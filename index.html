@@ -1,67 +1,176 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <meta charset="utf-8">
-        <title>msLandscape</title>
-        <link rel="stylesheet" href="main.css" type="text/css">
-    </head>
-    <body>
-        
-        <h1><em>msLandscape</em></h1>
-        
-        <h3>
-            <em>msLandscape</em> is a toolbox that enables the quick, largely automatic generation and visualization of customized landscapes to simulate with the popular coalescent simulator <em>ms</em>.
-        </h3>
-        
-        <p>Created by Geoffrey House and Matthew Hahn (Indiana University)</p>
-        
-        <p>
-            The <em>msLandscape</em> toolbox consists of the stand alone R package <em>msLandscape</em> as well as Python and bash shell scripts. All of them work seamlessly together so you can focus on creating the landscape you want to simulate.
-        
-        </p>
-        
-        <a href="https://github.com/geohouse/msLandscape">Download and install <em>msLandscape</em> from GitHub</a>
-        
-        <p>
-            For an overview of what <em>msLandscape</em> can do and how to use it to generate and simulate custom landscape shapes, see the guide here:
-            <a href="./msLandscape_plotSculpt_tutorial_062017.html"><em>msLandscape</em> tutorial.</a>
-        </p>
-        <p>
-            For a tutorial about how to create layered composite images of multiple input images (e.g. <em>SpaceMix</em>, <em>EEMS</em>, or <em>un-PC</em> results from different scenarios) that allow direct comparisons between them, see the guide here:
-            <a href="https://geohouse.github.io/msLandscape_layerPNGImages_tutorial.html"><em>msLandscape</em> layer images tutorial</a>.
-        </p>
-        
-        <p>
-            For more detail about the <em>msLandscape</em> workflow and how it easily interfaces with downstream analysis programs to infer patterns of past migration across the landscape, including unbundled principal components (<em>un-PC</em>), see the schematic diagram here: <a href="./msLandscapeSchematic.html"><em>msLandscape </em> workflow.</a>
-        
-        </p>
-        <p>
-            To run <em>msLandscape</em>, you will need to have three things installed on our computer (and it makes it easier if they are on your <em>$PATH</em>.) They are (with links):
-        </p>
-            <ul>
-                <li>
-                    <a href="https://cran.r-project.org/">R</a>
-                </li>
-                <li>
-                    <a href="https://www.python.org/">Python</a> (v. 2.7.9 or later, including Python 3). Python is installed by default on Macs
-                </li>
-                <li>
-                    <a href="http://home.uchicago.edu/rhudson1/source/mksamples.html"><em>ms</em></a> coalescent simulator from: 
-                    Hudson, R. R. (2002) Generating samples under a Wright-Fisher neutral model. Bioinformatics 18:337-8.
-                </li>
-        
-        
-            </ul>    
-      
-        
-        <a href="images/ghostLands_unevenSample_migrBar_forWebsite_033017.svg">
-            <img src="images/ghostLands_unevenSample_migrBar_forWebsite_033017.png" alt="Click for detailed version" style="width:550px;height:550px;border:0;">
-        </a>
-        
-        <p>
-         <strong>Above:</strong> <em>msLandscape</em> makes it easier to use <em>ms</em> for landscape simulations by automatically creating and editing the contents of the underlying <em>ms</em> flag file (base layer) and then plotting the resulting lansdcape (overlay), so you can focus more on building the landscape configuration you want.
-        </p>
-        
-        <!--<p><em>msLandscape</em> automatically constructs customized <em>ms</em> flag files to match your landscape configuration and then plots them. Combined with its automated ability to 'sculpt' the landscape into different shapes, -->
-           <!-- <kbd>Groovy</kbd> -->
+<!--
+	Interphase by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Interphase by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header">
+				<h2><a>Geoffrey House</h2>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one">Projects</a></li>
+						<li><a href="#two">CV</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>This is Interphase</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<ul class="actions">
+					<li>
+						<a href="#" class="button big">Learn More</a>
+					</li>
+				</ul>
+			</section>
+
+		<!-- Section One - Projects -->
+			<section id="one" class="wrapper style2 align-center">
+				<div class="container">
+					<header>
+						<h2>Projects</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, autem.</p>
+					</header>
+					<div class="row">
+						<section class="feature 6u 12u$(small)">
+							<a href="https://geohouse.github.io/wordPath/">
+								<img class="image fit" alt="WordPath" src="images/WordPath.png">
+							</a>
+							<h3 class="title">WordPath</h3>
+							<p>Find as many words as you can in the grid in 3 minutes with the integrated timer. When done, you can display all of the possible words in the grid and clicking on the word highlights its 'WordPath' in the grid. The number of vowels in the grid can be changed too.</p>
+						</section>
+						<section class="feature 6u$ 12u$(small)">
+							<a href="https://geohouse.github.io/numberPath/">
+								<img class="image fit" alt="NumberPath" src="images/WordPath.png">
+							</a>
+							<h3 class="title">NumberPath</h3>
+							<p>Fill in the grid with consecutive numbers from 1 to 81, using the pre-filled numbers as a guide. If you're stuck, you can toggle the answer as a trace through the grid.</p>
+						</section>
+						<section class="feature 6u 12u$(small)">
+							<img class="image fit" src="images/pic03.jpg" alt="" />
+							<h3 class="title">Voluptates, repudiandae, dolor</h3>
+							<p>Voluptatibus repellendus tempora, quia! Consequuntur atque, rerum quis, ullam labore officiis ipsa beatae dolore, assumenda eos harum repudiandae, qui ab! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</section>
+						<section class="feature 6u$ 12u$(small)">
+							<img class="image fit" src="images/pic04.jpg" alt="" />
+							<h3 class="title">Eveniet, reiciendis, veniam</h3>
+							<p>Rem nulla molestiae inventore quibusdam repudiandae doloremque eveniet ullam, qui autem possimus saepe laudantium numquam sapiente vel. Repudiandae, nihil tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</section>
+					</div>
+					<footer>
+						<ul class="actions">
+							<li>
+								<a href="#" class="button alt big">Learn More</a>
+							</li>
+						</ul>
+					</footer>
+				</div>
+			</section>
+
+		<!-- Section Two - CV -->
+		<section id="two" class="wrapper style1 align-center">
+			<div class="container">
+				<header>
+					<h2>Consectetur adipisicing elit</h2>
+					<p>Lorem ipsum dolor sit amet adipisicing elit. Delectus consequatur sed tempus.</p>
+				</header>
+				<div class="row 200%">
+					<section class="4u 12u$(small)">
+						<i class="icon big rounded fa-clock-o"></i>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quam consectetur quibusdam magni minus aut modi aliquid.</p>
+					</section>
+					<section class="4u 12u$(small)">
+						<i class="icon big rounded fa-comments"></i>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam consequatur repellat debitis maxime molestiae.</p>
+					</section>
+					<section class="4u$ 12u$(small)">
+						<i class="icon big rounded fa-user"></i>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque eveniet, nesciunt molestias. Ipsam, voluptate vero.</p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="4u 6u(medium) 12u$(small)">
+							<h3>Lorem ipsum</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque!</p>
+							<ul class="alt">
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Quod adipisci perferendis et itaque.</a></li>
+								<li><a href="#">Itaque eveniet ullam, veritatis reiciendis?</a></li>
+								<li><a href="#">Accusantium repellat accusamus a, soluta.</a></li>
+							</ul>
+						</section>
+						<section class="4u 6u$(medium) 12u$(small)">
+							<h3>Nostrum, repellat!</h3>
+							<p>Tenetur voluptate exercitationem eius tempora! Obcaecati suscipit, soluta earum blanditiis.</p>
+							<ul class="alt">
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Id inventore, qui necessitatibus sunt.</a></li>
+								<li><a href="#">Deleniti eum odit nostrum eveniet.</a></li>
+								<li><a href="#">Illum consectetur quibusdam eos corporis.</a></li>
+							</ul>
+						</section>
+						<section class="4u$ 12u$(medium) 12u$(small)">
+							<h3>Contact Us</h3>
+							<ul class="icons">
+								<li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
+								<li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
+								<li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="tabular">
+								<li>
+									<h3>Address</h3>
+									1234 Somewhere Road<br>
+									Nashville, TN 00000
+								</li>
+								<li>
+									<h3>Mail</h3>
+									<a href="#">someone@untitled.tld</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									(000) 000-0000
+								</li>
+							</ul>
+						</section>
+					</div>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
