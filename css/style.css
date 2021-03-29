@@ -45,7 +45,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #666;
+		color: #111;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -483,11 +483,12 @@
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
-			width: 60%;
+			/* Increases image width */
+			width: 70%;
 		}
 
 			.image.fit img {
-				width: 60%;
+				width: 0%;
 			}
 
 /* List */
