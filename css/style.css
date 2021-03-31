@@ -746,7 +746,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #7942b9;
+			background-color: #d41f64c2;
 		}
 
 		input[type="submit"]:active,
@@ -894,6 +894,23 @@
 			#header h1 a {
 				font-size: 1.25em;
 			}
+
+		.GitHub {
+			height: 60%;
+			position: absolute;
+			left: 30em;
+			top: 1em;
+			vertical-align: middle;
+		}
+
+		.LinkedIn{
+			height: 60%;
+			position: absolute;
+			left: 35em;
+			top: 1em;
+			vertical-align: middle;
+		}
+
 
 		#header nav {
 			height: inherit;
