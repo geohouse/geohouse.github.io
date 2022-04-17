@@ -1,0 +1,108 @@
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+
+.row {
+    margin: 0px;
+  }
+
+/* Add padding BETWEEN each column (if you want) 
+.row,
+.row > .column {
+  padding: 0px 40px;
+}
+*/
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+  padding: 10px;
+}
+
+/* Only have 2 columns (instead of 3) if the screen width is < 800px*/
+@media screen and (max-width: 800px) {
+    .column{
+        width: 50%
+    }
+    
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#myBtnContainer {
+    padding: 5px 18px;
+}
+
+.image.fit {
+    /* Makes the images centered above the text */
+    margin: 0 0 2em 0;
+    /* Increases image width */
+    width: 100%;
+}
+
+.method {
+    font-size: 10pt;
+    text-align: center;
+}
+
+.heading, .details {
+    text-align: center;
+}
+
+/* hr divider double lines; has to be >= 3px otherwise the double line disappears*/
+.divider{
+    border-top: 3px double rgba(144, 144, 144, 0.25);
+}
+
+.citation{
+    text-align: center;
+    font-size: 10pt;
+}
+
+.paperlink {
+    color: #4dac71;
+}
