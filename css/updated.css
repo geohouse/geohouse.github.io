@@ -42,6 +42,14 @@
     
 }
 
+/* Only have 1 column (instead of 3) if the screen width is < 800px*/
+@media screen and (max-width: 600px) {
+    .column{
+        width: 100%
+    }
+    
+}
+
 /* Clear floats after rows */
 .row:after {
   content: "";
