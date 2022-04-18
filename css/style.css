@@ -42,7 +42,7 @@
     
 }
 
-/* Only have 1 column (instead of 3) if the screen width is < 800px*/
+/* Only have 1 column (instead of 3) if the screen width is < 600px*/
 @media screen and (max-width: 600px) {
     .column{
         width: 100%
