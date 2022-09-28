@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/projects-long-format.css" />
+  </head>
+  <body>
+    <h1>Block Island Glass Floats</h1>
+    <h2>What is it?</h2>
+    <p>
+      Every summer since 2012, local glass artists have handmade and hidden
+      roughly 500 clear glass orbs around Block Island, Rhode Island for
+      visitors and residents to find. Every year, the first batch of floats made
+      are brightly colored and decorated. When someone finds a float, they are
+      asked to log the unique float number and the location where it was found.
+      This project is an interactive web map of the locations where these floats
+      have been found on Block Island over the last 10 years to see whether the
+      locations where floats were found have changed between years, and whether
+      the limited number of decorated 'fancy' floats are more commonly found in
+      specific areas of the island.
+    </p>
+    <h2>How does it work?</h2>
+    <p>
+      The web map shows where regular and 'fancy' floats have been found on
+      Block Island by using different image icons that are sized in proportion
+      to how many floats were found at that location. Each icon displays a label
+      when clicked that gives more information about the location and the number
+      of floats found there. Users can choose which basemap they want to use -
+      from an artistic background to aerial photos and can also select the year
+      they want to look at, or all years combined.
+    </p>
+    <h2>How is it built?</h2>
+    <p>
+      To make the interactive map, I used the Leaflet JavaScript library with
+      calls to two different external raster map tile providers to provide the
+      user-selectable background maps. The Leaflet maps are generated from
+      geoJSON files (1 per year) that give the locations where regular and
+      'fancy' floats were found that year, and also underlie the dynamic
+      tooltips to give more information about each float location in the map.
+      The geoJSON files were generated using a custom Python script after
+      applying fuzzy matching to the location description for each float against
+      a standardized set of location names and coordinates that I tabulated
+      (more detail about this process is below).
+    </p>
+    <a href="https://geohouse.github.io/blockIslandGlassFloats/">Live map</a>
+    <a href="https://github.com/geohouse/blockIslandGlassFloats">Source code</a>
+    <h2>Why did I build it?</h2>
+    <p>
+      I was intrigued by this project when I first heard about it, because a
+      summer scavenger hunt to get people out and exploring the island seemed
+      like neat idea to me and it also seemed like a mutually helpful link
+      between a local artist who started this project and the local tourism
+      bureau that supports it. I was looking for a way to get experience with
+      Leaflet interactive mapping, and this project provided lots of varied
+      experience with cleaning datasets, outputting geoJSON data, data-driven
+      changes to map icon sizing, dynamic tooltips, and updating the map with
+      user input from sliders, radio buttons, and check boxes. Project design I
+      knew I wanted an interactive map that let users choose what data would be
+      mapped, but I also knew I had to break it down into small pieces and build
+      to the final project incrementally. This started with building static maps
+      that allowed custom images and I then added additional layers of
+      functionality on top of that. I knew that I could use geoJSON data
+      reliably to make Leaflet maps, so this allowed me to pursue the data
+      cleaning work simultaneously with proof-of-concept trials to build the
+      functions I wanted into the map. What I am most proud of The feature I'm
+      most proud of is the data parsing that enabled the raw input data, with a
+      wide variety of site descriptions where the floats were found, to be
+      standardized and georeferenced to provide the locations rendered in the
+      map. Although this isn't directly visible in the map outcome, it is what
+      allows all the map features to be possible (like showing the different
+      special float icons for year 2020) while confidently showing locations for
+      ~95% of the registered floats based on a description of where they were
+      found.
+    </p>
+    <h2>Challenges I ran into and how I resolved them</h2>
+    <p>
+      The most major hurdle during development was in parsing the input data and
+      structuring it so that it was available for use by the Leaflet library to
+      create the user-selected map view by year and background map. The input
+      dataset was a list of float numbers found by year (each float has a unique
+      number engraved on it, allowing the location where each float was found to
+      be documented). However, the float finding locations are submitted by the
+      public, and consist of the float ID number and description of where it was
+      found, which is a free-text field on the submission website. I knew that
+      the map would only be possible if I could reliably parse the majority of
+      these free-text description fields so that I could geocode them to produce
+      a latitude/longitude value for each float, along with a standardized
+      location name and float type (regular or fancy). Because the glass floats
+      project has been active for 10 years, there are ~3100 records to parse,
+      which is more than I could efficiently do manually. To automate this
+      process, I used fuzzy matching from Python's fuzzywuzzy package to match
+      each location description against a list of curated location names that I
+      created. The fuzzy matching returns a match score for each float location
+      description compared to each location in the curated list. It was an
+      iterative process to add common locations to the curated location list,
+      run the fuzzy match against all float records, evaluate how well the
+      curated list represented float record descriptions, adding more locations
+      to the curated list as needed, and repeating. When I had added enough
+      locations to the curated list to account for most of the float record
+      descriptions (130 locations including common spelling variations), I
+      looked at the quality of the fuzzy matches produced and their associated
+      scores in order to set a minimum score threshold for largely correct
+      matches. Any float with a description that couldn't be reliably matched
+      with at least that score was discarded, but this only applied to 131
+      records (~5% of total), with many of them being ambiguous descriptions,
+      like 'beach'.
+    </p>
+    <h2>What I learned for future projects</h2>
+    <p>
+      Through this project, I learned a lot more about building interactive
+      webmaps, which is what I had wanted. This included having maps be
+      responsive to a range of different user input types, and to access the
+      correct datasets as required to meet the user's specifications. I also
+      worked with fuzzy string matching and geoJSON output packaging from Python
+      scripts, which were key foundations to providing the data for the map to
+      display. This also required project management skills to balance the
+      progress of both the mapping and the data cleaning/packaging successfully,
+      creating the required proof-of-concepts and any needed additional
+      development and troubleshooting so that I could catch problems quickly for
+      both aspects and ensure they moved forward as efficiently as possible. In
+      that sense, I was building from the ends of the project toward the middle,
+      but I knew this would work because geoJSON file standardization ensured
+      that the dataset output would work seamlessly as the required mapping
+      input.
+    </p>
+  </body>
+</html>
