@@ -1,9 +1,19 @@
-:root{
-    --heading-color:
-    --accent-color:#7F1734
+:root {
+  /* claret */
+  --accent-color: #7f1734;
+  /*jungle green */
+  --accent-green: #177f62;
 }
 h1 {
   font-size: 4em;
   font-family: Arial, Helvetica, sans-serif;
-color: #7F1734;
+  color: var(--accent-green);
+}
+b {
+  width: 70%;
+  height: 3px;
+  border-bottom: 3px solid var(--accent-color);
+}
+br {
+  height: 10px;
 }
