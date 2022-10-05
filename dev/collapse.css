@@ -5,6 +5,7 @@
   width: 100%;
   background-color: lightsalmon;
   margin: 5px;
+  border: none;
 }
 
 .collapse-header:hover {

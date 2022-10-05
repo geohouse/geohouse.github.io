@@ -3,24 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
   </head>
   <body>
     <h1>Block Island Glass Floats</h1>
-    <h2>What is it?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <!-- This div for the button holder is used to group the buttons
+      for CSS flexbox so that they're both moved to the end of the area-->
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Interactive map of glass float locations on Block Island during an
+        annual summer scavenger hunt
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       Every summer since 2012, local glass artists have handmade and hidden
       roughly 500 clear glass orbs around Block Island, Rhode Island for
-      visitors and residents to find. Every year, the first batch of floats made
+      visitors and residents to find. Each year, the first batch of floats made
       are brightly colored and decorated. When someone finds a float, they are
-      asked to log the unique float number and the location where it was found.
-      This project is an interactive web map of the locations where these floats
-      have been found on Block Island over the last 10 years to see whether the
-      locations where floats were found have changed between years, and whether
-      the limited number of decorated 'fancy' floats are more commonly found in
-      specific areas of the island.
+      asked to log the unique float number and the location where it was found
+      on a website. This project is an interactive web map of the locations
+      where these floats have been found on Block Island over the last 10 years
+      to see whether the locations where floats were found have changed between
+      years, and whether the limited number of decorated 'fancy' floats are more
+      commonly found in specific areas of the island.
     </p>
     <h2>How does it work?</h2>
-    <p>
+    <p class="details">
       The web map shows where regular and 'fancy' floats have been found on
       Block Island by using different image icons that are sized in proportion
       to how many floats were found at that location. Each icon displays a label
@@ -30,7 +46,7 @@
       they want to look at, or all years combined.
     </p>
     <h2>How is it built?</h2>
-    <p>
+    <p class="details">
       To make the interactive map, I used the Leaflet JavaScript library with
       calls to two different external raster map tile providers to provide the
       user-selectable background maps. The Leaflet maps are generated from
@@ -45,7 +61,7 @@
     <a href="https://geohouse.github.io/blockIslandGlassFloats/">Live map</a>
     <a href="https://github.com/geohouse/blockIslandGlassFloats">Source code</a>
     <h2>Why did I build it?</h2>
-    <p>
+    <p class="details">
       I was intrigued by this project when I first heard about it, because a
       summer scavenger hunt to get people out and exploring the island seemed
       like neat idea to me and it also seemed like a mutually helpful link
@@ -57,7 +73,7 @@
       user input from sliders, radio buttons, and check boxes.
     </p>
     <h2>Project design</h2>
-    <p>
+    <p class="details">
       I knew I wanted an interactive map that let users choose what data would
       be mapped, but I also knew I had to break it down into small pieces and
       build to the final project incrementally. This started with building
@@ -68,7 +84,7 @@
       functions I wanted into the map.
     </p>
     <h2>What I am most proud of</h2>
-    <p>
+    <p class="details">
       The feature I'm most proud of is the data parsing that enabled the raw
       input data, with a wide variety of site descriptions where the floats were
       found, to be standardized and georeferenced to provide the locations
@@ -79,18 +95,17 @@
       of where they were found.
     </p>
     <h2>Challenges I ran into and how I resolved them</h2>
-    <p>
-      The most major hurdle during development was in parsing the input data and
-      structuring it so that it was available for use by the Leaflet library to
-      create the user-selected map view by year and background map. The input
-      dataset was a list of float numbers found by year (each float has a unique
-      number engraved on it, allowing the location where each float was found to
-      be documented). However, the float finding locations are submitted by the
-      public, and consist of the float ID number and description of where it was
-      found, which is a free-text field on the submission website. I knew that
-      the map would only be possible if I could reliably parse the majority of
-      these free-text description fields so that I could geocode them to produce
-      a latitude/longitude value for each float, along with a standardized
+    <p class="details">
+      The largest hurdle during development was parsing and cleaning the input
+      data to make it ready to map. The input dataset was a list of float
+      numbers found by year (each float has a unique number engraved on it,
+      allowing the location where each float was found to be documented).
+      However, the float finding locations are submitted by the public, and
+      consist of the float ID number and description of where it was found,
+      which is a free-text field on the submission website. I knew that the map
+      would only be possible if I could reliably parse the majority of these
+      free-text description fields so that I could geocode them to produce a
+      latitude/longitude value for each float, along with a standardized
       location name and float type (regular or fancy). Because the glass floats
       project has been active for 10 years, there are ~3100 records to parse,
       which is more than I could efficiently do manually. To automate this
@@ -112,7 +127,7 @@
       like 'beach'.
     </p>
     <h2>What I learned for future projects</h2>
-    <p>
+    <p class="details">
       Through this project, I learned a lot more about building interactive
       webmaps, which is what I had wanted. This included having maps be
       responsive to a range of different user input types, and to access the
