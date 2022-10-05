@@ -83,3 +83,13 @@ hr {
 br {
   height: 10px;
 }
+
+#links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+  height: 40px;
+  margin: 5px 20% 0px 20%;
+}

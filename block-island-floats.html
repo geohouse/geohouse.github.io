@@ -59,7 +59,20 @@
       from an artistic background to aerial photos and can also select the year
       they want to look at, or all years combined.
     </p>
-    <h2>How is it built?</h2>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Built using Leaflet JavaScript library with data that was georeferenced
+        by custom Python scripts into geoJSON format
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       To make the interactive map, I used the Leaflet JavaScript library with
       calls to two different external raster map tile providers to provide the
@@ -72,9 +85,26 @@
       a standardized set of location names and coordinates that I tabulated
       (more detail about this process is below).
     </p>
-    <a href="https://geohouse.github.io/blockIslandGlassFloats/">Live map</a>
-    <a href="https://github.com/geohouse/blockIslandGlassFloats">Source code</a>
-    <h2>Why did I build it?</h2>
+    <div id="links">
+      <a href="https://geohouse.github.io/blockIslandGlassFloats/">Live map</a>
+      <a href="https://github.com/geohouse/blockIslandGlassFloats"
+        >Source code</a
+      >
+    </div>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The scavenger hunt aspect was appealing to me, and georeferencing then
+        interactively mapping free-form data entries was a good challenge
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       I was intrigued by this project when I first heard about it, because a
       summer scavenger hunt to get people out and exploring the island seemed
@@ -86,7 +116,21 @@
       changes to map icon sizing, dynamic tooltips, and updating the map with
       user input from sliders, radio buttons, and check boxes.
     </p>
-    <h2>Project design</h2>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Ensured the functionality for mapping and fuzzy georeferencing was
+        possible, then built from both ends of the project toward the middle
+        (linked by geoJSON files)
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       I knew I wanted an interactive map that let users choose what data would
       be mapped, but I also knew I had to break it down into small pieces and
@@ -97,7 +141,21 @@
       cleaning work simultaneously with proof-of-concept trials to build the
       functions I wanted into the map.
     </p>
-    <h2>What I am most proud of</h2>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Parsing the raw location descriptions to get mappable locations for 95%
+        of the recorded floats [******Allowing multiple types of user input
+        (year, float type, background map) to tailor the map for different uses]
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       The feature I'm most proud of is the data parsing that enabled the raw
       input data, with a wide variety of site descriptions where the floats were
@@ -108,7 +166,20 @@
       showing locations for ~95% of the registered floats based on a description
       of where they were found.
     </p>
-    <h2>Challenges I ran into and how I resolved them</h2>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Parsing the raw location descriptions that were found using an iterative
+        approach with fuzzy matching
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       The largest hurdle during development was parsing and cleaning the input
       data to make it ready to map. The input dataset was a list of float
@@ -140,7 +211,20 @@
       records (~5% of total), with many of them being ambiguous descriptions,
       like 'beach'.
     </p>
-    <h2>What I learned for future projects</h2>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Building interactive webmaps, cleaning and georeferencing data, managing
+        a project from both input and output ends simultaneously
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
     <p class="details">
       Through this project, I learned a lot more about building interactive
       webmaps, which is what I had wanted. This included having maps be
