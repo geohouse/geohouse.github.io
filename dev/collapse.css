@@ -1,0 +1,38 @@
+.collapse-header {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  width: 100%;
+  background-color: lightsalmon;
+  margin: 5px;
+}
+
+.collapse-header:hover {
+  background-color: salmon;
+}
+
+/* puts '+' or '-' after the main content depending on whether the 
+collapsible is open or not */
+.collapse-header::after {
+  content: "\002B";
+  margin-left: 30%;
+}
+
+.active::after {
+  content: "\2212";
+}
+
+.collapse-details {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  /* This is key to make the collapsing work properly.
+  The text is hidden when collapsed */
+  overflow: hidden;
+  background-color: aquamarine;
+  /* These allow indenting the expanded content on the left
+  while making sure the width is reduced on the right so 
+  that it still lines up with the expanding header on that side. */
+  width: calc(100% - 5px);
+  margin-left: 10px;
+  /* margin: 5px 5px 5px 10px; */
+}

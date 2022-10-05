@@ -9,10 +9,19 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--accent-green);
 }
-b {
-  width: 70%;
-  height: 3px;
-  border-bottom: 3px solid var(--accent-color);
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  border-bottom: 2px solid #aaa;
+}
+hr {
+  border: none;
+  border-top: 4px double var(--accent-color);
+  color: var(--accent-green);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 80%;
 }
 br {
   height: 10px;
