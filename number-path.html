@@ -3,28 +3,70 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
   </head>
   <body>
     <h1>Number path game</h1>
-    <h2>What is it?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        A web version of the Numbrix logic game where the numbers 1 to 81 need
+        to be placed in the grid to form a 'path' (no diagonals) through it.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       This is a web version of the logic game Numbrix from Parade magazines. The
       puzzle is a 9 by 9 cell grid that you need to fill with each number from 1
       to 81 to form a path through the grid (without using diagonals). Some
       numbers pre-populated on the edge of the grid of each puzzle to get
       started.
     </p>
-    <hr />
-    <h2>How does it work?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        It generates several puzzles at a time, assigns a difficulty level to
+        each, and lets users browse through them to find a puzzle they would
+        like to try.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       This web version first generates several new puzzles at once, gives each
       of them a rough difficulty rating, then allows the player to scroll
       through them to see which puzzle they want to try. If you get stuck while
       trying to solve it, you can toggle the display of the puzzle's solution
       path on and off.
     </p>
-    <h2>How is it built?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        It attempts 5,000 puzzle generations when the page is loaded, and shows
+        the ones where complete puzzles were found. The grid display and the
+        path through it (when the answer is toggled) are displayed fully with
+        HTML elements.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       The main components of this app generate the puzzles and then display the
       currently selected puzzle on the screen. The completed puzzle
       configurations for each website load (5,000 attempted puzzle generations)
@@ -43,8 +85,21 @@
       possible ways to configure the numbers connecting two of them inside the
       grid, and therefore the puzzle is typically more difficult.
     </p>
-    <h2>Why did I build it?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I wanted a way to make more Numbrix-like puzzles for myself and a family
+        member to be able to solve.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       A family member introduced me to Numbrix puzzles but we only got one new
       puzzle per week when it was published in Parade magazine and I wanted
       build more puzzles for them to be able to solve. I knew it could be tricky
@@ -53,8 +108,22 @@
       that, I also knew I would need some optimizations based on the puzzle
       rules, and that challenge was appealing to me.
     </p>
-    <h2>Project design</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I started with getting the basic mechanics for game generation working,
+        then added features like assigning a difficulty level to puzzles and
+        toggling showing the solved version of the puzzle.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       The design started quite basic, with focusing on getting code that could
       randomly generate these numberPath puzzles reliably. When that was
       working, I worked to include additional features to make it more fun for
@@ -63,15 +132,43 @@
       see how easy or difficult a puzzle may be, and being able to display the
       solution for the chosen puzzle.
     </p>
-    <h2>What I am most proud of</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Heuristics I identified to improve the success rate for generating the
+        puzzles.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       I am most proud of the heuristics that allow the app to identify many more
       puzzles per run (more detail about this is in the next section) and
       assigning a general difficulty level for each puzzle based on the size of
       number 'loops' that are not anchored by the initially given numbers.
     </p>
-    <h2>Challenges I ran into and how I resolved them</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Generating complete (81 cell) puzzles was difficult and computationally
+        costly to do randomly, so I identified two heuristic rules and built
+        them into the puzzle generation to improve the successfully puzzle
+        generation rate.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       Initially I built this to randomly fill the grid with numbers until there
       were no more possible moves, and then to start over and try again. This
       allowed me to get the basic code working to check for open squares the
@@ -91,8 +188,21 @@
       both of these rules and tuned these weights by trial and error to increase
       the number of puzzles successfully found.
     </p>
-    <h2>What I learned for future projects</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Working with two-dimensional grids of values, pathfinding through those
+        grids, and looking for rules that can improve that pathfinding.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       Working with two-dimensional grids of values and pathfinding through those
       grids while following different rule sets were both helpful when building
       my wordPath project. I also learned to closely examine app output given a
