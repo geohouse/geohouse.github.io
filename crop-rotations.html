@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
   </head>
   <body>
     <h1>Visualizing crop rotations</h1>
-    <h2>What is it?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Interactive map graphing major crop rotations in different areas of
+        Minnesota from 2008-2021
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       An interactive map viewer to explore crop rotations in the last 14 years
       in Minnesota and at a variety of scales (whole state, county-level,
       township-level [~ 1 square mile]). Static thumbnail graphs depicting the
@@ -19,8 +33,23 @@
       underlying crop coverage and rotation data being shown as dynamic
       tool-tips when moused over.
     </p>
-    <h2>How does it work?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Static graphs of crop rotations appear as icons in an interactive map of
+        Minnesota at the state and county level. If you click on one, a more
+        detailed interactive version will be built to explore the crop rotations
+        for that area in more detail
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       The app itself is built on top of the MapboxGL Javascript library that
       provides access to tiled background maps hosted by Mapbox and the ability
       to add custom interactions with maps. The map first loads at the whole
@@ -36,8 +65,23 @@
       becomes townships (~1 sq mi areas) and the crop rotation graphs for each
       of those.
     </p>
-    <h2>How is it built?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Crop cover data from USDA is converted to crop rotations from 2008-2021
+        for each 30m pixel, then aggregated to different spatial scales. A
+        custom graph was then made to visualize these crop transitions more
+        easily.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       Processing the annual crop raster data to provide crop rotation
       information at different spatial scales was necessary before any of the
       web mapping or other features of the app could be built. The USDA’s
@@ -85,8 +129,23 @@
       land uses each year (markers). These plots can be zoomed in or out to see
       more detail.
     </p>
-    <h2>Why did I build it?</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I am fascinated by crop rotations, especially to manage plant disease
+        and increase biodiversity. I knew that agriculture in Minnesota varies
+        widely across the state, and wanted to visualize crop rotation patterns
+        in different parts of the state.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       After taking a remote sensing class, I was especially interested in how
       the spectral signatures of different crop plants could be used to map crop
       locations and acreage for a growing season. I wanted to use the USDA's
@@ -99,8 +158,22 @@
       an especially interesting state to look at for landscape-level crop
       rotation patterns.
     </p>
-    <h2>Project design</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I built several proof of concepts for major required functions to
+        determine the project viability, then increased complexity from there.
+        This required work in Python and R before the web development.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       I knew that I wanted to visualize the crop rotations in a compact, easy to
       understand way for each spatial area, and that I wanted those plots to
       both appear on the map as markers in static form, as well as being able to
@@ -139,8 +212,22 @@
       tools, they share the same design and colors to make interpretation of the
       results across the graph types as seamless as possible.
     </p>
-    <h2>What I am most proud of</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The overall graph format, with static graphs made in R and an
+        interactive implementation of the same graph using Plotly when a user
+        clicks on it.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       I'm happy with how the graph format and the interactive version of the
       graphs together make it as easy as possible to explore trends and changes
       in crop rotations between years, and across different locations. Being
@@ -151,8 +238,24 @@
       explore the overall trends in the data quickly by panning and zooming
       around the map.
     </p>
-    <h2>Challenges I ran into and how I resolved them</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Adding the static graphs to the map required loading them separately and
+        then associating those images with the mapped data. By converting
+        numeric crop codes to strings with padding, I was able to compactly
+        encode crop rotation data, which was key to computing the crop rotations
+        per pixel.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       One of the hardest challenges was to figure out how to have the static
       graph images appear as symbols in the appropriate map locations. It is not
       currently possible with Mapbox to provide a URL to an image to use as a
@@ -211,8 +314,22 @@
         </tr>
       </tbody>
     </table>
-    <h2>What I learned for future projects</h2>
-    <p>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        This gave me experience tabulating metrics from large raster datasets
+        and mapping the results, as well as experience with interactive maps
+        built with Mapbox and complex interactive graphs with Plotly.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
       This project gave me more experience working with Mapbox to display large
       datasets using custom settings, which will be useful for future projects.
       I also gained a lot of experience pre-processing raster data to provide
