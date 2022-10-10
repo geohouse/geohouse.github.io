@@ -130,8 +130,8 @@
       more detail.
     </p>
     <div id="links">
-      <a href="#">[*****Live map; replace href]</a>
-      <a href="#">[*******Source code; replace href]</a>
+      <a href="https://geohouse.github.io/MN_cropRotations/">Live map</a>
+      <a href="https://github.com/geohouse/MN_cropRotations">Source code</a>
     </div>
     <div class="heading-holder">
       <h2>Why did I build it?</h2>
@@ -177,45 +177,48 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      I knew that I wanted to visualize the crop rotations in a compact, easy to
-      understand way for each spatial area, and that I wanted those plots to
-      both appear on the map as markers in static form, as well as being able to
-      be better explored in interactive form when the user clicked on any of the
-      static graph images. I went through several iterations of graph types to
-      try and show the data in a compact, but not overwhelming way. I started
-      with trying polar plots, with different angles for the years and variable
-      sized dots at different radii representing the acreage of each crop
-      planted each year. This became too cramped though, especially for crops
-      represented near the center of the graph. I then experimented with
-      Sankey-like graphs that show linear flows, in this case from acreage of
-      each crop to each other crop through time. The problem here was that there
-      were too many overlapping 'flows' - 49 of them for each year (connecting
-      each of the 7 land uses to all others). To try and address these
-      shortcomings, I made three main modifications:
-    </p>
-    <ol>
-      <li>
-        I removed the full line connections between years that were so
-        confusing, so that there was a vertical blank buffer between lines
-        representing crop acreage transitions from the previous year and those
-        representing the transitions to the current year
-      </li>
-      <li>
-        I organized the incoming and outgoing lines from each crop such that any
-        horizontal line in the graph always represents acreage continuing in
-        that crop from year to year, regardless of crop
-      </li>
-      <li>
-        Markers at each crop/year combination have a size that is proportional
-        to the percentage of area planted to that crop.
-      </li>
-    </ol>
-    <p>
-      Even though the static and the interactive graphs are made using different
-      tools, they share the same design and colors to make interpretation of the
-      results across the graph types as seamless as possible.
-    </p>
+    <div class="details">
+      <p>
+        I knew that I wanted to visualize the crop rotations in a compact, easy
+        to understand way for each spatial area, and that I wanted those plots
+        to both appear on the map as markers in static form, as well as being
+        able to be better explored in interactive form when the user clicked on
+        any of the static graph images. I went through several iterations of
+        graph types to try and show the data in a compact, but not overwhelming
+        way. I started with trying polar plots, with different angles for the
+        years and variable sized dots at different radii representing the
+        acreage of each crop planted each year. This became too cramped though,
+        especially for crops represented near the center of the graph. I then
+        experimented with Sankey-like graphs that show linear flows, in this
+        case from acreage of each crop to each other crop through time. The
+        problem here was that there were too many overlapping 'flows' - 49 of
+        them for each year (connecting each of the 7 land uses to all others).
+        To try and address these shortcomings, I made three main modifications:
+      </p>
+      <ol>
+        <li>
+          I removed the full line connections between years that were so
+          confusing, so that there was a vertical blank buffer between lines
+          representing crop acreage transitions from the previous year and those
+          representing the transitions to the current year
+        </li>
+        <li>
+          I organized the incoming and outgoing lines from each crop such that
+          any horizontal line in the graph always represents acreage continuing
+          in that crop from year to year, regardless of crop
+        </li>
+        <li>
+          Markers at each crop/year combination have a size that is proportional
+          to the percentage of area planted to that crop.
+        </li>
+      </ol>
+      <p>
+        Even though the static and the interactive graphs are made using
+        different tools, they share the same design and colors to make
+        interpretation of the results across the graph types as seamless as
+        possible.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>What I am most proud of</h2>
       <div class="button-holder">
@@ -259,65 +262,67 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      One of the hardest challenges was to figure out how to have the static
-      graph images appear as symbols in the appropriate map locations. It is not
-      currently possible with Mapbox to provide a URL to an image to use as a
-      marker for each location that's contained within the GeoJSON file that
-      Mapbox uses for plotting locations. Instead, the fix was to load all
-      images independently from a separate JSON file of image information that I
-      created for this purpose, and then uniquely associate the images with each
-      location requiring a marker in the map using identical identifying
-      information in the loaded image and the map locations.
-      <br />
-      Another central challenge to this project was how to reliably encode crop
-      rotation data between pairs of the yearly crop raster datasets on a
-      pixel-by-pixel basis. I knew I needed to encode this information using as
-      little information as possible due to the already large data sizes, and in
-      a format that would allow reliable decoding later. In the NASS data, each
-      crop already has a numeric value that represents it, so I based the data
-      encoding on that. In order to compactly track the crop from the previous
-      year and the crop for the next year for each pixel, I used string
-      concatenation of the numeric crop code values for both years (where the
-      crop code for the second year was padded to three characters with leading
-      zeros as needed), and back-converted to a number. This allowed me to
-      reliably parse the three digit crop code for each year from the combined
-      output, starting from the right-most side of the combined crop code. The
-      table below provides an example of this. During this process, my computer
-      still ran out of memory to complete the computations for the full state,
-      so I split each input file into quarters then ran the computation on each
-      of those before stitching the results back together to get the output for
-      the whole state.
-    </p>
-    <table>
-      <thead>
-        <th>Year 1 crop code</th>
-        <th>Year 2 crop code</th>
-        <th>Combined crop code (year 2 is always the rightmost 3 digits)</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>1001</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>10</td>
-          <td>1010</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>100</td>
-          <td>1100</td>
-        </tr>
-        <tr>
-          <td>100</td>
-          <td>1</td>
-          <td>100001</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="details">
+      <p>
+        One of the hardest challenges was to figure out how to have the static
+        graph images appear as symbols in the appropriate map locations. It is
+        not currently possible with Mapbox to provide a URL to an image to use
+        as a marker for each location that's contained within the GeoJSON file
+        that Mapbox uses for plotting locations. Instead, the fix was to load
+        all images independently from a separate JSON file of image information
+        that I created for this purpose, and then uniquely associate the images
+        with each location requiring a marker in the map using identical
+        identifying information in the loaded image and the map locations.
+        <br />
+        Another central challenge to this project was how to reliably encode
+        crop rotation data between pairs of the yearly crop raster datasets on a
+        pixel-by-pixel basis. I knew I needed to encode this information using
+        as little information as possible due to the already large data sizes,
+        and in a format that would allow reliable decoding later. In the NASS
+        data, each crop already has a numeric value that represents it, so I
+        based the data encoding on that. In order to compactly track the crop
+        from the previous year and the crop for the next year for each pixel, I
+        used string concatenation of the numeric crop code values for both years
+        (where the crop code for the second year was padded to three characters
+        with leading zeros as needed), and back-converted to a number. This
+        allowed me to reliably parse the three digit crop code for each year
+        from the combined output, starting from the right-most side of the
+        combined crop code. The table below provides an example of this. During
+        this process, my computer still ran out of memory to complete the
+        computations for the full state, so I split each input file into
+        quarters then ran the computation on each of those before stitching the
+        results back together to get the output for the whole state.
+      </p>
+      <table>
+        <thead>
+          <th>Year 1 crop code</th>
+          <th>Year 2 crop code</th>
+          <th>Combined crop code (year 2 is always the rightmost 3 digits)</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1001</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>10</td>
+            <td>1010</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>100</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>1</td>
+            <td>100001</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="heading-holder">
       <h2>What I learned for future projects</h2>
       <div class="button-holder">
