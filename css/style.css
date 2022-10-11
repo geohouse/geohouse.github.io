@@ -1,23 +1,22 @@
 /* Center website */
 .main {
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  h1 {
-    font-size: 50px;
-    word-break: break-all;
-  }
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
 
 .row {
-    margin: 0px;
-    /* Needed for more regular wrapping of 'tiles'. 
+  margin: 0px;
+  /* Needed for more regular wrapping of 'tiles'. 
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* Add padding BETWEEN each column (if you want) 
 .row,
@@ -34,20 +33,26 @@
   /*flex-direction: column;*/
 }
 
+.column-main {
+  /*float: left;*/
+  width: 50%;
+  /* Hide columns by default */
+  padding: 10px;
+  /*flex-direction: column;*/
+}
+
 /* Only have 2 columns (instead of 3) if the screen width is < 800px*/
 @media screen and (max-width: 800px) {
-    .column{
-        width: 50%
-    }
-    
+  .column {
+    width: 50%;
+  }
 }
 
 /* Only have 1 column (instead of 3) if the screen width is < 600px*/
 @media screen and (max-width: 600px) {
-    .column{
-        width: 100%
-    }
-    
+  .column {
+    width: 100%;
+  }
 }
 
 /* Clear floats after rows */
@@ -91,40 +96,41 @@
 }
 
 #myBtnContainer {
-    padding: 5px 18px;
+  padding: 5px 18px;
 }
 
 .image.fit {
-    /* Makes the images centered above the text */
-    margin: 0 0 2em 0;
-    /* Increases image width */
-    width: 100%;
+  /* Makes the images centered above the text */
+  margin: 0 0 2em 0;
+  /* Increases image width */
+  width: 100%;
 }
 
 .method {
-    font-size: 10pt;
-    text-align: center;
+  font-size: 10pt;
+  text-align: center;
 }
 
-.heading, .details {
-    text-align: center;
+.heading,
+.details {
+  text-align: center;
 }
 
 /* hr divider double lines; has to be >= 3px otherwise the double line disappears*/
-.divider{
-    border-top: 3px double rgba(144, 144, 144, 0.25);
+.divider {
+  border-top: 3px double rgba(144, 144, 144, 0.25);
 }
 
-.citation{
-    text-align: center;
-    font-size: 10pt;
+.citation {
+  text-align: center;
+  font-size: 10pt;
 }
 
 .paperlink {
-    color: #4dac71;
+  color: #4dac71;
 }
 
-.w3cite{
-    text-align: center;
-    font-size: 12pt;
+.w3cite {
+  text-align: center;
+  font-size: 12pt;
 }
