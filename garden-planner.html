@@ -26,12 +26,12 @@
     <p class="details">
       Gardens can be excellent in supporting a variety of key wildlife, such as
       pollinators and birds. Planning a garden to attract a range of wildlife
-      through the growing season and beyond is not always easy, as it requires a
-      holistic approach to bloom times, fruiting times, and other key aspects
-      that attract wildlife. This project seeks to make this process easier by
-      visually representing the blooming, fruiting, and other important wildlife
-      attracting times through the growing season for multiple plants
-      simultaneously, allowing gaps in timing to be easily found so that the
+      through the growing season and beyond is not always easy though, because
+      it requires a holistic approach to bloom times, fruiting times, and other
+      key qualities that attract wildlife. I wanted to make this process easier
+      by visually representing the blooming, fruiting, and other important
+      wildlife attracting times through the growing season for multiple plants
+      simultaneously. This allows gaps in timing to be easily found so that the
       plant plan can be amended accordingly.
     </p>
     <div class="heading-holder">
@@ -52,7 +52,7 @@
     </div>
     <p class="details">
       This app lets you input detailed information about the wildlife attracted
-      by the flowers, fruit/seeds, or leaves/other aspects of each plant,
+      by the flowers, fruit/seeds, or leaves/other qualities of each plant,
       including the time of year and type of wildlife attracted for each. It
       then aggregates this information into a set of standardized plant 'cards'
       to allow easier comparison of features across plants. Finally, the
@@ -63,9 +63,9 @@
       can be easily sorted by the blooming, fruiting, or other wildlife
       attracting times through the year for any number of plants, which makes it
       easy to see at a glance whether there are time gaps in attracting key
-      wildlife to the garden using the current plants, and the plan can be
-      updated based on that by easily deleting existing plants or adding new
-      ones.
+      wildlife to the garden using the current plants. The garden plan can then
+      be updated based on that information by easily deleting existing plants or
+      adding new ones.
     </p>
     <div class="heading-holder">
       <h2>How is it built?</h2>
@@ -83,13 +83,13 @@
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
-      This application uses React through several related functional components
-      to easily manage the state (list of plants for the garden and their
-      characteristics) and its display. I use the ChartJS library for making the
-      interactive graph, with bindings for React. All the components are written
-      in TypeScript, which helps prevent type-related bugs and makes it easier
-      to ensure the props passed between React components are properly
-      standardized. React Testing Library and Jest are used to provide unit and
+      This application uses several related functional components built with
+      React to easily manage its state (the list of plants for the garden and
+      their characteristics) and its display. I use the ChartJS library for
+      making the interactive graph, with bindings for React. All the components
+      are written in TypeScript, which helps prevent type-related bugs and makes
+      it easier to ensure the props passed between React components are properly
+      structured. React Testing Library and Jest are used to provide unit and
       integration tests for the app.
     </p>
     <div id="links">
@@ -106,23 +106,22 @@
     <div class="overview-holder">
       <p class="overview">
         I recently planted a garden to try and attract wildlife, but missed
-        having an easy way to summarize blooming and fruiting times to try and
+        having an easy way to summarize blooming and fruiting times to help
         ensure more consistent food sources for wildlife. This app is the tool I
         wish I had when planning the garden.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
+      Effectively planning gardens to provide habitat and/or food for wildlife
+      wherever possible, but especially in urban and suburban areas, is
+      important to help sustain and attract biodiversity back to these areas.
       Having recently planned and planted a garden where I wanted to attract as
-      much wildlife as possible through the growing season, I wanted to create
-      an app to make garden planning for wildlife easier. Especially in urban
-      and suburban areas, gardens can provide important habitat and food
-      resources for wildlife. Planning gardens for wildlife whenever possible is
-      important to be able to sustain and attract biodiversity back to these
-      built-up areas. While each individual garden cannot make a large
-      difference, many nearby gardens planned to attract wildlife through the
-      growing season can have a large collective impact and making this aspect
-      of garden planning easier is important to me.
+      much wildlife as possible in a small space, I wanted to create an app to
+      make garden planning for wildlife easier. This app highlights the timing
+      for flowering, fruiting, and other wildlife attracting qualities for all
+      plants in the current plan so that it can be modified as needed to provide
+      better continuity for wildlife through the year.
     </p>
     <div class="heading-holder">
       <h2>Project design</h2>
@@ -150,31 +149,31 @@
         This would make it very easy to spot parts of the season where, say,
         hummingbirds wouldn't have any flowers to visit in the garden, and you
         could update the planting plan to help fill that gap. To make this
-        happen, I set up the app using React as a framework to manage the
-        different components that were involved and to pass the state of the
-        different components efficiently between them to allow for easy
-        rendering and a dynamic website. There are three major groups of
-        components for this app:
+        happen, I set up the app using React as a framework to manage the plant
+        list (the app's state) and to allow functional components that modify or
+        display the list in different ways based on user needs. There are three
+        major groups of components for this app:
       </p>
       <ol>
         <li>
-          Adding plant information through input fields, date and color
-          selectors, and checkboxes for wildlife types that the plant attracts
+          Adding plant information through input fields, custom date and color
+          selectors (their own functional components), and checkboxes for
+          wildlife types that the plant attracts
         </li>
         <li>
-          A list of the plants entered for the garden that shows an overview of
-          the qualities of each of the plants
+          A list of 'cards' for the plants entered for the garden that shows an
+          overview of the qualities of each of the plants
         </li>
         <li>
           A graph that displays the information in the plant list graphically
           through a year to see overlapping bloom times and colors, fruiting
-          times, and other features that may attract wildlife, and the specific
+          times, and other qualities that may attract wildlife, and the specific
           types of wildlife that are attracted by each
         </li>
       </ol>
       <p>
-        I am a firm believer in making user interactions as easy and intuitive
-        as possible and I built custom selector components as needed to help
+        It is important to me to make user interactions as easy and intuitive as
+        possible, and I built custom selector components as needed to help
         facilitate this. For example, I built date selectors as a group of
         buttons that could easily be 'painted' over while clicking and dragging
         a mouse to select multiple months quickly and easily along with 'select
@@ -182,9 +181,8 @@
         the context.
         <br />
         Once the plants are plotted, the list and graph can be sorted together
-        by bloom time, fruit time, or the time other wildlife are attracted to
-        see the wildlife attracted by the plants in the current garden plan in
-        order through the year.
+        by bloom time, fruit time, or the time where other plant qualities
+        attract wildlife to get a yearly overview for the current garden plan.
       </p>
     </div>
     <div class="heading-holder">
@@ -228,25 +226,28 @@
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
-      I knew I wanted this project to include as much testing as possible to
-      ensure future changes would not break current functionality. Implementing
-      integration tests was sometimes tricky, especially for a Chart testing
-      problem where `resize-observer` was required for the Chart library, but is
-      not supported by JestDOM, which I was using for testing. After searching
-      for possible solutions online, I tried more elegant seeming solutions
-      using mock functions without success and so I finally used a polyfill
-      instead, which solved my problem. Because this is just used for testing
-      and not core application functionality, this seemed like a workable
-      solution.
+      I knew I wanted this project to include as much automated code testing as
+      possible to ensure future changes would not break current functionality.
+      Implementing integration tests was sometimes tricky, especially for a
+      Chart testing problem where
+      <span class="monospace">resize-observer</span> was required for the Chart
+      library, but is not supported by JestDOM, which I was using for testing.
+      After searching for possible solutions online, I tried more elegant
+      seeming solutions using mock functions without success before finally
+      using a polyfill instead, which solved my problem. Because this is just
+      used for testing and not core application functionality, this seemed like
+      a workable solution.
       <br />
-      I also migrated the existing code from JavaScript to TypeScript, and this
-      translation was sometimes difficult, especially for getting correct typing
-      when using dynamic indexing into nested objects that contain multiple
-      types. To address this, I read multiple TypeScript references to better
-      understand different solutions and made extensive use of `keyof` and
-      `typeof` operators to provide correct type checking for dynamic indexing
-      into nested objects without necessarily needing to specify a pre-defined
-      type or interface to follow for the typing.
+      I also migrated the codebase from JavaScript to TypeScript after much of
+      the core functionality was already operational, and this translation was
+      sometimes difficult, especially for getting correct typing when using
+      dynamic indexing into nested objects that contain multiple types. To
+      address this, I read several TypeScript references to better understand
+      different solutions and made extensive use of
+      <span class="monospace">keyof</span> and
+      <span class="monospace">typeof</span> operators to provide correct type
+      checking for dynamic indexing into nested objects without necessarily
+      needing to pre-define a type or interface to follow for the typing.
     </p>
     <div class="heading-holder">
       <h2>Project accessibility</h2>
@@ -265,7 +266,8 @@
 
     <p class="details">
       This project is accessible except for the dynamically produced graph. I
-      have ensured that all the inputs are accessible by keyboard using tabIndex
+      have ensured that all the inputs are accessible by keyboard using
+      <span class="monospace">tabIndex</span>
       attributes as needed, and that the elements of the plant cards are
       accessible. Making the dynamic chart accessible is harder, as it is meant
       to be a visual representation of the plants in the plan and making that
@@ -296,19 +298,18 @@
 
     <p class="details">
       I learned a large amount from this project. Working with React across
-      multiple related components, it was good practice with lifting state up to
-      the closest shared component and having references to state changing
-      functions be passed down to the individual components that needed them.
-      Working with Chart for React was helpful to understand how they work
-      together and how it is possible to produce data-driven visualizations
-      based on state that is managed by React. This also was very helpful
-      practice with creating and using unit and integration tests to help ensure
-      future changes would not affect the current functionality. The experience
-      of translating JavaScript code to TypeScript was also extremely useful to
-      understand how powerful TypeScript can be in providing checks as a first
-      line of testing for React component code, especially with elements of
-      objects and ensuring props objects are packaged and passed correctly
-      between components.
+      multiple related functional components was good practice with lifting
+      state up to the closest shared component and having references to the
+      state-changing functions be passed down to the individual components as
+      needed. Using Chart for React was helpful to understand how it is possible
+      to produce data-driven visualizations based on state that is managed by
+      React. This also was useful practice creating and using unit and
+      integration tests to help ensure future code changes would not affect the
+      current functionality. The experience of translating JavaScript code to
+      TypeScript was also quite useful to understand how powerful TypeScript can
+      be in providing checks as a first line of testing for React component
+      code, especially with elements of objects and ensuring props objects are
+      packaged and passed correctly between components.
     </p>
   </body>
 </html>
