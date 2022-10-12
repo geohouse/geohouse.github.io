@@ -16,8 +16,9 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        A web version of the Boggle word game that includes a timer and shows
-        the maximum possible score and all words found in each puzzle.
+        A web version of the Boggle word game that includes a timer playing,
+        then shows the maximum possible score and can highlight the path of each
+        word found in the puzzle.
         <button type="button" class="collapse-button">+</button>
       </p>
     </div>
@@ -38,10 +39,11 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        You can choose the number of vowels to include in each puzzle, then
-        start the timer and find as many words as you can. When the timer runs
-        out, check the words you found against all words and the maximum
-        possible score for that puzzle.
+        Choose the number of vowels to include in each game (changes the
+        difficulty), then start the timer and find as many words as you can in 3
+        minutes. When the timer runs out, see how you did by checking the words
+        you found against all the words represented in the game and see the
+        game's maximum possible score.
         <button type="button" class="collapse-button">+</button>
       </p>
     </div>
@@ -69,9 +71,9 @@
     <div class="overview-holder">
       <p class="overview">
         A web worker loads a dictionary while the game is being set up with the
-        user-selected number of vowels. When the user wants to display the
-        answers, the list of words is used to find all words in the current
-        puzzle and the paths taken by each through the dies.
+        number of vowels you select. When you want to display the answers, the
+        dictionary is used to find all words in the current game and the paths
+        taken by each through the letter dice.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -111,9 +113,9 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        I've played a lot of Boggle, and always have been curious about all the
-        words in each puzzle, because you never find them all. This app lets you
-        see the words you may have missed.
+        I've played a lot of Boggle with family and always have been curious
+        about all the words in each game, because you never find them all by
+        eye. This app lets you see the words you may have missed.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -140,9 +142,10 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        I started with the basic functionality to get that working, then added
-        other features I wanted, like an integrated timer and the ability to
-        highlight the path of each possible word through the grid.
+        I started by getting the basic functionality of the game working, then
+        added other features I wanted, like: an integrated timer, the ability to
+        highlight the path of each possible word through the grid, and a slider
+        to choose the number of vowels to include.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -168,8 +171,8 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        The automatic solver that records all words in the puzzle and the way
-        each word can be formed through the grid of dice.
+        The automatic solver that records all words in the current game and the
+        way each word can be formed through the grid of dice.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -189,11 +192,10 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        The initial word finding was thorough but very slow. I identified a
-        heuristic to only try extending possible words if the first two letters
-        were existing prefixes in the dictionary. This sped up the word search
-        considerably because it could determine whether a given path may yield a
-        word based only on its first letter and its immediate neighbors.
+        The initial word finding was thorough but very slow. I found a heuristic
+        to only try extending possible words if the first two letters were
+        existing prefixes in the dictionary. This gave a large speed-up because
+        it could quickly identify and abandon paths that could never form words.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -231,18 +233,18 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        This taught me how to use web workers to load information in the
-        background, and finding paths through 2-D arrays including identifying
+        This taught me how to use web workers for loading information in the
+        background and finding paths through 2-D arrays including identifying
         and implementing ways to speed up that path finding.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
       Through this project I learned how to use web workers to load needed
-      information for the webpage, in this case the word list, without blocking
-      JavaScript's execution thread, how to do word lookups using a heuristic to
-      speed up the process, working with two dimensional arrays and tracing
-      paths through them.
+      information for the webpage - in this case the word list - without
+      blocking JavaScript's execution thread. I also learned how to reliably
+      trace paths through 2-D arrays, including identifying and implementing
+      heuristic rules to speed up the word search.
     </p>
   </body>
 </html>

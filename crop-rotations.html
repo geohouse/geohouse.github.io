@@ -16,8 +16,7 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Interactive map graphing major crop rotations in different areas of
-        Minnesota from 2008-2021
+        Interactive map showing crop rotations across Minnesota from 2008-2021
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -44,8 +43,8 @@
       <p class="overview">
         Static graphs of crop rotations appear as icons in an interactive map of
         Minnesota at the state and county level. If you click on one, a more
-        detailed interactive version will be built to explore the crop rotations
-        for that area in more detail
+        detailed interactive version of it will be shown to explore the crop
+        rotations for that area in more detail
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -74,17 +73,16 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Crop cover data from USDA is converted to crop rotations from 2008-2021
-        for each 30m pixel, then aggregated to different spatial scales. A
-        custom graph was then made to visualize these crop transitions more
-        easily.
+        Crop cover data from USDA is converted to crop rotations from 2008-2021,
+        then aggregated to different spatial scales. I then built custom graphs
+        to visualize these crop transitions more easily.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
       Processing the annual crop raster data to provide crop rotation
       information at different spatial scales was necessary before any of the
-      web mapping or other features of the app could be built. The USDA’s
+      web mapping or other features of the app could be built. The USDA's
       National Agricultural Statistics Service (NASS) publishes detailed crop
       maps annually based on remote sensing data, and I started by downloading
       the annual crop raster data for Minnesota from 2008-2021, when the
@@ -144,8 +142,8 @@
       <p class="overview">
         I am fascinated by crop rotations, especially to manage plant disease
         and increase biodiversity. I knew that agriculture in Minnesota varies
-        widely across the state, and wanted to visualize crop rotation patterns
-        in different parts of the state.
+        widely across the state, and I wanted see the different types of crop
+        rotations being used.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -171,8 +169,8 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        I built several proof of concepts for major required functions to
-        determine the project viability, then increased complexity from there.
+        I built several proof-of-concepts to test major required functions and
+        determine project viability, then I increased complexity from there.
         This required work in Python and R before the web development.
       </p>
       <button type="button" class="collapse-button">+</button>
@@ -255,10 +253,10 @@
     <div class="overview-holder">
       <p class="overview">
         Adding the static graphs to the map required loading them separately and
-        then associating those images with the mapped data. By converting
+        then associating those images with the mapped data. Also, by converting
         numeric crop codes to strings with padding, I was able to compactly
-        encode crop rotation data, which was key to computing the crop rotations
-        per pixel.
+        encode crop rotation data and this was key to computing the crop
+        rotations on a per-pixel level.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -332,17 +330,19 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        This gave me experience tabulating metrics from large raster datasets
-        and mapping the results, as well as experience with interactive maps
-        built with Mapbox and complex interactive graphs with Plotly.
+        This gave me experience tabulating metrics from large spatial raster
+        datasets and mapping the results, as well as experience using custom
+        icon images in Mapbox and creating complex interactive graphs with
+        Plotly.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
     <p class="details">
       This project gave me more experience working with Mapbox to display large
-      datasets using custom settings, which will be useful for future projects.
-      I also gained a lot of experience pre-processing raster data to provide
-      the underlying datasets for use in maps and gained experience generating
+      datasets using custom settings, especially unique custom image markers,
+      which will be useful for future projects. I also gained a lot of
+      experience pre-processing spatial raster data with Python to provide the
+      underlying datasets for use in maps and gained experience generating
       custom formatted interactive plots using JavaScript libraries.
     </p>
   </body>

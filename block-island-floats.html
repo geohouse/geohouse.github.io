@@ -18,8 +18,8 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Interactive map of glass float locations on Block Island during an
-        annual summer scavenger hunt
+        Interactive map exploring where glass floats have been found on Block
+        Island during an annual summer scavenger hunt
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -44,9 +44,9 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Displays locations where 'regular' and 'fancy' floats were found on the
-        island for the user-selected years, with dynamic tooltips for more
-        details.
+        Maps locations where clear ('regular') and decorated ('fancy') floats
+        have been found on the island over the period the user selects, with
+        dynamic tooltips for more details.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -54,10 +54,10 @@
       The web map shows where regular and 'fancy' floats have been found on
       Block Island by using different image icons that are sized in proportion
       to how many floats were found at that location. Each icon displays a label
-      when clicked that gives more information about the location and the number
-      of floats found there. Users can choose which basemap they want to use -
-      from an artistic background to aerial photos and can also select the year
-      they want to look at, or all years combined.
+      when clicked that gives more information about the location name and the
+      number of floats found there. Users can choose which basemap they want to
+      use - from an artistic background to aerial photos and can also select the
+      year they want to look at, or all years combined.
     </p>
     <div class="heading-holder">
       <h2>How is it built?</h2>
@@ -68,8 +68,8 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Built using Leaflet JavaScript library with data that was georeferenced
-        by custom Python scripts into geoJSON format
+        The map is built using the Leaflet JavaScript library. The underlying
+        data were cleaned and georeferenced using custom Python scripts
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -100,8 +100,11 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        The scavenger hunt aspect was appealing to me, and georeferencing then
-        interactively mapping free-form data entries was a good challenge
+        I had fun learning about this Block Island tradition, and when I found
+        the list of locations where floats have been found over the years on a
+        Block Island tourism website, I was super curious to map them. It also
+        provided great experience building an interactive map that contains
+        several different features.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -127,7 +130,7 @@
       <p class="overview">
         Ensured the functionality for mapping and fuzzy georeferencing was
         possible, then built from both ends of the project toward the middle
-        (linked by geoJSON files)
+        (linked by files in geoJSON format)
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -151,11 +154,11 @@
     <div class="overview-holder">
       <p class="overview">
         Parsing the raw location descriptions to get mappable locations for 95%
-        of the recorded floats [******Allowing multiple types of user input
-        (year, float type, background map) to tailor the map for different uses]
+        of the recorded floats (this was also one of the main challenges!)
+        <button type="button" class="collapse-button">+</button>
       </p>
-      <button type="button" class="collapse-button">+</button>
     </div>
+
     <p class="details">
       The feature I'm most proud of is the data parsing that enabled the raw
       input data, with a wide variety of site descriptions where the floats were
@@ -220,8 +223,11 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Building interactive webmaps, cleaning and georeferencing data, managing
-        a project from both input and output ends simultaneously
+        This turned out to be an excellent project for learning a lot of skills
+        related to interactive mapping. It required cleaning and organizing
+        crowd-sourced data, implementing a range of ways users could interact
+        with the mapped data, and managing project development from both the
+        input (data) and output (mapping) ends simultaneously.
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
@@ -240,7 +246,8 @@
       that sense, I was building from the ends of the project toward the middle,
       but I knew this would work because geoJSON file standardization ensured
       that the dataset output would work seamlessly as the required mapping
-      input.
+      input. I have already leveraged some of these skills through the project
+      mapping crop rotations in Minnesota.
     </p>
   </body>
 </html>
