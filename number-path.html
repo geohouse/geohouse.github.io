@@ -74,16 +74,17 @@
       represented as an array of arrays, enabling easy browsing of the different
       puzzles found. There is a toggle to switch between showing each puzzle
       ready for solving or showing the answer as a solved path that connects the
-      numbers. This is fully rendered in HTML through &lttd&gt elements for the
-      number cells, and &ltdiv&gt elements in different directions to denote the
-      path. To try and give puzzle solvers more detail about each of the puzzles
-      generated, I built a method to assign expected difficulty levels (easy,
-      medium, or hard) to each of the puzzles based on the length of the typical
-      number 'loops' in each puzzle that take place in between the initial
-      numbers given around the outside edge. Longer 'loops' mean there are
-      larger differences in the initially filled in number values - meaning more
-      possible ways to configure the numbers connecting two of them inside the
-      grid, and therefore the puzzle is typically more difficult.
+      numbers. This is fully rendered in HTML through
+      <span class="monospace">&lttd&gt</span> elements for the number cells, and
+      <span class="monospace">&ltdiv&gt</span> elements in different directions
+      to denote the path. To try and give puzzle solvers more detail about each
+      of the puzzles generated, I built a method to assign expected difficulty
+      levels (easy, medium, or hard) to each of the puzzles based on the length
+      of the typical number 'loops' in each puzzle that take place in between
+      the initial numbers given around the outside edge. Longer 'loops' mean
+      there are larger differences in the initially filled in number values -
+      meaning more possible ways to configure the numbers connecting two of them
+      inside the grid, and therefore the puzzle is typically more difficult.
     </p>
     <div class="heading-holder">
       <h2>Why did I build it?</h2>

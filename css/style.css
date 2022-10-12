@@ -134,3 +134,7 @@ h1 {
   text-align: center;
   font-size: 12pt;
 }
+
+#about {
+  height: 100vh;
+}
