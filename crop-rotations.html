@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
+  </head>
+  <body>
+    <h1>Visualizing crop rotations</h1>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Interactive map showing crop rotations across Minnesota from 2008-2021
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      An interactive map viewer to explore crop rotations in the last 14 years
+      in Minnesota and at a variety of scales (whole state, county-level,
+      township-level [~ 1 square mile]). Static thumbnail graphs depicting the
+      crop rotation history for each area are rendered quickly as images on the
+      map to allow initial exploration of trends. When you zoom the map in or
+      out, the thumbnail graphs and spatial boundaries change to match the zoom
+      level. If you want to explore any given graph in more detail, you can
+      click on it to see an interactive version of the graph with the underlying
+      crop coverage and rotation data, and get dynamic tool-tips when any
+      element of the plot is moused over.
+    </p>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Static graphs of crop rotations appear as icons in an interactive map of
+        Minnesota at the state and county level. If you click on one, a more
+        detailed interactive version of it will be shown to explore the crop
+        rotations for that area in more detail
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      The app itself is built on top of the MapboxGL Javascript library that
+      provides access to tiled background maps hosted by Mapbox and the ability
+      to add custom interactions with maps. The map first loads at the whole
+      state-scale, which is its smallest spatial scale it supports. The outline
+      of Minnesota appears along with a static graph showing the state-wide crop
+      rotation data for the crops with the most planted acreage from 2008-2021.
+      Like any of these static graphs in the app, you can click on it to load an
+      interactive version in a separate panel that allows you to explore the
+      data in more detail using the dynamic tooltips that give the underlying
+      data values. When you zoom in on the map enough, county-level data will be
+      shown instead, with county outlines and the static crop rotation graph for
+      each county. Finally, when you zoom in even further, township-level (~ 1
+      square mile) crop rotation graphs appear.
+    </p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Crop cover data from USDA is converted to crop rotations from 2008-2021,
+        then aggregated to different spatial scales. I then built custom graphs
+        to visualize these crop transitions more easily.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I first needed to process the annual crop raster data to provide crop
+      rotation information at different spatial scales before I could build any
+      of the web mapping or other features of the app. The USDA's National
+      Agricultural Statistics Service (NASS) publishes detailed crop maps
+      annually based on remote sensing data, and I started by downloading the
+      annual crop raster data for Minnesota from 2008-2021, when the resolution
+      of the maps was consistently 30 x 30m pixels. I used custom Python scripts
+      to import pairs of the raster datasets from consecutive years and to
+      compare the datasets to tabulate crop rotation information for each pixel
+      in the state over those 14 years. This information was then aggregated at
+      the township, county, and state levels to calculate the percentage of the
+      given area that was covered by each of the major crops in each year. This
+      also includes linked information about which crops were planted in the
+      same location the year before, and which crops were going to be planted in
+      the same location in the following year.
+      <br />
+      After tabulating the crop rotations, I then did additional data analysis
+      using custom R scripts. I started by identifying the most widely planted
+      crops state-wide, so I would only include those in the visualizations for
+      clarity. I found that from 2008-2021, six crops averaged over 100,000
+      acres of identified area (in decreasing order): corn, soy, spring wheat,
+      hay, sugarbeets, and dry beans. While I was initially planning to only
+      highlight crop rotations to and from these most planted crops, I realized
+      that there was quite a lot of land entering and leaving cultivation each
+      year, most of which cycled to or from identifiable hay crops, so I also
+      included an 'Other' category that represented all other land uses.
+      <br />
+      I then used R to create the static crop rotation plots for each of the
+      spatial scales, as well as to package the underlying data for each graph
+      into a JSON file that is used to generate the interactive version of each
+      plot when a user clicks it on the map. To easily organize these graph
+      images and underlying JSON data files, I took inspiration from how raster
+      tiles for mapping (such as with the Leaflet library) are stored and served
+      using a nested folder structure instead of a formal database. The folder
+      hierarchy is standardized to allow easy retrieval of the graph image or
+      the JSON data for any location in the state and at any of the three
+      supported spatial scales.
+      <br />
+      When a user clicks on any static graph image, the corresponding JSON data
+      is loaded from a URL and an interactive graph is generated from it using
+      the Plotly JavaScript library with the same conventions and graph style as
+      for the static graph. The interactive graphs have dynamic tooltips to
+      access the percentage of area represented by each crop transition (lines)
+      and the percentage of area represented by each of the seven main land uses
+      each year (markers). These plots can be zoomed in or out to see more
+      detail.
+    </p>
+    <div id="links">
+      <a href="https://geohouse.github.io/MN_cropRotations/">Live map</a>
+      <a href="https://github.com/geohouse/MN_cropRotations">Source code</a>
+    </div>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I am fascinated by crop rotations, especially to manage plant disease
+        and increase biodiversity. I knew that agriculture in Minnesota varies
+        widely across the state, and I wanted see the different types of crop
+        rotations being used.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      After taking a remote sensing class, I was especially interested in how
+      the spectral signatures of different crop plants could be used to map crop
+      locations and acreage for a growing season. I wanted to use the USDA's
+      NASS crop raster data to visualize yearly crop rotations on the landscape
+      in Minnesota. I chose Minnesota because I knew that farming takes
+      different forms in different parts of the state: while the southern part
+      of the state is dominated by corn/soy crop rotations, the western part
+      grows more sugarbeets and wheat, and the northern part of the state has
+      very little agriculture. I thought these geographic trends could make it
+      an especially interesting state to look at for landscape-level crop
+      rotation patterns.
+    </p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I built several proof-of-concepts to test major required functions and
+        determine project viability, then I increased complexity from there.
+        This required work in Python and R before the web development.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <div class="details">
+      <p>
+        I knew that I wanted to visualize the crop rotations in a compact, easy
+        to understand way for each spatial area. I also wanted those plots to
+        appear quickly on the map as static image markers and then be shown
+        interactively in more detail when you click on any one of them in the
+        map. I went through several iterations of graph types to show the data
+        in a compact, but not overwhelming way. I started with trying polar
+        plots, with different angles for the years and variable sized dots at
+        different radii to represent the acreage of each crop planted each year.
+        This became too cramped though, especially for crops represented near
+        the center of the graph. I then experimented with Sankey-like graphs
+        that show linear flows, in this case showing the flow of planted acreage
+        from each crop to each other crop in the next year. The problem here was
+        that there were too many overlapping 'flows' - 49 of them for each year
+        (connecting each of the 7 land uses to all others). To try and address
+        these shortcomings, I made three main modifications:
+      </p>
+      <ol>
+        <li>
+          I removed the full line connections between years that were so
+          confusing, so that there was a vertical blank buffer between lines
+          representing crop acreage transitions from the previous year and those
+          representing the transitions to the current year.
+        </li>
+        <li>
+          I organized the incoming and outgoing lines from each crop such that
+          any horizontal line in the graph always represents acreage continuing
+          in that crop from year to year, regardless of crop.
+        </li>
+        <li>
+          Markers at each crop/year combination have a size that is proportional
+          to the percentage of area planted to that crop.
+        </li>
+      </ol>
+      <p>
+        Even though the static and the interactive graphs are made using
+        different tools, they share the same design and colors to make
+        interpretation of the results across the graph types as seamless as
+        possible.
+      </p>
+    </div>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The overall graph format, with static graphs made in R and an
+        interactive implementation of the same graph using Plotly when a user
+        clicks on it.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I'm happy with how the graph format and the interactive version of the
+      graphs together make it as easy as possible to explore trends and changes
+      in crop rotations between years, and across different locations. Being
+      able to get a quick overview with the static graph images on the map and
+      then a more detailed interactive version of the same graph when you click
+      on the static one, I think represents a good trade-off between data
+      density and quickly exploring overall trends by moving the map.
+    </p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Adding the static graphs to the map required loading them separately and
+        then associating those images with the mapped data. Also, by converting
+        numeric crop codes to strings with padding, I was able to compactly
+        encode crop rotation data and this was key to computing the crop
+        rotations on a per-pixel level.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <div class="details">
+      <p>
+        One of the hardest challenges was to figure out how to have the static
+        graph images appear as symbols in the appropriate map locations. It is
+        not currently possible with Mapbox to provide a URL for an image to use
+        as a marker for each location that's contained within the GeoJSON file
+        that Mapbox uses for plotting locations. Instead, the fix was to load
+        all images independently from a separate JSON file of image information
+        that I created for this purpose, and then uniquely associating the
+        images with each marker location in the map using matching identifying
+        information in the loaded image and the map locations.
+        <br />
+        Another central challenge to this project was how to reliably encode
+        crop rotation data between pairs of the yearly crop raster datasets on a
+        pixel-by-pixel basis. I knew I needed to encode this information using
+        as little information as possible due to the already large data sizes,
+        and in a format that would allow reliable decoding later. In the NASS
+        data, each crop already has a numeric value assigned to it, which I used
+        as the basis for the data encoding. To compactly track the crop from the
+        previous year and the crop for the next year for each pixel, I used
+        string concatenation of the numeric crop code values for both years
+        (where the crop code for the second year was padded to three characters
+        with leading zeros as needed), and back-converted to a number. This
+        allowed me to reliably parse the three digit crop code for each year
+        from the combined output, starting from the right-most side of the
+        combined crop code. The table below provides an example of this. During
+        this process, my computer still ran out of memory to complete the
+        computations for the full state, so I split each input file into
+        quarters then ran the computation on each of those before stitching the
+        results back together to get the output for the whole state.
+      </p>
+      <table>
+        <thead>
+          <th>Year 1 crop code</th>
+          <th>Year 2 crop code</th>
+          <th>Combined crop code (year 2 is always the rightmost 3 digits)</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1001</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>10</td>
+            <td>1010</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>100</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>1</td>
+            <td>100001</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        This gave me experience tabulating metrics from large spatial raster
+        datasets and mapping the results, as well as experience using custom
+        icon images in Mapbox and creating complex interactive graphs with
+        Plotly.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      This project gave me more experience working with Mapbox to display large
+      datasets using custom settings, especially unique custom image markers,
+      which will be useful for future projects. I also gained a lot of
+      experience pre-processing spatial raster data with Python to provide the
+      underlying datasets for use in maps, experience designing clear data
+      visualization, and experience generating custom formatted interactive
+      plots using JavaScript libraries.
+    </p>
+  </body>
+</html>

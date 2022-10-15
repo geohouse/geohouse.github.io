@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
+  </head>
+  <body>
+    <h1>Garden planner for wildlife</h1>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        A visual tool to help maximize your garden's ability to support wildlife
+        by making it easier to ensure longer periods during the year where
+        flowers, fruits/seeds, or other plant characteristics for wildlife are
+        available.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      Gardens can be excellent in supporting a variety of key wildlife, such as
+      pollinators and birds. Planning a garden to attract a range of wildlife
+      through the growing season and beyond is not always easy though, because
+      it requires a holistic approach to bloom times, fruiting times, and other
+      key qualities that attract wildlife. I wanted to make this process easier
+      by visually representing the blooming, fruiting, and other important
+      wildlife attracting times through the growing season for multiple plants
+      simultaneously. This allows gaps in timing to be easily found so that the
+      plant plan can be amended accordingly.
+    </p>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Enter information about blooming, fruiting, and other wildlife
+        attracting qualities of each plant and then easily compare plant
+        features through the year to plan a garden that better supports
+        wildlife.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      This app lets you input detailed information about the wildlife attracted
+      by the flowers, fruit/seeds, or leaves/other qualities of each plant,
+      including the time of year and type of wildlife attracted for each. It
+      then aggregates this information into a set of standardized plant 'cards'
+      to allow easier comparison of features across plants. Finally, the
+      information in the plant 'cards' is also presented visually with a graph
+      that shows the times of blooming, fruiting, and other wildlife attracting
+      qualities through the year for the whole garden at once, along with the
+      types of wildlife that are attracted by each. The 'cards' and the graph
+      can be easily sorted by the blooming, fruiting, or other wildlife
+      attracting times through the year for any number of plants, which makes it
+      easy to see at a glance whether there are time gaps in attracting key
+      wildlife to the garden using the current plants. The garden plan can then
+      be updated based on that information by easily deleting existing plants or
+      adding new ones.
+    </p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        This is a React-based app written in TypeScript with code tests
+        implemented using Jest and React Testing Library. The ChartJS library
+        provides the visualization of plant characteristics.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      This application uses several related functional components built with
+      React to easily manage its state (the list of plants for the garden and
+      their characteristics) and its display. I use the ChartJS library for
+      making the interactive graph, with bindings for React. All the components
+      are written in TypeScript, which helps prevent type-related bugs and makes
+      it easier to ensure the props passed between React components are properly
+      structured. React Testing Library and Jest are used to provide unit and
+      integration tests for the app.
+    </p>
+    <div id="links">
+      <a href="https://geohouse.github.io/garden-planner/">Live planner app</a>
+      <a href="https://github.com/geohouse/garden-planner">Source code</a>
+    </div>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I recently planted a garden to try and attract wildlife, but missed
+        having an easy way to summarize blooming and fruiting times to help
+        ensure more consistent food sources for wildlife. This app is the tool I
+        wish I had when planning the garden.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      Effectively planning gardens to provide habitat and/or food for wildlife
+      wherever possible, but especially in urban and suburban areas, is
+      important to help sustain and attract biodiversity back to these areas.
+      Having recently planned and planted a garden where I wanted to attract as
+      much wildlife as possible in a small space, I wanted to create an app to
+      make garden planning for wildlife easier. This app highlights the timing
+      for flowering, fruiting, and other wildlife attracting qualities for all
+      plants in the current plan so that it can be modified as needed to provide
+      better continuity for wildlife through the year.
+    </p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        React effectively manages the state of the app through the central plant
+        list stored in a parent component. This plant list is then updated or
+        read by separate components for plant input, plant 'cards' showing each
+        plants' characteristics, and the visual comparison of plants through the
+        year.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <div class="details">
+      <p>
+        My main goal was to allow users to input plants with different
+        characteristics for blooms, fruits, and other attributes that may
+        attract wildlife (like leaves for butterfly caterpillars) and to have
+        those attributes plotted together on a graph through a growing season.
+        This would make it very easy to spot parts of the season where, say,
+        hummingbirds wouldn't have any flowers to visit in the garden, and you
+        could update the planting plan to help fill that gap. To make this
+        happen, I set up the app using React as a framework to manage the plant
+        list (the app's state) and to allow functional components that modify or
+        display the list in different ways based on user needs. There are three
+        major groups of components for this app:
+      </p>
+      <ol>
+        <li>
+          Adding plant information through input fields, custom date and color
+          selectors (their own functional components), and checkboxes for
+          wildlife types that the plant attracts
+        </li>
+        <li>
+          A list of 'cards' for the plants entered for the garden that shows an
+          overview of the qualities of each of the plants
+        </li>
+        <li>
+          A graph that displays the information in the plant list graphically
+          through a year to see overlapping bloom times and colors, fruiting
+          times, and other qualities that may attract wildlife, and the specific
+          types of wildlife that are attracted by each
+        </li>
+      </ol>
+      <p>
+        It is important to me to make user interactions as easy and intuitive as
+        possible, and I built custom selector components as needed to help
+        facilitate this. For example, I built date selectors as a group of
+        buttons that could easily be 'painted' over while clicking and dragging
+        a mouse to select multiple months quickly and easily along with 'select
+        all' and 'select none' buttons that activate and de-activate based on
+        the context.
+        <br />
+        Once the plants are plotted, the list and graph can be sorted together
+        by bloom time, fruit time, or the time where other plant qualities
+        attract wildlife to get a yearly overview for the current garden plan.
+      </p>
+    </div>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I'm happy with the chart output. It allows quick comparisons of
+        different plant characteristics through the growing season. This was the
+        main goal of the app.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I'm most proud of the chart output. This is the main output from the app,
+      and it needs to be intuitive to read and understand otherwise people would
+      not want to use it for garden planning. Behind-the-scenes it handles
+      different scenarios to try and keep the chart as informative and easy to
+      understand as possible. This also required working with a version of the
+      Chart library with special bindings for React, which behaves slightly
+      differently from the regular Chart library.
+    </p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The codebase for this app includes testing at various levels, including
+        typechecking using Typescript, which was sometimes challenging to
+        implement. It was also a challenge to make the app as accessible as
+        possible with the different input and visual elements.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I knew I wanted this project to include as much automated code testing as
+      possible to ensure future changes would not break current functionality.
+      Implementing integration tests was sometimes tricky, especially for a
+      Chart testing problem where
+      <span class="monospace">resize-observer</span> was required for the Chart
+      library, but is not supported by JestDOM, which I was using for testing.
+      After searching for possible solutions online, I tried more elegant
+      seeming solutions using mock functions without success before finally
+      using a polyfill instead, which solved my problem. Because this is just
+      used for testing and not core application functionality, this seemed like
+      a workable solution.
+      <br />
+      I also migrated the codebase from JavaScript to TypeScript after much of
+      the core functionality was already operational, and this translation was
+      sometimes difficult, especially for getting correct typing when using
+      dynamic indexing into nested objects that contain multiple types. To
+      address this, I read several TypeScript references to better understand
+      different solutions and made extensive use of
+      <span class="monospace">keyof</span> and
+      <span class="monospace">typeof</span> operators to provide correct type
+      checking for dynamic indexing into nested objects without necessarily
+      needing to pre-define a type or interface to follow for the typing.
+    </p>
+    <div class="heading-holder">
+      <h2>Project accessibility</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        All input elements and the plant overview 'cards' are accessible for
+        users interacting with the app via keyboard
+        <button type="button" class="collapse-button">+</button>
+      </p>
+    </div>
+
+    <p class="details">
+      This project is accessible except for the dynamically produced graph. I
+      have ensured that all the inputs are accessible by keyboard using
+      <span class="monospace">tabIndex</span>
+      attributes as needed, and that the elements of the plant cards are
+      accessible. Making the dynamic chart accessible is harder, as it is meant
+      to be a visual representation of the plants in the plan and making that
+      consistently accessible to users who are not able to see the chart is
+      tricky. All the information in the chart is contained in the plant cards
+      though, and I have ensured that those are accessible. The plant cards get
+      sorted the same as the graph when the user selects a sort button, so it is
+      still possible to get insights about time gaps in wildlife attraction
+      through the year for the current garden plants even if the user is not
+      able to view the chart.
+    </p>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I learned to build complexity into React apps step-by-step and to
+        re-factor components as needed based on that increased complexity. This
+        also gave me experience migrating an existing JavaScript app to
+        TypeScript and implementing code tests.
+        <button type="button" class="collapse-button">+</button>
+      </p>
+    </div>
+
+    <p class="details">
+      I learned a large amount from this project. Working with React across
+      multiple related functional components was good practice with lifting
+      state up to the closest shared component and having references to the
+      state-changing functions be passed down to the individual components as
+      needed. Using Chart for React was helpful to understand how it is possible
+      to produce data-driven visualizations based on state that is managed by
+      React. This also was useful practice creating and using unit and
+      integration tests to help ensure future code changes would not affect the
+      current functionality. The experience of translating JavaScript code to
+      TypeScript was also quite useful to understand how powerful TypeScript can
+      be in providing checks as a first line of testing for React component
+      code, especially with elements of objects and ensuring props objects are
+      packaged and passed correctly between components.
+    </p>
+  </body>
+</html>

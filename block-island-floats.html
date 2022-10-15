@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
+  </head>
+  <body>
+    <h1>Block Island Glass Floats</h1>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <!-- This div for the button holder is used to group the buttons
+      for CSS flexbox so that they're both moved to the end of the area-->
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Interactive map exploring where glass floats have been found on Block
+        Island during an annual summer scavenger hunt
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      Every summer since 2012, local glass artists have handmade and hidden
+      roughly 500 clear glass orbs around Block Island, Rhode Island for
+      visitors and residents to find. Each year, the first batch of floats made
+      are brightly colored and decorated. When someone finds a float, they are
+      asked to log the unique float number and the location where it was found
+      on a website. This project is an interactive web map of the locations
+      where these floats have been found on Block Island over the last 10 years
+      to see whether the locations where floats were found have changed between
+      years, and whether the limited number of each years' first run of
+      decorated 'fancy' floats are more commonly found in specific areas of the
+      island.
+    </p>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Maps locations where clear ('regular') and decorated ('fancy') floats
+        have been found on the island over the period the user selects, with
+        dynamic tooltips for more details.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      The web map shows where regular and 'fancy' floats have been found on
+      Block Island by using different image icons that are sized in proportion
+      to how many floats were found at that location. Each icon displays a label
+      when clicked that gives more information about the location name and the
+      number of floats found there. You can choose which basemap you want to use
+      - from an artistic background to aerial photos and can also select the
+      year you want to look at, or all years combined.
+    </p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The map is built using the Leaflet JavaScript library. The underlying
+        data were cleaned and georeferenced using custom Python scripts
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      To make the interactive map, I used the Leaflet JavaScript library with
+      calls to two different external raster map tile providers to provide the
+      user-selectable background maps. The Leaflet maps are generated from
+      geoJSON files (1 per year) that give the locations where regular and
+      'fancy' floats were found that year, and also contain the details shown in
+      the tooltips for each float location in the map. The geoJSON files were
+      generated using a custom Python script after applying fuzzy matching to
+      the user-entered location description for each float against a
+      standardized set of location names and coordinates that I tabulated (more
+      detail about this process is below).
+    </p>
+    <div id="links">
+      <a href="https://geohouse.github.io/blockIslandGlassFloats/">Live map</a>
+      <a href="https://github.com/geohouse/blockIslandGlassFloats"
+        >Source code</a
+      >
+    </div>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I had fun learning about this Block Island tradition, and when I found
+        the list of locations where floats have been found over the years on the
+        Block Island tourism bureau's website, I was super curious to map them.
+        It also provided great experience building an interactive map that
+        contains several different features.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I was intrigued by this project when I first heard about it, because a
+      summer scavenger hunt to get people out and exploring the island seemed
+      like neat idea to me and it also seemed like a mutually helpful link
+      between a local artist who started this project and the local tourism
+      bureau that supports it. I was looking for a way to get experience with
+      Leaflet interactive mapping, and this project provided lots of varied
+      experience with cleaning datasets, outputting geoJSON data, data-driven
+      changes to map icon sizing, dynamic tooltips, and updating the map with
+      user input from sliders, radio buttons, and check boxes.
+    </p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Ensured the functionality for mapping and fuzzy georeferencing was
+        possible, then built from both ends of the project toward the middle
+        (linked by files in geoJSON format)
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I knew I wanted an interactive map so you could choose what data would be
+      mapped, but I also knew I had to break it down into small pieces and build
+      to the final project incrementally. This started with building static maps
+      that allowed custom images and I then added additional layers of
+      functionality on top of that. I knew that I could use geoJSON data
+      reliably to make Leaflet maps, so this allowed me to pursue the data
+      cleaning work simultaneously with proof-of-concept trials to build the
+      interactive functions I wanted for the map.
+    </p>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Parsing the raw location descriptions to get mappable locations for 95%
+        of the recorded floats (this was also one of the main challenges!)
+        <button type="button" class="collapse-button">+</button>
+      </p>
+    </div>
+
+    <p class="details">
+      The feature I'm most proud of is the data parsing that enabled the raw
+      input data, with a wide variety of site descriptions where the floats were
+      found, to be standardized and georeferenced to provide the locations
+      rendered in the map. Although this isn't directly visible in the map
+      outcome, it's what allows all the map features to be possible (like
+      showing the different special float icons for year 2020) while confidently
+      showing locations for ~95% of the registered floats based on a description
+      of where they were found.
+    </p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Parsing the raw location descriptions that were found using an iterative
+        approach with fuzzy matching
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      The largest hurdle during development was parsing and cleaning the input
+      data to make it ready to map. The input dataset was a list of float
+      identification numbers found by year (each float has a unique number
+      engraved on it, allowing the location where it was found to be
+      documented). However, the description where each float was found is
+      submitted by its finder as a free-text description. I knew that the map
+      would only be possible if I could reliably parse the majority of these
+      free-text descriptions so I could geocode them to produce a
+      latitude/longitude value for each float, along with a standardized
+      location name and float type (regular or fancy). Because the glass floats
+      project has been active for 10 years, there are ~3100 records to parse,
+      which is more than I could efficiently do manually. To automate this
+      process, I used fuzzy matching from Python's fuzzywuzzy package to match
+      each location description against a list of curated location names that I
+      created. The fuzzy matching returns a match score for each float location
+      description compared to each location in the curated list. It was an
+      iterative process to add common locations to the curated location list,
+      run the fuzzy match against all float records, evaluate how well the
+      curated list represented float record descriptions, add more locations to
+      the curated list as needed, and repeating. When I had added enough
+      locations to the curated list to account for most of the float record
+      descriptions (130 locations including common spelling variations), I
+      looked at the quality of the fuzzy matches produced and their associated
+      scores to set a minimum score threshold for largely correct matches. Any
+      float with a description that couldn't be reliably matched with at least
+      that score was discarded, but this only applied to 131 records (~5% of
+      total), with many of them being ambiguous descriptions, like 'beach'.
+    </p>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+      <div class="button-holder">
+        <button class="expand-all">Expand all details</button>
+        <button class="collapse-all">Collapse all details</button>
+      </div>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        This turned out to be an excellent project for learning a lot of skills
+        related to interactive mapping. It required cleaning and organizing
+        crowd-sourced data, implementing a range of ways users could interact
+        with the mapped data, and managing project development from both the
+        input (data) and output (mapping) ends simultaneously.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      Through this project, I learned a lot more about building interactive
+      webmaps, which is what I had wanted. This included having maps be
+      responsive to a range of different user input types, and to access the
+      correct datasets as required to meet the user's specifications. I also
+      worked with fuzzy string matching and creating geoJSON output files from
+      Python scripts, which were key foundations to providing the data for the
+      map to display. This also required project management skills to balance
+      the progress of both the mapping and the data cleaning/packaging
+      successfully, building the required proof-of-concepts, and quickly
+      catching and addressing challenges as they arose. In that sense, I was
+      building from the ends of the project toward the middle, but I knew this
+      would work because geoJSON file standardization ensured that the dataset
+      output would work seamlessly as the required mapping input. I have already
+      leveraged some of these skills through the project mapping crop rotations
+      in Minnesota.
+    </p>
+  </body>
+</html>
