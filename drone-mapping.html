@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/projects-long-format.css" />
+    <script src="./js/projects-long-format.js" defer></script>
+  </head>
+  <body>
+    <h1>Mapping using drone-collected imagery</h1>
+    <div class="heading-holder">
+      <h2>What is it?</h2>
+      <!-- This div for the button holder is used to group the buttons
+      for CSS flexbox so that they're both moved to the end of the area-->
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Maps and 3-D models built with photographs collected by an aerial drone.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <div class="details">
+      <p>
+        This is a collection of projects that are all based on aerial drone
+        imagery that I have flown and collected in different settings. I have
+        used these images to create perspective-corrected aerial maps, digital
+        surface models that show differences in landscape height, and 3-D
+        models. These projects represent all of those outputs from drone images
+        and demonstrate some of the applications of drone-based mapping that I
+        find most interesting:
+      </p>
+      <ul>
+        <li>
+          Measuring steep topographic differences where hiking is impossible
+        </li>
+        <li>Tracking plant growth changes through the seasons</li>
+        <li>3-D capturing of historic structures.</li>
+      </ul>
+    </div>
+    <div class="heading-holder">
+      <h2>How does it work?</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        All the projects have interactive output to allow exploring the data,
+        regardless of whether they're maps or 3-D models. The models also
+        include tools to measure distances and heights of any feature in the
+        model.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      For projects with interactive maps, they can be panned and zoomed like any
+      other webmap, except the imagery shown is fully constructed from aerial
+      drone photographs that have fine spatial resolution. There are toggle
+      controls for the user to choose whether show the digital surface model
+      instead of the default imagery. This surface model is derived from the
+      imagery and shows the relative surface elevations of landscape features
+      using an artificial color scale. For projects with 3-D models based on the
+      drone imagery, the models can be panned, zoomed, and rotated using
+      multiple mouse buttons. A context menu is also accessible to access tools
+      including rulers to measure distances and heights of objects in the model
+      and to change the amount of model detail that's displayed.
+    </p>
+    <div class="heading-holder">
+      <h2>How is it built?</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I processed the drone imagery using with open-source WebODM software. I
+        then used the Leaflet Javascript library for the maps and the Potree
+        Javascript library for the 3-D models.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      I first collected the aerial imagery with the required high amount of
+      overlap between successive images with the help of automated drone flight
+      software (using the Pix4DCapture app). I then used WebODM software to
+      process these raw images into orthorectified composite images, digital
+      surface models (2-D), and full 3-D models of landscape features. This
+      output raster map tiles for the orthorectified images and the digital
+      surface models. I could use these directly with the Leaflet Javascript
+      library to build interactive webmaps that allowed you to toggle between
+      displaying the imagery and displaying the digital surface model. It also
+      output point cloud files that I could convert into files compatible with
+      the Potree Javascript library that efficiently renders large point clouds
+      so they can be explored interactively on websites.
+    </p>
+    <div id="links">
+      <a href="https://geohouse.github.io/droneMapping/"
+        >Page with links to multiple drone-based mapping projects</a
+      >
+      <a href="https://github.com/geohouse/droneMapping/">Source code</a>
+    </div>
+    <div class="heading-holder">
+      <h2>Why did I build it?</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        These projects let me gain experience with the workflow of drone-based
+        mapping, in applications that are especially interesting to me.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      After getting my FAA Part 107 remote pilot's license, I was keen to
+      experiment with creating mapping-related output from aerial drone images.
+      I bought drone capable of supervised, but pre-programmed flights for
+      mapping (a Parrot Anafi), and set about testing it in different mapping
+      scenarios. This gave me more hands-on experience with mission planning for
+      drone mapping, collecting the images during supervised autonomous flight,
+      and processing the output using the excellent open-source WebODM image
+      analysis software built for this purpose. That resulted in analyzed output
+      on my local computer, but I wanted to make it easily explorable through
+      interactive websites as well. Displaying the output maps using Leaflet was
+      straightforward after my experience with the Block Island Glass Float
+      project, but displaying the 3-D models using Potree was another important
+      skill to have developed. Ultimately, I'm very proud of the outcome of
+      these projects so far both in terms of learning process of drone-based
+      mapping, and in demonstrating how useful this mapping can be in a range of
+      applications.
+    </p>
+    <div class="heading-holder">
+      <h2>Project design</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        Each of the projects is self-contained and followed similar workflows,
+        but highlights different capabilities of drone-based mapping
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      The projects here generally follow the same technical design, with the
+      major difference being whether the project shows 2-D mapping output or 3-D
+      modelling output from the drone-collected images. However, each project
+      purposefully highlights different capabilities of drone-based mapping. I
+      have sought out opportunities to use my drone to capture seasonal
+      differences in plant growth for the same location through the growing
+      year, to see how well its output can capture
+    </p>
+    <div class="heading-holder">
+      <h2>What I am most proud of</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        I'm most proud of the details some of the projects show, from detailed
+        3-D reconstructions to changes in flowering plants and leaf-out during
+        the growing season.
+        <button type="button" class="collapse-button">+</button>
+      </p>
+    </div>
+
+    <p class="details">
+      For this drone-based mapping, I'm most proud of details in the project
+      outcomes. Deep relief; corroborating detail in independent maps from
+      overlapping flights; detail contained in 3-D models that enable
+      measurements to be made on snapshots of structure conditions (could be
+      used to monitor condition changes over time)
+    </p>
+    <div class="heading-holder">
+      <h2>Challenges I ran into and how I resolved them</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        The biggest challenge was figuring out how to serve the 3-D model
+        results as an interactive website given hosting constraints.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      The WebODM software calculates the 3-D model based on the drone images and
+      outputs this information in compressed point cloud files (<span
+        class="monospace"
+        >.laz</span
+      >
+      files). These need to be converted to a different file format before they
+      can be rendered with the Potree interactive viewer. I first tried this
+      conversion using the newest version of the Potree viewer, which produces
+      only 3 output files. However, this project uses GitHub for version control
+      and web hosting, and one of those files was too large to include on GitHub
+      so I started looking for an alternative. I found that the older version of
+      the Potree converter outputs many small files instead, which would be
+      compatible with GitHub, so I used that and modified the Potree rendering
+      code to work with this older style of converted file. This let me set up a
+      re-producible pipeline to convert the WebODM 3-D model output into data
+      that could be rendered using the Potree interactive viewer in any website.
+    </p>
+    <div class="heading-holder">
+      <h2>What I learned for future projects</h2>
+    </div>
+    <div class="overview-holder">
+      <p class="overview">
+        This turned out to be an excellent project for learning a lot of skills
+        related to interactive mapping. It required cleaning and organizing
+        crowd-sourced data, implementing a range of ways users could interact
+        with the mapped data, and managing project development from both the
+        input (data) and output (mapping) ends simultaneously.
+      </p>
+      <button type="button" class="collapse-button">+</button>
+    </div>
+    <p class="details">
+      Through this project, I learned a lot more about building interactive
+      webmaps, which is what I had wanted. This included having maps be
+      responsive to a range of different user input types, and to access the
+      correct datasets as required to meet the user's specifications. I also
+      worked with fuzzy string matching and creating geoJSON output files from
+      Python scripts, which were key foundations to providing the data for the
+      map to display. This also required project management skills to balance
+      the progress of both the mapping and the data cleaning/packaging
+      successfully, building the required proof-of-concepts, and quickly
+      catching and addressing challenges as they arose. In that sense, I was
+      building from the ends of the project toward the middle, but I knew this
+      would work because geoJSON file standardization ensured that the dataset
+      output would work seamlessly as the required mapping input. I have already
+      leveraged some of these skills through the project mapping crop rotations
+      in Minnesota.
+    </p>
+  </body>
+</html>
