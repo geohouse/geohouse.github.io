@@ -28,7 +28,7 @@ h1 {
 .column {
   /*float: left;*/
   width: 33.33%;
-  display: none; /* Hide columns by default */
+  /* display: none; Hide columns by default */
   padding: 10px;
   /*flex-direction: column;*/
 }
@@ -68,9 +68,9 @@ h1 {
   padding: 10px;
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
+/* The "hide" class is added to the projects NOT meant to appear with the given filter options*/
+.hide {
+  display: none;
 }
 
 /* Style the buttons */
