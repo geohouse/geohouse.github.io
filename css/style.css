@@ -14,7 +14,34 @@ h2 {
 }
 
 .all-content {
-  margin: 0 0 0 100px;
+  margin: 0 0 0 12%;
+}
+
+#sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0px;
+  left: 15px;
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  max-width: 10%;
+}
+
+#photo {
+  width: 85%;
+}
+
+#main-project-holder {
+  display: flex;
+  flex-direction: row;
+  flex: 1, 2;
+}
+
+#main-project-icon {
+  width: 20%;
 }
 
 .row {
@@ -121,6 +148,7 @@ h2 {
 .method {
   font-size: 10pt;
   text-align: center;
+  margin: 3px 0 3px 0;
 }
 
 .heading {
