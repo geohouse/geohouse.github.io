@@ -9,6 +9,14 @@ h1 {
   word-break: break-all;
 }
 
+h2 {
+  font-size: 36px;
+}
+
+.all-content {
+  margin: 0 0 0 100px;
+}
+
 .row {
   margin: 0px;
   /* Needed for more regular wrapping of 'tiles'. 
@@ -34,10 +42,14 @@ h1 {
 }
 
 .column-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /*float: left;*/
-  width: 50%;
+  width: calc(50% - 40px);
   /* Hide columns by default */
-  padding: 10px;
+  padding: 20px;
   /*flex-direction: column;*/
 }
 
@@ -101,9 +113,9 @@ h1 {
 
 .image.fit {
   /* Makes the images centered above the text */
-  margin: 0 0 2em 0;
+
   /* Increases image width */
-  width: 100%;
+  width: 30vw;
 }
 
 .method {
@@ -111,14 +123,19 @@ h1 {
   text-align: center;
 }
 
-.heading,
+.heading {
+  text-align: center;
+}
+
 .details {
   text-align: center;
+  width: 85%;
 }
 
 /* hr divider double lines; has to be >= 3px otherwise the double line disappears*/
 .divider {
-  border-top: 3px double rgba(144, 144, 144, 0.25);
+  width: 100%;
+  border-top: 4px solid rgba(144, 144, 144, 0.25);
 }
 
 .citation {
@@ -140,6 +157,6 @@ h1 {
   flex-direction: column;
   width: 90%;
   justify-content: space-between;
-  margin-left: 10px;
+  margin: 0 5% 0 5%;
   min-height: 70vh;
 }
