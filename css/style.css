@@ -11,7 +11,7 @@ h1 {
 
 h2 {
   font-size: 36px;
-  margin: 0 0 0 2%;
+  margin: 20px 0 20px 20px;
 }
 
 .all-content {
@@ -117,6 +117,39 @@ h2 {
 @media screen and (max-width: 800px) {
   .column {
     width: 50%;
+  }
+}
+
+#small-photo,
+#hamburger-icon,
+#top-conditional-images {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #top-conditional-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+  }
+  #small-photo {
+    display: block;
+    width: 10%;
+    height: 10%;
+  }
+  #hamburger-icon {
+    display: block;
+    scale: 35%;
+  }
+  #top-conditional-images {
+    background-color: white;
+  }
+  #sidebar {
+    display: none;
+  }
+  .all-content {
+    margin-left: 0;
   }
 }
 
