@@ -14,7 +14,12 @@ h2 {
 }
 
 .all-content {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
   margin: 0 0 0 12%;
+  background-color: #f1f1f1;
+  overflow: scroll;
 }
 
 #sidebar {
@@ -34,14 +39,27 @@ h2 {
   width: 85%;
 }
 
-#main-project-holder {
+#main-project-holder,
+#about-holder,
+#other-project-holder {
   display: flex;
   flex-direction: row;
   flex: 1, 2;
+  align-items: flex-end;
+  margin: 15px 0 15px 0;
 }
 
-#main-project-icon {
+#main-project-icon,
+#about-icon,
+#other-project-icon {
   width: 20%;
+  margin: 0 10px 0 0;
+}
+
+#linkedin-icon-link,
+#github-icon-link {
+  height: 32px;
+  margin: 25px 5px 10px 5px;
 }
 
 .row {
@@ -49,8 +67,8 @@ h2 {
   /* Needed for more regular wrapping of 'tiles'. 
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Add padding BETWEEN each column (if you want) 
@@ -73,11 +91,12 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*float: left;*/
-  width: calc(50% - 40px);
+
+  width: calc(100% - 80px);
   /* Hide columns by default */
   padding: 20px;
-  /*flex-direction: column;*/
+  margin: 20px;
+  background-color: white;
 }
 
 /* Only have 2 columns (instead of 3) if the screen width is < 800px*/
