@@ -11,6 +11,7 @@ h1 {
 
 h2 {
   font-size: 36px;
+  margin: 0 0 0 2%;
 }
 
 .all-content {
@@ -62,13 +63,23 @@ h2 {
   margin: 25px 5px 10px 5px;
 }
 
-.row {
-  margin: 0px;
+.main-project-grid {
+  margin: 40px;
   /* Needed for more regular wrapping of 'tiles'. 
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.other-project-grid {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
 }
 
 /* Add padding BETWEEN each column (if you want) 
@@ -79,10 +90,13 @@ h2 {
 */
 /* Create three equal columns that floats next to each other */
 .column {
-  /*float: left;*/
-  width: 33.33%;
-  /* display: none; Hide columns by default */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
   padding: 10px;
+  background-color: white;
   /*flex-direction: column;*/
 }
 
@@ -92,10 +106,10 @@ h2 {
   justify-content: center;
   align-items: center;
 
-  width: calc(100% - 80px);
+  width: calc(100% - 40px);
   /* Hide columns by default */
   padding: 20px;
-  margin: 20px;
+  /* margin: 20px; */
   background-color: white;
 }
 
@@ -155,13 +169,15 @@ h2 {
 
 #myBtnContainer {
   padding: 5px 18px;
+  /*Needed to line up the left edge of the button holder with the project cards */
+  margin: 20px 0 0 calc(40px - 8px);
 }
 
 .image.fit {
   /* Makes the images centered above the text */
 
   /* Increases image width */
-  width: 30vw;
+  width: 90%;
 }
 
 .method {
