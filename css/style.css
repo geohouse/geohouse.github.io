@@ -36,13 +36,18 @@ h2 {
   max-width: 10%;
 }
 
+#topbar {
+  display: none;
+}
+
 #photo {
   width: 85%;
 }
 
 #main-project-holder,
 #about-holder,
-#other-project-holder {
+#other-project-holder,
+#contact-holder {
   display: flex;
   flex-direction: row;
   flex: 1, 2;
@@ -52,7 +57,8 @@ h2 {
 
 #main-project-icon,
 #about-icon,
-#other-project-icon {
+#other-project-icon,
+#contact-icon {
   width: 20%;
   margin: 0 10px 0 0;
 }
@@ -127,17 +133,56 @@ h2 {
 }
 
 @media screen and (max-width: 1000px) {
-  #top-conditional-images {
+  #sidebar {
+    display: none;
+  }
+
+  #topbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    left: 15px;
+    height: 100%;
+    padding: 15px 0 5px 0;
+    background-color: white;
+    max-height: 10%;
+    z-index: 1;
+    font-size: 1em;
+  }
+
+  #main-project-holder-top,
+  #about-holder-top,
+  #other-project-holder-top,
+  #contact-holder-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 2 1;
+  }
+
+  #main-project-icon-top,
+  #about-icon-top,
+  #other-project-icon-top,
+  #contact-icon-top {
+    width: 15%;
+  }
+
+  /* #top-conditional-images {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 0 0 0;
   }
-  #small-photo {
-    display: block;
+  */
+  #photo {
     width: 10%;
-    height: 10%;
+    padding: 0 20px 0 0;
   }
+  /*
   #hamburger-icon {
     display: block;
     scale: 35%;
@@ -145,11 +190,17 @@ h2 {
   #top-conditional-images {
     background-color: white;
   }
-  #sidebar {
-    display: none;
+  */
+
+  .top-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
   .all-content {
-    margin-left: 0;
+    margin: 12% 0 0 0;
   }
 }
 

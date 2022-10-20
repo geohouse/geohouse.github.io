@@ -90,3 +90,12 @@ btns.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+// Making the modal work
+const hamburgerIcon = document.querySelector("#hamburger-icon");
+const allContent = document.querySelector(".all-content");
+
+hamburgerIcon.addEventListener("click", () => {
+  allContent.style.backgroundColor = "rgba(0,0,0,0.4)";
+  allContent.style.zIndex = 2;
+});

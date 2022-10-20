@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
-
+    <script src="js/main.js" defer></script>
     <style>
       body,
       h1,
@@ -39,7 +39,7 @@
       </div>
       <div id="about-holder">
         <img id="about-icon" alt="About icon" src="./images/about.png" />
-        <a href="#about">ABOUT</a>
+        <a href="#about-divider">ABOUT</a>
       </div>
       <div id="other-project-holder">
         <img
@@ -47,15 +47,12 @@
           alt="Other project icon"
           src="./images/otherProjects_v2.png"
         />
-        <a href="#other-projects">OTHER PROJECTS</a>
+        <a href="#other-divider">OTHER PROJECTS</a>
       </div>
-
-      <a
-        href="#contact"
-        onclick="w3_close()"
-        class="w3-bar-item w3-button w3-padding"
-        ><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a
-      >
+      <div id="contact-holder">
+        <img id="contact-icon" alt="Contact icon" src="./images/contact.png" />
+        <a href="#contact">CONTACT</a>
+      </div>
       <div class="info-links">
         <a href="https://github.com/geohouse"
           ><img id="github-icon-link" src="images/GitHub-Mark-32px.png"
@@ -65,15 +62,53 @@
         /></a>
       </div>
     </nav>
+    <!-- Top bar used for smaller screen sizes -->
+    <nav id="topbar">
+      <br />
+      <img
+        id="photo"
+        src="/images/GH_cloaked_circleCrop.jpg"
+        alt="portrait photograph"
+      /><br /><br />
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="w3-overlay w3-hide-large w3-animate-opacity"
-      onclick="w3_close()"
-      style="cursor: pointer"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
+      <div id="main-project-holder-top">
+        <a class="top-link" href="#portfolio"
+          ><img
+            id="main-project-icon-top"
+            alt="Main project icon"
+            src="./images/mainProjects.png"
+        /></a>
+      </div>
+      <div id="about-holder-top">
+        <a class="top-link" href="#about-divider"
+          ><img id="about-icon-top" alt="About icon" src="./images/about.png"
+        /></a>
+      </div>
+      <div id="other-project-holder-top">
+        <a class="top-link" href="#other-divider"
+          ><img
+            id="other-project-icon-top"
+            alt="Other project icon"
+            src="./images/otherProjects_v2.png"
+        /></a>
+      </div>
+      <div id="contact-holder-top">
+        <a class="top-link" href="#contact"
+          ><img
+            id="contact-icon-top"
+            alt="Contact icon"
+            src="./images/contact.png"
+        /></a>
+      </div>
+      <div class="info-links-top">
+        <a class="top-link" href="https://github.com/geohouse"
+          ><img id="github-icon-link" src="images/GitHub-Mark-32px.png"
+        /></a>
+        <a href="https://www.linkedin.com/in/geoffrey-house"
+          ><img id="linkedin-icon-link" src="images/LI-In-Bug.png"
+        /></a>
+      </div>
+    </nav>
 
     <!-- !PAGE CONTENT! -->
     <div class="all-content">
@@ -91,7 +126,7 @@
       </div>
       <!-- Header -->
       <header id="portfolio">
-        <h2>Main Projects</h2>
+        <h2>MAIN PROJECTS</h2>
       </header>
       <!-- Portfolio Gallery Grid -->
       <div class="main-project-grid">
@@ -224,7 +259,7 @@
     </p>
     <hr>
 -->
-      <hr class="divider" />
+      <hr class="divider" id="about-divider" />
       <h2>ABOUT</h2>
       <div id="about">
         <p>
@@ -270,7 +305,7 @@
 
         <br />
       </div>
-      <hr class="divider" />
+      <hr class="divider" id="other-divider" />
       <!-- Footer -->
 
       <div id="other-projects">
@@ -653,6 +688,20 @@
           </div>
         </div>
       </div>
+      <hr class="divider" id="other-divider" />
+      <div id="contact">
+        <h2>CONTACT</h2>
+        <iframe
+          id="contact-form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckXuM3uvPC_U1cPeyvt9AYu7uZ3TRWUyzza9YGJg3NT8hbJA/viewform?embedded=true"
+          width="100%"
+          height="732"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
+        >
+      </div>
       <!-- End page content -->
     </div>
 
@@ -668,6 +717,5 @@
         document.getElementById("myOverlay").style.display = "none";
       }
     </script>
-    <script src="js/main.js"></script>
   </body>
 </html>
