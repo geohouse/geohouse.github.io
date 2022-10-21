@@ -26,20 +26,19 @@
         id="photo"
         src="/images/GH_cloaked_circleCrop.jpg"
         alt="portrait photograph"
-      /><br /><br />
+      />
 
-      <h4><b>PORTFOLIO</b></h4>
       <div id="main-project-holder">
         <img
           id="main-project-icon"
           alt="Main project icon"
           src="./images/mainProjects.png"
         />
-        <a href="#portfolio">MAIN PROJECTS</a>
+        <a href="#portfolio-divider">Main Projects</a>
       </div>
       <div id="about-holder">
         <img id="about-icon" alt="About icon" src="./images/about.png" />
-        <a href="#about-divider">ABOUT</a>
+        <a href="#about-divider">About</a>
       </div>
       <div id="other-project-holder">
         <img
@@ -47,11 +46,11 @@
           alt="Other project icon"
           src="./images/otherProjects_v2.png"
         />
-        <a href="#other-divider">OTHER PROJECTS</a>
+        <a href="#other-divider">Other Projects</a>
       </div>
       <div id="contact-holder">
         <img id="contact-icon" alt="Contact icon" src="./images/contact.png" />
-        <a href="#contact">CONTACT</a>
+        <a href="#contact-divider">Contact</a>
       </div>
       <div class="info-links">
         <a href="https://github.com/geohouse"
@@ -69,10 +68,10 @@
         id="photo"
         src="/images/GH_cloaked_circleCrop.jpg"
         alt="portrait photograph"
-      /><br /><br />
+      />
 
       <div id="main-project-holder-top">
-        <a class="top-link" href="#portfolio"
+        <a class="top-link" href="#portfolio-divider"
           ><img
             id="main-project-icon-top"
             alt="Main project icon"
@@ -93,7 +92,7 @@
         /></a>
       </div>
       <div id="contact-holder-top">
-        <a class="top-link" href="#contact"
+        <a class="top-link" href="#contact-divider"
           ><img
             id="contact-icon-top"
             alt="Contact icon"
@@ -112,7 +111,7 @@
 
     <!-- !PAGE CONTENT! -->
     <div class="all-content">
-      <div id="top-conditional-images">
+      <!-- <div id="top-conditional-images">
         <img
           id="hamburger-icon"
           src="./images/hamburgerIcon.png"
@@ -123,14 +122,18 @@
           src="./images/GH_cloaked_circleCrop.jpg"
           alt="portrait photograph"
         />
+      </div> -->
+      <div id="heading">
+        <h1 id="mini-about">
+          I'm Geoffrey - a web developer and mapper with a biology background
+        </h1>
       </div>
-      <!-- Header -->
-      <header id="portfolio">
-        <h2>MAIN PROJECTS</h2>
-      </header>
+      <hr class="divider" id="portfolio-divider" />
+      <div id="portfolio">
+        <h2>Main Projects</h2>
+      </div>
       <!-- Portfolio Gallery Grid -->
       <div class="main-project-grid">
-        <!-- <div class="column javascript"> -->
         <div class="column-main">
           <a href="./garden-planner.html">
             <img
@@ -155,7 +158,6 @@
             modified to better attract wildlife.
           </p>
         </div>
-        <!-- <div class="column javascript gis leaflet mapbox"> -->
         <div class="column-main">
           <a href="./crop-rotations.html">
             <img
@@ -180,8 +182,6 @@
             any chart to explore an interactive version of it with tooltips.
           </p>
         </div>
-
-        <!-- <div class="column javascript gis leaflet"> -->
         <div class="column-main">
           <a href="./block-island-floats.html">
             <img
@@ -205,8 +205,6 @@
             Interactive web map with data filtering and background selection.
           </p>
         </div>
-
-        <!-- <div class="column games javascript"> -->
         <div class="column-main">
           <a href="./word-path.html">
             <img
@@ -227,8 +225,6 @@
             be changed too.
           </p>
         </div>
-
-        <!-- <div class="column games javascript"> -->
         <div class="column-main">
           <a href="./number-path.html">
             <img
@@ -250,17 +246,9 @@
         <!-- END GRID -->
       </div>
       <br />
-      <!--
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr>
--->
+      <!-- About section -->
       <hr class="divider" id="about-divider" />
-      <h2>ABOUT</h2>
+      <h2>About</h2>
       <div id="about">
         <p>
           Hi, I'm Geoffrey - I'm an early career web developer and web mapper
@@ -286,7 +274,7 @@
           I realized that the programs I enjoyed writing the most were ones with
           some sort of visual output, and so I started learning GIS and
           Javascript to translate my skills to web development and web mapping,
-          which seemed like a good fit.
+          which has been a good fit.
         </p>
         <p>
           Through internships, self-guided projects, classes, and tutorials,
@@ -297,19 +285,19 @@
         </p>
         <p>
           From my Biology research background, I developed skills to
-          successfully manage complex projects and a strong work ethic even
-          under challenging field conditions. These provide me with a deep drive
-          to continue learning and expanding my skills in web development and
-          mapping.
+          successfully manage complex projects as well as a strong work ethic
+          even under challenging field conditions. These provide me with a deep
+          drive to continue learning and expanding my skills in web development
+          and mapping.
         </p>
 
         <br />
       </div>
       <hr class="divider" id="other-divider" />
-      <!-- Footer -->
+      <!-- Other projects -->
 
       <div id="other-projects">
-        <h2>OTHER PROJECTS</h2>
+        <h2>Other Projects</h2>
         <div id="myBtnContainer">
           <button class="btn active" id="all">Show all</button>
           <button class="btn" id="gis">GIS</button>
@@ -688,9 +676,9 @@
           </div>
         </div>
       </div>
-      <hr class="divider" id="other-divider" />
+      <hr class="divider" id="contact-divider" />
       <div id="contact">
-        <h2>CONTACT</h2>
+        <h2>Contact</h2>
         <iframe
           id="contact-form"
           src="https://docs.google.com/forms/d/e/1FAIpQLSckXuM3uvPC_U1cPeyvt9AYu7uZ3TRWUyzza9YGJg3NT8hbJA/viewform?embedded=true"
@@ -704,18 +692,5 @@
       </div>
       <!-- End page content -->
     </div>
-
-    <script>
-      // Script to open and close sidebar
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-      }
-    </script>
   </body>
 </html>

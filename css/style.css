@@ -5,8 +5,13 @@
 }
 
 h1 {
-  font-size: 50px;
-  word-break: break-all;
+  font-size: 44px;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  background-color: aquamarine;
+  padding: 0.7em 0 0.7em 0;
+  margin: 0;
+  text-align: center;
 }
 
 h2 {
@@ -42,6 +47,7 @@ h2 {
 
 #photo {
   width: 85%;
+  margin: 0 0 2em 0;
 }
 
 #main-project-holder,
@@ -144,11 +150,10 @@ h2 {
     align-items: center;
     justify-content: space-between;
     top: 0px;
-    left: 15px;
-    height: 100%;
+    left: 0px;
     padding: 15px 0 5px 0;
     background-color: white;
-    max-height: 10%;
+    max-height: 15%;
     z-index: 1;
     font-size: 1em;
   }
@@ -180,7 +185,14 @@ h2 {
   */
   #photo {
     width: 10%;
-    padding: 0 20px 0 0;
+    padding: 10px 0 20px 20px;
+    margin: 0;
+  }
+
+  #linkedin-icon-link,
+  #github-icon-link {
+    height: 32px;
+    margin: 10px 10px 10px 5px;
   }
   /*
   #hamburger-icon {
