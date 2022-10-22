@@ -1,21 +1,128 @@
 /* Center website */
+body {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+  max-width: 1600px;
+  font-size: 1.25em;
+}
+
 .main {
   max-width: 1000px;
   margin: auto;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
+h2 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  margin: 20px 0 20px 20px;
 }
 
-.row {
-  margin: 0px;
+#all-content {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  margin: 0 0 0 12%;
+  background-color: #f1f1f1;
+  overflow: scroll;
+  z-index: 2;
+}
+
+#sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0px;
+  left: 15px;
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  max-width: 10%;
+  z-index: 3;
+}
+
+#topbar {
+  display: none;
+}
+
+#photo {
+  width: 85%;
+  margin: 0 0 2em 0;
+}
+
+#main-project-holder,
+#about-holder,
+#other-project-holder,
+#contact-holder {
+  display: flex;
+  flex-direction: row;
+  flex: 1, 2;
+  align-items: flex-end;
+  margin: 15px 0 15px 0;
+}
+
+#main-project-icon,
+#about-icon,
+#other-project-icon,
+#contact-icon {
+  width: 20%;
+  margin: 0 10px 0 0;
+}
+
+#linkedin-icon-link,
+#github-icon-link {
+  height: 32px;
+  margin: 25px 5px 10px 5px;
+}
+
+/* #basketflower {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+} */
+
+#mini-about-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 150, 136, 0.4);
+  max-height: 1;
+}
+
+#mini-about {
+  font-size: 36px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  padding: 0.7em 0.3em 0.7em 0.3em;
+  margin: 0;
+  text-align: center;
+}
+
+#butterfly {
+  width: 15%;
+  height: auto;
+}
+
+.main-project-grid {
+  padding: 40px;
   /* Needed for more regular wrapping of 'tiles'. 
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+  background-color: #f1f1f1;
+}
+
+.other-project-grid {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
 }
 
 /* Add padding BETWEEN each column (if you want) 
@@ -26,25 +133,126 @@ h1 {
 */
 /* Create three equal columns that floats next to each other */
 .column {
-  /*float: left;*/
-  width: 33.33%;
-  display: none; /* Hide columns by default */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
   padding: 10px;
+  background-color: white;
   /*flex-direction: column;*/
 }
 
 .column-main {
-  /*float: left;*/
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100% - 40px);
   /* Hide columns by default */
-  padding: 10px;
-  /*flex-direction: column;*/
+  padding: 20px;
+  /* margin: 20px; */
+  background-color: white;
 }
 
 /* Only have 2 columns (instead of 3) if the screen width is < 800px*/
 @media screen and (max-width: 800px) {
   .column {
     width: 50%;
+  }
+}
+
+#small-photo,
+#hamburger-icon,
+#top-conditional-images {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #all-content {
+    margin: 0;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  #topbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    padding: 15px 0 5px 0;
+    background-color: white;
+    max-height: 15%;
+    z-index: 3;
+    font-size: 1em;
+  }
+
+  #main-project-holder-top,
+  #about-holder-top,
+  #other-project-holder-top,
+  #contact-holder-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 2 1;
+  }
+
+  #main-project-icon-top,
+  #about-icon-top,
+  #other-project-icon-top,
+  #contact-icon-top {
+    width: 15%;
+  }
+
+  /* #top-conditional-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+  }
+  */
+  #photo {
+    width: 10%;
+    padding: 10px 0 20px 20px;
+    margin: 0;
+  }
+
+  #linkedin-icon-link,
+  #github-icon-link {
+    height: 32px;
+    margin: 10px 10px 10px 5px;
+  }
+  /*
+  #hamburger-icon {
+    display: block;
+    scale: 35%;
+  }
+  #top-conditional-images {
+    background-color: white;
+  }
+  */
+
+  .top-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .all-content {
+    margin: 12% 0 0 0;
+  }
+
+  /* Gets the section below the top bar */
+  #mini-about-holder {
+    margin: 15% 0 0 0;
   }
 }
 
@@ -68,9 +276,9 @@ h1 {
   padding: 10px;
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
+/* The "hide" class is added to the projects NOT meant to appear with the given filter options*/
+.hide {
+  display: none;
 }
 
 /* Style the buttons */
@@ -97,11 +305,13 @@ h1 {
 
 #myBtnContainer {
   padding: 5px 18px;
+  /*Needed to line up the left edge of the button holder with the project cards */
+  margin: 20px 0 0 calc(40px - 8px);
 }
 
 .image.fit {
   /* Makes the images centered above the text */
-  margin: 0 0 2em 0;
+
   /* Increases image width */
   width: 100%;
 }
@@ -109,16 +319,22 @@ h1 {
 .method {
   font-size: 10pt;
   text-align: center;
+  margin: 3px 0 3px 0;
 }
 
-.heading,
+.heading {
+  text-align: center;
+}
+
 .details {
   text-align: center;
+  width: 85%;
 }
 
 /* hr divider double lines; has to be >= 3px otherwise the double line disappears*/
 .divider {
-  border-top: 3px double rgba(144, 144, 144, 0.25);
+  width: 100%;
+  border-top: 4px solid rgba(144, 144, 144, 0.25);
 }
 
 .citation {
@@ -136,10 +352,24 @@ h1 {
 }
 
 #about {
+  background-image: url("../images/basketflower-med.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  width: 90%;
   justify-content: space-between;
-  margin-left: 10px;
+  align-items: center;
   min-height: 70vh;
+}
+
+#about-paragraphs {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 70%;
+  padding: 10px 20px;
+}
+
+#about-title {
+  align-self: flex-start;
 }

@@ -5,180 +5,397 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@400&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Raleway"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <style>
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Raleway", sans-serif;
-      }
-    </style>
   </head>
-  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+  <body>
     <!-- Sidebar/menu -->
-    <nav
-      class="w3-sidebar w3-collapse w3-white w3-animate-left"
-      style="z-index: 3; width: 160px"
-      id="mySidebar"
-    >
+    <nav id="sidebar">
       <br />
-      <div class="w3-container">
-        <a
-          href="#"
-          onclick="w3_close()"
-          class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
-          title="close menu"
-        >
-          <i class="fa fa-remove"></i>
-        </a>
-        <!--
-      <img src="/images/GH_cloaked_circleCrop.jpg" style="width:45%;" class="w3-round"><br><br>
-    -->
+      <img
+        id="photo"
+        src="/images/GH_cloaked_circleCrop.jpg"
+        alt="portrait photograph"
+      />
+      <div id="main-project-holder">
         <img
-          class="image fit"
-          alt="Photo"
-          src="images/GH_cloaked_circleCrop.jpg"
-        /><br /><br />
-
-        <h4><b>PORTFOLIO</b></h4>
+          id="main-project-icon"
+          alt="Main project icon"
+          src="./images/mainProjects.png"
+        />
+        <a href="#portfolio-divider">Main Projects</a>
       </div>
-      <div class="w3-bar-block">
-        <a
-          href="#portfolio"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-padding w3-text-teal"
-          ><i class="fa fa-th-large fa-fw w3-margin-right"></i>MAIN PROJECTS</a
-        >
-        <a
-          href="#about"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-padding w3-text-teal"
-          ><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a
-        >
-        <a
-          href="#other-projects"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-padding w3-text-teal"
-          ><i class="fa fa-th-large fa-fw w3-margin-right"></i>OTHER PROJECTS</a
-        >
-        <!--
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    -->
+      <div id="about-holder">
+        <img id="about-icon" alt="About icon" src="./images/about.png" />
+        <a href="#about-divider">About</a>
       </div>
-      <div class="w3-panel w3-large">
+      <div id="other-project-holder">
+        <img
+          id="other-project-icon"
+          alt="Other project icon"
+          src="./images/otherProjects_v2.png"
+        />
+        <a href="#other-divider">Other Projects</a>
+      </div>
+      <div id="contact-holder">
+        <img id="contact-icon" alt="Contact icon" src="./images/contact.png" />
+        <a href="#contact-divider">Contact</a>
+      </div>
+      <div class="info-links">
         <a href="https://github.com/geohouse"
-          ><i class="fa fa-github w3-hover-opacity"></i
-        ></a>
+          ><img id="github-icon-link" src="images/GitHub-Mark-32px.png"
+        /></a>
         <a href="https://www.linkedin.com/in/geoffrey-house"
-          ><i class="fa fa-linkedin w3-hover-opacity"></i
-        ></a>
+          ><img id="linkedin-icon-link" src="images/LI-In-Bug.png"
+        /></a>
+      </div>
+    </nav>
+    <!-- Top bar used for smaller screen sizes -->
+    <nav id="topbar">
+      <br />
+      <img
+        id="photo"
+        src="/images/GH_cloaked_circleCrop.jpg"
+        alt="portrait photograph"
+      />
+
+      <div id="main-project-holder-top">
+        <a class="top-link" href="#portfolio-divider"
+          ><img
+            id="main-project-icon-top"
+            alt="Main project icon"
+            src="./images/mainProjects.png"
+        /></a>
+      </div>
+      <div id="about-holder-top">
+        <a class="top-link" href="#about-divider"
+          ><img id="about-icon-top" alt="About icon" src="./images/about.png"
+        /></a>
+      </div>
+      <div id="other-project-holder-top">
+        <a class="top-link" href="#other-divider"
+          ><img
+            id="other-project-icon-top"
+            alt="Other project icon"
+            src="./images/otherProjects_v2.png"
+        /></a>
+      </div>
+      <div id="contact-holder-top">
+        <a class="top-link" href="#contact-divider"
+          ><img
+            id="contact-icon-top"
+            alt="Contact icon"
+            src="./images/contact.png"
+        /></a>
+      </div>
+      <div class="info-links-top">
+        <a class="top-link" href="https://github.com/geohouse"
+          ><img id="github-icon-link" src="images/GitHub-Mark-32px.png"
+        /></a>
+        <a href="https://www.linkedin.com/in/geoffrey-house"
+          ><img id="linkedin-icon-link" src="images/LI-In-Bug.png"
+        /></a>
       </div>
     </nav>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="w3-overlay w3-hide-large w3-animate-opacity"
-      onclick="w3_close()"
-      style="cursor: pointer"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
-
     <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left: 160px">
-      <!-- Header -->
-      <header id="portfolio">
-        <a href="#"
-          ><img
-            src="images/GH_cloaked_circleCrop.jpg"
-            style="width: 65px"
-            class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"
-        /></a>
-        <span
-          class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></span>
-        <div class="w3-container">
-          <h1><b>Main Projects</b></h1>
-        </div>
-      </header>
-      <!-- <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')">
-          Show all
-        </button>
-        <button class="btn" onclick="filterSelection('gis')">GIS</button>
-        <button class="btn" onclick="filterSelection('biologyresearch')">
-          Biology research
-        </button>
-        <button class="btn" onclick="filterSelection('games')">Games</button>
-        <button class="btn" onclick="filterSelection('javascript')">
-          JavaScript
-        </button>
-        <button class="btn" onclick="filterSelection('rscript')">R</button>
-        <button class="btn" onclick="filterSelection('python')">Python</button>
-        <button class="btn" onclick="filterSelection('bash')">bash</button>
-        <button class="btn" onclick="filterSelection('leaflet')">
-          Leaflet
-        </button>
-        <button class="btn" onclick="filterSelection('mapbox')">Mapbox</button>
-        <button class="btn" onclick="filterSelection('rshiny')">R Shiny</button>
+    <div id="all-content">
+      <!-- <div id="top-conditional-images">
+        <img
+          id="hamburger-icon"
+          src="./images/hamburgerIcon.png"
+          alt="Page menu"
+        />
+        <img
+          id="small-photo"
+          src="./images/GH_cloaked_circleCrop.jpg"
+          alt="portrait photograph"
+        />
       </div> -->
+      <div id="mini-about-holder">
+        <h1 id="mini-about">
+          I'm Geoffrey - a web developer and mapper with a biology background
+        </h1>
+        <img
+          id="butterfly"
+          alt="Butterfly on a Rattlesnake Master flower"
+          src="images/butterfly-cropped-small.jpg"
+        />
+      </div>
+      <hr class="divider" id="portfolio-divider" />
+      <div id="portfolio">
+        <h2>Main Projects</h2>
+      </div>
       <!-- Portfolio Gallery Grid -->
-      <div class="row">
-        <!-- <div class="column javascript"> -->
-          <div class="column-main">
-          <div class="content">
-            <a href="./garden-planner.html">
+      <div class="main-project-grid">
+        <div class="column-main">
+          <a href="./garden-planner.html">
+            <img
+              class="image fit"
+              alt="App to help plan a garden to attract wildlife through the year"
+              src="images/GardenPlanner.jpg"
+            />
+          </a>
+          <a href="./garden-planner.html"
+            ><h4 class="heading">Wildlife garden planner</h4></a
+          >
+          <p class="method">
+            Made using <em><a href="https://reactjs.org/">React</a></em> with
+            <em><a href="https://www.typescriptlang.org/">Typescript</a></em>
+          </p>
+          <hr class="divider" />
+          <p class="details">
+            Input plant characteristics that attract wildlife (blooms,
+            fruits/seeds, other). Get an intuitive plot of all the plant
+            characteristics through a year to pinpoint time gaps where plants
+            are not attracting wildlife. This lets the planting plan can be
+            modified to better attract wildlife.
+          </p>
+        </div>
+        <div class="column-main">
+          <a href="./crop-rotations.html">
+            <img
+              class="image fit"
+              alt="Web map with interactive charts of Minnesota crop rotations from 2008-2021"
+              src="images/MN_cropRotation_small.jpg"
+            />
+          </a>
+          <a href="./crop-rotations.html"
+            ><h4 class="heading">
+              Visualizing crop rotations in Minnesota from 2008-2021
+            </h4></a
+          >
+          <p class="method">
+            Made using <em><a href="https://www.mapbox.com/">Mapbox</a></em>
+          </p>
+          <hr class="divider" />
+          <p class="details">
+            Map contains thumbnail charts of crop rotations (corn, soy, hay,
+            spring wheat, sugar beets, dry beans, and all other land uses) in
+            Minnesota at the state and county levels from 2008-2021. Click on
+            any chart to explore an interactive version of it with tooltips.
+          </p>
+        </div>
+        <div class="column-main">
+          <a href="./block-island-floats.html">
+            <img
+              class="image fit"
+              alt="Block Island glass floats project interactive map"
+              src="images/BlockIslandGlassFloats_thumbnail.jpg"
+            />
+          </a>
+          <a href="./block-island-floats.html"
+            ><h4 class="heading">
+              Locations of glass floats found on Block Island, Rhode Island
+            </h4></a
+          >
+          <p class="method">
+            Made using
+            <em>JavaScript's <a href="https://leafletjs.com/">Leaflet</a></em>
+            library
+          </p>
+          <hr class="divider" />
+          <p class="details">
+            Interactive web map with data filtering and background selection.
+          </p>
+        </div>
+        <div class="column-main">
+          <a href="./word-path.html">
+            <img
+              class="image fit"
+              alt="WordPath"
+              src="images/WordPath_onionPath.png"
+            />
+          </a>
+          <a href="./word-path.html"><h4 class="heading">WordPath</h4></a>
+          <p class="method">Made using <em>JavaScript</em></p>
+          <hr class="divider" />
+          <p class="details">
+            Find as many words as you can in the grid in 3 minutes with the
+            integrated timer. When the time's up, you can display a list of all
+            of the possible words in the grid. Clicking on the word in this list
+            highlights its 'WordPath' in the grid from dark green (first letter)
+            to dark purple (last letter). The number of vowels in the grid can
+            be changed too.
+          </p>
+        </div>
+        <div class="column-main">
+          <a href="./drone-mapping.html">
+            <img
+              class="image fit"
+              alt="Maps made with drone collected imagery"
+              src="images/quemazon_composite.jpg"
+            />
+          </a>
+          <a href="./drone-mapping.html"
+            ><h4 class="heading">
+              Maps and surface models from drone-collected imagery
+            </h4></a
+          >
+          <p class="method">
+            Made using WebODM drone mapping software and
+            <em>JavaScript's <a href="https://leafletjs.com/">Leaflet</a></em>
+            library
+          </p>
+          <hr class="divider" />
+          <p class="details">
+            Variety of maps and digital surface models made using photographs
+            taken by a drone in several locations to demonstrate its
+            capabilities.
+          </p>
+        </div>
+        <div class="column-main">
+          <a href="./number-path.html">
+            <img
+              class="image fit"
+              alt="NumberPath"
+              src="images/NumberPath_inkscapeComposite.png"
+            />
+          </a>
+          <a href="./number-path.html"><h4 class="heading">NumberPath</h4></a>
+          <p class="method">Made using <em>JavaScript</em></p>
+          <hr class="divider" />
+          <p class="details">
+            Fill in the grid with consecutive numbers from 1 to 81 (no diagonals
+            allowed), using the pre-filled numbers as a guide. If you're stuck,
+            you can toggle the answer as a trace through the grid.
+          </p>
+        </div>
+
+        <!-- END GRID -->
+      </div>
+      <br />
+      <!-- About section -->
+      <hr class="divider" id="about-divider" />
+      <div id="about">
+        <h2 id="about-title">About</h2>
+        <div id="about-paragraphs">
+          <p>
+            Hi, I'm Geoffrey - I'm an early career web developer and web mapper
+            with a background in environmental biology. I enjoy the type of
+            applied problem solving that goes along with putting together jigsaw
+            puzzles, building with Legos, and planting gardens.
+          </p>
+          <p>
+            To me, the process of computer programming feels similar, and I like
+            that challenge. I first dabbled in Java in high school, but only
+            understood the true power of being able to write my own computer
+            programs in graduate school when I needed to analyze large datasets
+            from sensors in a customizable way.
+          </p>
+          <p>
+            During the next several years, I gained a lot of hands-on experience
+            writing reusable scripts for scientific data analysis using MATLAB,
+            R, Python, and bash, to run on local and remote computers (and a lot
+            of associated troubleshooting experience to get those scripts
+            working reliably!)
+          </p>
+          <p>
+            I realized that the programs I enjoyed writing the most were ones
+            with some sort of visual output, and so I started learning GIS and
+            Javascript to translate my skills to web development and web
+            mapping, which has been a good fit.
+          </p>
+          <p>
+            Through internships, self-guided projects, classes, and tutorials,
+            I've built a strong foundation in developing web applications using
+            Javascript, Typescript, and React, and web mapping using Mapbox,
+            Leaflet, and flying a drone to collect images for interactive
+            mapping (I'm a licensed Part 107 pilot).
+          </p>
+          <p>
+            From my Biology research background, I developed skills to
+            successfully manage complex projects as well as a strong work ethic
+            even under challenging field conditions. These provide me with a
+            deep drive to continue learning and expanding my skills in web
+            development and mapping.
+          </p>
+        </div>
+        <br />
+      </div>
+      <hr class="divider" id="other-divider" />
+      <!-- Other projects -->
+
+      <div id="other-projects">
+        <h2>Other Projects</h2>
+        <div id="myBtnContainer">
+          <button class="btn active" id="all">Show all</button>
+          <button class="btn" id="gis">GIS</button>
+          <button class="btn" id="biologyresearch">Biology research</button>
+          <!-- <button class="btn" onclick="filterSelection('games')">Games</button> -->
+          <button class="btn" id="javascript">JavaScript</button>
+          <button class="btn" id="rscript">R</button>
+          <button class="btn" id="python">Python</button>
+          <button class="btn" id="bash">bash</button>
+          <button class="btn" id="leaflet">Leaflet</button>
+          <button class="btn" id="mapbox">Mapbox</button>
+          <button class="btn" id="rshiny">R Shiny</button>
+        </div>
+        <!-- Portfolio Gallery Grid -->
+        <div class="other-project-grid">
+          <div class="column javascript">
+            <a href="https://geohouse.github.io/peace-panels/">
               <img
                 class="image fit"
-                alt="App to help plan a garden to attract wildlife through the year"
-                src="images/GardenPlanner.jpg"
+                alt="Interactive peace messages"
+                src="images/Peace-panels.png"
               />
             </a>
-            <a href="./garden-planner.html"
-              ><h4 class="heading">Wildlife garden planner</h4></a
+            <a href="https://geohouse.github.io/peace-panels"
+              ><h4 class="heading">
+                Interactive messages of peace from around the world
+              </h4></a
             >
             <p class="method">
-              Made using <em><a href="https://reactjs.org/">React</a></em> with
-              <em><a href="https://www.typescriptlang.org/">Typescript</a></em>
+              Made using
+              <em>JavaScript's <a href="https://lit.dev/">Lit</a></em> and
+              <em><a href="https://svgjs.dev/docs/3.0/">SVG</a></em> libraries
             </p>
             <hr class="divider" />
             <p class="details">
-              Input plant characteristics that attract wildlife (blooms,
-              fruits/seeds, other). Get an intuitive plot of all the plant
-              characteristics through a year to pinpoint time gaps where plants
-              are not attracting wildlife. This lets the planting plan can be
-              modified to better attract wildlife.
+              Interactive messages of peace from around the world. Click on a
+              message to see what language it is, and link them all with the
+              color panels to see what happens. Made using custom web
+              components.
             </p>
           </div>
-        </div>
-        <!-- <div class="column javascript gis leaflet mapbox"> -->
-          <div class="column-main">
-          <div class="content">
-            <a href="./crop-rotations.html">
+          <div class="column javascript">
+            <a href="https://geohouse.github.io/flowFields/">
               <img
                 class="image fit"
-                alt="Web map with interactive charts of Minnesota crop rotations from 2008-2021"
-                src="images/MN_cropRotation_small.jpg"
+                alt="Interactive cursor following with lines and colors"
+                src="images/flow-fields-no-display-controls.png"
               />
             </a>
-            <a href="./crop-rotations.html"
+            <a href="https://geohouse.github.io/flowFields"
+              ><h4 class="heading">Interactive cursor tracker</h4></a
+            >
+            <p class="method">Made using <em>JavaScript</em></p>
+            <hr class="divider" />
+            <p class="details">
+              Line segments rotate to follow your cursor around the screen and
+              change color with cursor distance. Can change the line width and
+              'glow' effect.
+            </p>
+          </div>
+          <div class="column gis mapbox">
+            <a href="https://geohouse.github.io/MN_AIS_storymap/">
+              <img
+                class="image fit"
+                alt="Story map of aquatic invasive species spread in Minnesota"
+                src="images/MN_AIS_Storymap.jpeg"
+              />
+            </a>
+            <a href="https://geohouse.github.io/MN_AIS_storymap/"
               ><h4 class="heading">
-                Visualizing crop rotations in Minnesota from 2008-2021
+                Story map of aquatic invasive species spread in Minnesota
               </h4></a
             >
             <p class="method">
@@ -186,654 +403,296 @@
             </p>
             <hr class="divider" />
             <p class="details">
-              Map contains thumbnail charts of crop rotations (corn, soy, hay,
-              spring wheat, sugar beets, dry beans, and all other land uses) in
-              Minnesota at the state and county levels from 2008-2021. Click on
-              any chart to explore an interactive version of it with tooltips.
+              Scrolling story map with information about six different invasive
+              species and maps showing their spread over time.
             </p>
           </div>
-        </div>
-        
-        
-        
-        
-
-        <!-- <div class="column javascript gis leaflet"> -->
-          <div class="column-main">
-          <div class="content">
-            <a href="./block-island-floats.html">
+          <div class="column gis">
+            <a href="https://geohouse.github.io/images/GIS_Valles_topo_map.pdf">
               <img
                 class="image fit"
-                alt="Block Island glass floats project interactive map"
-                src="images/BlockIslandGlassFloats_thumbnail.jpg"
+                alt="Valles Caldera topographic map"
+                src="images/GIS_Valles_topo_map_jpg_small_75ppi.jpg"
               />
             </a>
-            <a href="./block-island-floats.html"
+            <a href="https://geohouse.github.io/images/GIS_Valles_topo_map.pdf"
               ><h4 class="heading">
-                Locations where floats from Block Island, Rhode Island's Glass
-                Floats Project have been found over time
+                Topographic map of the Valles Caldera National Preserve, New
+                Mexico
               </h4></a
             >
+            <p class="method">Made using <em>ArcGIS Pro</em></p>
+            <hr class="divider" />
+            <p class="details">
+              Topographic map of the area including complex topographic shading
+              and custom color scales.
+            </p>
+          </div>
+
+          <div class="column gis">
+            <a
+              href="https://geohouse.github.io/images/GIS_LongmontCityTrees.pdf"
+            >
+              <img
+                class="image fit"
+                alt="Longmont city trees"
+                src="images/GIS_LongmontCityTrees_75ppi.jpg"
+              />
+            </a>
+            <a
+              href="https://geohouse.github.io/images/GIS_LongmontCityTrees.pdf"
+              ><h4 class="heading">City trees in Longmont, Colorado</h4></a
+            >
+            <p class="method">Made using <em>ArcMap</em></p>
+            <hr class="divider" />
+            <p class="details">
+              Analyzing spatial patterns of city trees in Longmont by tree
+              species and neighborhood age.
+            </p>
+          </div>
+          <div class="column rscript rshiny gis">
+            <a href="https://geohouse.shinyapps.io/usCityPopulationTrends/">
+              <img
+                class="image fit"
+                alt="cityPopulationTrends"
+                src="images/usCityPopulationTrendsThumbnail_v2.jpg"
+              />
+            </a>
+            <a href="https://geohouse.shinyapps.io/usCityPopulationTrends/"
+              ><h4 class="heading">U.S. city population trends</h4></a
+            >
+            <p class="method">Made using <em>R Shiny</em></p>
+            <hr class="divider" />
+            <p class="details">
+              Interactive website to map and identify the population changes of
+              U.S. cities from 2010 to 2019.
+            </p>
+          </div>
+          <div class="column rscript">
+            <a href="https://geohouse.github.io/tidyTuesday/">
+              <img
+                class="image fit"
+                alt="tidyTuesday"
+                src="images/TidyTuesday_062921_catRescues_small.jpg"
+              />
+            </a>
+            <a href="https://geohouse.github.io/tidyTuesday/"
+              ><h4 class="heading">Tidy Tuesday data analysis</h4></a
+            >
+            <p class="method">Made using <em>R</em></p>
+            <hr class="divider" />
+            <p class="details">Weekly data analysis projects</p>
+          </div>
+          <div class="column rscript biologyresearch">
+            <a href="https://geohouse.github.io/un-PC/">
+              <img
+                class="image fit"
+                alt="un-PC"
+                src="images/unPC_migrBarrier.png"
+              />
+            </a>
+            <a href="https://geohouse.github.io/un-PC/"
+              ><h4 class="heading"><em>un-PC</em></h4></a
+            >
+            <p class="method">Made using <em>R</em></p>
+            <hr class="divider" />
+            <p class="details">
+              A quick-to-run, intuitive way to visualize patterns of genetic
+              differentiation across a landscape.
+            </p>
+            <p class="citation">
+              Published in: House and Hahn 2018.
+              <a href="https://doi.org/10.1111/1755-0998.12747"
+                ><em class="paperlink"
+                  >Evaluating methods to visualize patterns of genetic
+                  differentiation on a landscape</em
+                >. Molecular Ecology Resources. 18:3 448-460</a
+              >
+            </p>
+          </div>
+          <div class="column rscript python bash biologyresearch">
+            <a href="https://geohouse.github.io/msLandscape/">
+              <img
+                class="image fit"
+                alt="msLandscape"
+                src="images/msLandscape_pageOver.png"
+              />
+            </a>
+            <a href="https://geohouse.github.io/msLandscape/"
+              ><h4 class="heading"><em>ms</em>Landscape</h4></a
+            >
             <p class="method">
-              Made using
-              <em>JavaScript's <a href="https://leafletjs.com/">Leaflet</a></em>
-              library
+              Made using <em>Python, R, </em> and <em>bash</em>
             </p>
             <hr class="divider" />
             <p class="details">
-              Interactive web map with data filtering and background selection.
+              A toolbox to easily generate and visualize landscape-scale
+              population genetic models using the <em>ms</em> simulation
+              program.
+            </p>
+            <p class="citation">
+              Published in: House and Hahn 2018.
+              <a href="https://doi.org/10.1111/1755-0998.12747"
+                ><em class="paperlink"
+                  >Evaluating methods to visualize patterns of genetic
+                  differentiation on a landscape</em
+                >. Molecular Ecology Resources. 18:3 448-460</a
+              >
             </p>
           </div>
-        </div>
 
-        
-
-        
-        
-
-        <!-- <div class="column games javascript"> -->
-          <div class="column-main">
-          <div class="content">
-            <a href="./word-path.html">
+          <div class="column rscript biologyresearch">
+            <a href="https://github.com/geohouse/Prairie-AMF-Gradient-Analysis">
               <img
                 class="image fit"
-                alt="WordPath"
-                src="images/WordPath_onionPath.png"
+                alt="Prarie precipitation gradient"
+                src="images/West_East_PrairieMontage_OK_IL.png"
               />
             </a>
-            <a href="./word-path.html"><h4 class="heading">WordPath</h4></a>
-            <p class="method">Made using <em>JavaScript</em></p>
+            <a href="https://github.com/geohouse/Prairie-AMF-Gradient-Analysis"
+              ><h4 class="heading">
+                Differences in plant-associated fungi from prairies across the
+                Midwest
+              </h4></a
+            >
+            <p class="method">Made using <em>R</em></p>
             <hr class="divider" />
             <p class="details">
-              Find as many words as you can in the grid in 3 minutes with the
-              integrated timer. When the time's up, you can display a list of
-              all of the possible words in the grid. Clicking on the word in
-              this list highlights its 'WordPath' in the grid from dark green
-              (first letter) to dark purple (last letter). The number of vowels
-              in the grid can be changed too.
+              The identity of mycorrhizal fungi in prairie plant roots differs
+              across a precipitation gradient and with site disturbance.
+            </p>
+            <p class="citation">
+              Published in: House and Bever 2018.
+              <a href=" https://doi.org/10.1002/eap.1681"
+                ><em class="paperlink"
+                  >Disturbance reduces the differentiation of mycorrhizal fungal
+                  communities in grasslands along a precipitation gradient</em
+                ></a
+              >. Ecological Applications. 28:3 736-748
             </p>
           </div>
-        </div>
 
-        <!-- <div class="column games javascript"> -->
-          <div class="column-main">
-          <div class="content">
-            <a href="./number-path.html">
+          <div class="column rscript biologyresearch">
+            <a
+              href="https://github.com/geohouse/Prairie-Restoration-Experiment-BaylesRoad"
+            >
               <img
                 class="image fit"
-                alt="NumberPath"
-                src="images/NumberPath_inkscapeComposite.png"
+                alt="Prairie restoration"
+                src="images/Bayles_restore_And_ger_growthGraph.png"
               />
             </a>
-            <a href="./number-path.html"><h4 class="heading">NumberPath</h4></a>
-            <p class="method">Made using <em>JavaScript</em></p>
+            <a
+              href="https://github.com/geohouse/Prairie-Restoration-Experiment-BaylesRoad"
+              ><h4 class="heading">
+                Plant-associated fungi and biochar in prairie restorations
+              </h4></a
+            >
+            <p class="method">Made using <em>R</em></p>
             <hr class="divider" />
             <p class="details">
-              Fill in the grid with consecutive numbers from 1 to 81 (no
-              diagonals allowed), using the pre-filled numbers as a guide. If
-              you're stuck, you can toggle the answer as a trace through the
-              grid.
+              Beneficial fungi in the plant roots improved establishment plant
+              establishment in a prairie restoration more than biochar additions
+              to the soil.
+            </p>
+            <p class="citation">
+              Published in: House and Bever 2019.
+              <a href="https://doi.org/10.1111/rec.12924"
+                ><em class="paperlink"
+                  >Biochar soil amendments in prairie restorations do not
+                  interfere with benefits from inoculation with native
+                  arbuscular mycorrhizal fungi</em
+                ></a
+              >. Restoration Ecology DOI:10.1111/rec.12924
+            </p>
+          </div>
+
+          <div class="column rscript biologyresearch">
+            <a
+              href="https://github.com/geohouse/Plant-Microbiomes-in-Grassland-Restorations"
+            >
+              <img
+                class="image fit"
+                alt="AMF_prairies"
+                src="images/AMF_dist_remn_Koziol_etal_2018.jpeg"
+              />
+            </a>
+            <a
+              href="https://github.com/geohouse/Plant-Microbiomes-in-Grassland-Restorations"
+              ><h4 class="heading">
+                Plant-associated fungi in prairie soils with site disturbance
+              </h4></a
+            >
+            <p class="method">Made using <em>R</em></p>
+            <hr class="divider" />
+            <p class="details">
+              Site disturbance affects the types of fungi found in the roots of
+              prairie plant species.
+            </p>
+            <p class="citation">
+              Published in: Koziol, Schultz, House, Bauer, Middleton, and Bever.
+              <a
+                href="https://academic.oup.com/bioscience/article/68/12/996/5148107"
+                ><em class="paperlink"
+                  >The Plant Microbiome and Native Plant Restoration: The
+                  Example of Native Mycorrhizal Fungi</em
+                ></a
+              >. BioScience, Volume 68, Issue 12, December 2018, Pages 996-1006
+            </p>
+            <p class="citation">
+              <em>Selected as an 'Editor's Choice' article</em>
+            </p>
+          </div>
+
+          <div class="column rscript python biologyresearch">
+            <a href="https://doi.org/10.1128/AEM.00816-16">
+              <img
+                class="image fit"
+                alt="AMF_DNA_sequence_divergence"
+                src="images/AMF_seqDivergence.jpg"
+              />
+            </a>
+            <a href="https://doi.org/10.1128/AEM.00816-16"
+              ><h4 class="heading">
+                High amount of genetic variation in plant-associated fungi
+              </h4></a
+            >
+            <p class="method">Made using <em>Python</em> and <em>R</em></p>
+            <hr class="divider" />
+            <p class="details">
+              The amount of DNA sequence variation differs widely across species
+              of mycorrhizal fungi found in prairie plant roots.
+            </p>
+            <p class="citation">
+              Published in: House, Ekanayake, Ruan, Schütte, Kaonongbua, Fox,
+              Ye, and Bever.
+              <a href="https://doi.org/10.1128/AEM.00816-16"
+                ><em class="paperlink"
+                  >Phylogenetically Structured Differences in rRNA Gene Sequence
+                  Variation among Species of Arbuscular Mycorrhizal Fungi and
+                  Their Implications for Sequence Clustering</em
+                ></a
+              >. Applied and Environmental Microbiology, Volume 82, Issue 16,
+              July 2016, Pages 4921-4930
             </p>
           </div>
         </div>
-
-        <!-- END GRID -->
       </div>
-      <br />
-      <!--
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr>
--->
-      <hr class="divider" />
-      <div id="about">
-        <h3>ABOUT</h3>
-
-        <p>
-          Hi, I'm Geoffrey - I'm an early career web developer
-          and web mapper with a background in environmental biology. I enjoy the
-          type of applied problem solving that goes along with putting together
-          jigsaw puzzles, building with Legos, and planting gardens.
-        </p>
-        <p>
-          To me, the process of computer programming feels similar, and I like
-          that challenge. I first dabbled in Java in high school, but only
-          understood the true power of being able to write my own computer
-          programs in graduate school when I needed to analyze large datasets
-          from sensors in a customizable way.
-        </p>
-        <p>
-          During the next several years, I gained a lot of hands-on experience
-          writing reusable scripts for scientific data analysis using MATLAB, R,
-          Python, and bash, to run on local and remote computers (and a lot of
-          associated troubleshooting experience to get those scripts working
-          reliably!)
-        </p>
-        <p>
-          I realized that the programs I enjoyed writing the most were ones with
-          some sort of visual output, and so I started learning GIS and
-          Javascript to translate my skills to web development and web mapping,
-          which seemed like a good fit.
-        </p>
-        <p>
-          Through internships, self-guided projects, classes, and tutorials,
-          I've built a strong foundation in developing web applications using
-          Javascript, Typescript, and React, and web mapping using Mapbox,
-          Leaflet, and flying a drone to collect images for interactive mapping
-          (I'm a licensed Part 107 pilot).
-        </p>
-        <p>
-          From my Biology research background, I developed skills to successfully manage complex projects and
-          a strong work ethic even under challenging field conditions. These
-          provide me with a deep drive to continue learning and expanding my
-          skills in web development and mapping.
-        </p>
-
-        <br />
-      </div>
-      <hr class="divider" />
-      <!-- Footer -->
-      <!--
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li> 
-      </ul>
-    </div>
-  </div>
-  </footer>
--->
-      <!--
-  <div class="w3-gray w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
--->
-
-<header id="other-projects">
-  <a href="#"
-    ><img
-      src="images/GH_cloaked_circleCrop.jpg"
-      style="width: 65px"
-      class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"
-  /></a>
-  <span
-    class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
-    onclick="w3_open()"
-    ><i class="fa fa-bars"></i
-  ></span>
-  <div class="w3-container">
-    <h1><b>Other Projects</b></h1>
-  </div>
-</header>
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">
-    Show all
-  </button>
-  <button class="btn" onclick="filterSelection('gis')">GIS</button>
-  <button class="btn" onclick="filterSelection('biologyresearch')">
-    Biology research
-  </button>
-  <!-- <button class="btn" onclick="filterSelection('games')">Games</button> -->
-  <button class="btn" onclick="filterSelection('javascript')">
-    JavaScript
-  </button>
-  <button class="btn" onclick="filterSelection('rscript')">R</button>
-  <button class="btn" onclick="filterSelection('python')">Python</button>
-  <button class="btn" onclick="filterSelection('bash')">bash</button>
-  <button class="btn" onclick="filterSelection('leaflet')">
-    Leaflet
-  </button>
-  <button class="btn" onclick="filterSelection('mapbox')">Mapbox</button>
-  <button class="btn" onclick="filterSelection('rshiny')">R Shiny</button>
-</div>
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-    
-  
-  <div class="column javascript">
-    <div class="content">
-      <a href="https://geohouse.github.io/peace-panels/">
-        <img
-          class="image fit"
-          alt="Interactive peace messages"
-          src="images/Peace-panels.png"
-        />
-      </a>
-      <a href="https://geohouse.github.io/peace-panels"
-        ><h4 class="heading">
-          Interactive messages of peace from around the world
-        </h4></a
-      >
-      <p class="method">
-        Made using
-        <em>JavaScript's <a href="https://lit.dev/">Lit</a></em> and
-        <em><a href="https://svgjs.dev/docs/3.0/">SVG</a></em> libraries
-      </p>
-      <hr class="divider" />
-      <p class="details">
-        Interactive messages of peace from around the world. Click on a
-        message to see what language it is, and link them all with the
-        color panels to see what happens. Made using custom web
-        components.
-      </p>
-    </div>
-  </div>
-  <div class="column javascript gis leaflet">
-    <div class="content">
-      <a href="https://geohouse.github.io/droneMapping/">
-        <img
-          class="image fit"
-          alt="Maps made with drone collected imagery"
-          src="images/quemazon_composite.jpg"
-        />
-      </a>
-      <a href="https://geohouse.github.io/droneMapping/"
-        ><h4 class="heading">
-          Maps and surface models from drone-collected imagery
-        </h4></a
-      >
-      <p class="method">
-        Made using WebODM drone mapping software and
-        <em>JavaScript's <a href="https://leafletjs.com/">Leaflet</a></em>
-        library
-      </p>
-      <hr class="divider" />
-      <p class="details">
-        Variety of maps and digital surface models made using photographs
-        taken by a drone in several locations to demonstrate its
-        capabilities.
-      </p>
-    </div>
-  </div>
-  <div class="column javascript">
-    <div class="content">
-      <a href="https://geohouse.github.io/flowFields/">
-        <img
-          class="image fit"
-          alt="Interactive cursor following with lines and colors"
-          src="images/flow-fields-no-display-controls.png"
-        />
-      </a>
-      <a href="https://geohouse.github.io/flowFields"
-        ><h4 class="heading">Interactive cursor tracker</h4></a
-      >
-      <p class="method">Made using <em>JavaScript</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Line segments rotate to follow your cursor around the screen and
-        change color with cursor distance. Can change the line width and
-        'glow' effect.
-      </p>
-    </div>
-  </div>
-  <div class="column gis mapbox">
-    <div class="content">
-      <a href="https://geohouse.github.io/MN_AIS_storymap/">
-        <img
-          class="image fit"
-          alt="Story map of aquatic invasive species spread in Minnesota"
-          src="images/MN_AIS_Storymap.jpeg"
-        />
-      </a>
-      <a href="https://geohouse.github.io/MN_AIS_storymap/"
-        ><h4 class="heading">
-          Story map of aquatic invasive species spread in Minnesota
-        </h4></a
-      >
-      <p class="method">
-        Made using <em><a href="https://www.mapbox.com/">Mapbox</a></em>
-      </p>
-      <hr class="divider" />
-      <p class="details">
-        Scrolling story map with information about six different invasive
-        species and maps showing their spread over time.
-      </p>
-    </div>
-  </div>
-
-  
-
-  <div class="column gis">
-    <div class="content">
-      <a href="https://geohouse.github.io/images/GIS_Valles_topo_map.pdf">
-        <img
-          class="image fit"
-          alt="Valles Caldera topographic map"
-          src="images/GIS_Valles_topo_map_jpg_small_75ppi.jpg"
-        />
-      </a>
-      <a href="https://geohouse.github.io/images/GIS_Valles_topo_map.pdf"
-        ><h4 class="heading">
-          Topographic map of the Valles Caldera National Preserve, New
-          Mexico
-        </h4></a
-      >
-      <p class="method">Made using <em>ArcGIS Pro</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Topographic map of the area including complex topographic shading
-        and custom color scales.
-      </p>
-    </div>
-  </div>
-
-  <div class="column gis">
-    <div class="content">
-      <a
-        href="https://geohouse.github.io/images/GIS_LongmontCityTrees.pdf"
-      >
-        <img
-          class="image fit"
-          alt="Longmont city trees"
-          src="images/GIS_LongmontCityTrees_75ppi.jpg"
-        />
-      </a>
-      <a
-        href="https://geohouse.github.io/images/GIS_LongmontCityTrees.pdf"
-        ><h4 class="heading">City trees in Longmont, Colorado</h4></a
-      >
-      <p class="method">Made using <em>ArcMap</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Analyzing spatial patterns of city trees in Longmont by tree
-        species and neighborhood age.
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript rshiny gis">
-    <div class="content">
-      <a href="https://geohouse.shinyapps.io/usCityPopulationTrends/">
-        <img
-          class="image fit"
-          alt="cityPopulationTrends"
-          src="images/usCityPopulationTrendsThumbnail_v2.jpg"
-        />
-      </a>
-      <a href="https://geohouse.shinyapps.io/usCityPopulationTrends/"
-        ><h4 class="heading">U.S. city population trends</h4></a
-      >
-      <p class="method">Made using <em>R Shiny</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Interactive website to map and identify the population changes of
-        U.S. cities from 2010 to 2019.
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript">
-    <div class="content">
-      <a href="https://geohouse.github.io/tidyTuesday/">
-        <img
-          class="image fit"
-          alt="tidyTuesday"
-          src="images/TidyTuesday_062921_catRescues_small.jpg"
-        />
-      </a>
-      <a href="https://geohouse.github.io/tidyTuesday/"
-        ><h4 class="heading">Tidy Tuesday data analysis</h4></a
-      >
-      <p class="method">Made using <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">Weekly data analysis projects</p>
-    </div>
-  </div>
-  <div class="column rscript biologyresearch">
-    <div class="content">
-      <a href="https://geohouse.github.io/un-PC/">
-        <img
-          class="image fit"
-          alt="un-PC"
-          src="images/unPC_migrBarrier.png"
-        />
-      </a>
-      <a href="https://geohouse.github.io/un-PC/"
-        ><h4 class="heading"><em>un-PC</em></h4></a
-      >
-      <p class="method">Made using <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">
-        A quick-to-run, intuitive way to visualize patterns of genetic
-        differentiation across a landscape.
-      </p>
-      <p class="citation">
-        Published in: House and Hahn 2018.
-        <a href="https://doi.org/10.1111/1755-0998.12747"
-          ><em class="paperlink"
-            >Evaluating methods to visualize patterns of genetic
-            differentiation on a landscape</em
-          >. Molecular Ecology Resources. 18:3 448-460</a
-        >
-      </p>
-    </div>
-  </div>
-  <div class="column rscript python bash biologyresearch">
-    <div class="content">
-      <a href="https://geohouse.github.io/msLandscape/">
-        <img
-          class="image fit"
-          alt="msLandscape"
-          src="images/msLandscape_pageOver.png"
-        />
-      </a>
-      <a href="https://geohouse.github.io/msLandscape/"
-        ><h4 class="heading"><em>ms</em>Landscape</h4></a
-      >
-      <p class="method">
-        Made using <em>Python, R, </em> and <em>bash</em>
-      </p>
-      <hr class="divider" />
-      <p class="details">
-        A toolbox to easily generate and visualize landscape-scale
-        population genetic models using the <em>ms</em> simulation
-        program.
-      </p>
-      <p class="citation">
-        Published in: House and Hahn 2018.
-        <a href="https://doi.org/10.1111/1755-0998.12747"
-          ><em class="paperlink"
-            >Evaluating methods to visualize patterns of genetic
-            differentiation on a landscape</em
-          >. Molecular Ecology Resources. 18:3 448-460</a
-        >
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript biologyresearch">
-    <div class="content">
-      <a href="https://github.com/geohouse/Prairie-AMF-Gradient-Analysis">
-        <img
-          class="image fit"
-          alt="Prarie precipitation gradient"
-          src="images/West_East_PrairieMontage_OK_IL.png"
-        />
-      </a>
-      <a href="https://github.com/geohouse/Prairie-AMF-Gradient-Analysis"
-        ><h4 class="heading">
-          Differences in plant-associated fungi from prairies across the
-          Midwest
-        </h4></a
-      >
-      <p class="method">Made using <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">
-        The identity of mycorrhizal fungi in prairie plant roots differs
-        across a precipitation gradient and with site disturbance.
-      </p>
-      <p class="citation">
-        Published in: House and Bever 2018.
-        <a href=" https://doi.org/10.1002/eap.1681"
-          ><em class="paperlink"
-            >Disturbance reduces the differentiation of mycorrhizal fungal
-            communities in grasslands along a precipitation gradient</em
-          ></a
-        >. Ecological Applications. 28:3 736-748
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript biologyresearch">
-    <div class="content">
-      <a
-        href="https://github.com/geohouse/Prairie-Restoration-Experiment-BaylesRoad"
-      >
-        <img
-          class="image fit"
-          alt="Prairie restoration"
-          src="images/Bayles_restore_And_ger_growthGraph.png"
-        />
-      </a>
-      <a
-        href="https://github.com/geohouse/Prairie-Restoration-Experiment-BaylesRoad"
-        ><h4 class="heading">
-          Plant-associated fungi and biochar in prairie restorations
-        </h4></a
-      >
-      <p class="method">Made using <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Beneficial fungi in the plant roots improved establishment plant
-        establishment in a prairie restoration more than biochar additions
-        to the soil.
-      </p>
-      <p class="citation">
-        Published in: House and Bever 2019.
-        <a href="https://doi.org/10.1111/rec.12924"
-          ><em class="paperlink"
-            >Biochar soil amendments in prairie restorations do not
-            interfere with benefits from inoculation with native
-            arbuscular mycorrhizal fungi</em
-          ></a
-        >. Restoration Ecology DOI:10.1111/rec.12924
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript biologyresearch">
-    <div class="content">
-      <a
-        href="https://github.com/geohouse/Plant-Microbiomes-in-Grassland-Restorations"
-      >
-        <img
-          class="image fit"
-          alt="AMF_prairies"
-          src="images/AMF_dist_remn_Koziol_etal_2018.jpeg"
-        />
-      </a>
-      <a
-        href="https://github.com/geohouse/Plant-Microbiomes-in-Grassland-Restorations"
-        ><h4 class="heading">
-          Plant-associated fungi in prairie soils with site disturbance
-        </h4></a
-      >
-      <p class="method">Made using <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">
-        Site disturbance affects the types of fungi found in the roots of
-        prairie plant species.
-      </p>
-      <p class="citation">
-        Published in: Koziol, Schultz, House, Bauer, Middleton, and Bever.
-        <a
-          href="https://academic.oup.com/bioscience/article/68/12/996/5148107"
-          ><em class="paperlink"
-            >The Plant Microbiome and Native Plant Restoration: The
-            Example of Native Mycorrhizal Fungi</em
-          ></a
-        >. BioScience, Volume 68, Issue 12, December 2018, Pages 996-1006
-      </p>
-      <p class="citation">
-        <em>Selected as an 'Editor's Choice' article</em>
-      </p>
-    </div>
-  </div>
-
-  <div class="column rscript python biologyresearch">
-    <div class="content">
-      <a href="https://doi.org/10.1128/AEM.00816-16">
-        <img
-          class="image fit"
-          alt="AMF_DNA_sequence_divergence"
-          src="images/AMF_seqDivergence.jpg"
-        />
-      </a>
-      <a href="https://doi.org/10.1128/AEM.00816-16"
-        ><h4 class="heading">
-          High amount of genetic variation in plant-associated fungi
-        </h4></a
-      >
-      <p class="method">Made using <em>Python</em> and <em>R</em></p>
-      <hr class="divider" />
-      <p class="details">
-        The amount of DNA sequence variation differs widely across species
-        of mycorrhizal fungi found in prairie plant roots.
-      </p>
-      <p class="citation">
-        Published in: House, Ekanayake, Ruan, Schütte, Kaonongbua, Fox,
-        Ye, and Bever.
-        <a href="https://doi.org/10.1128/AEM.00816-16"
-          ><em class="paperlink"
-            >Phylogenetically Structured Differences in rRNA Gene Sequence
-            Variation among Species of Arbuscular Mycorrhizal Fungi and
-            Their Implications for Sequence Clustering</em
-          ></a
-        >. Applied and Environmental Microbiology, Volume 82, Issue 16,
-        July 2016, Pages 4921-4930
-      </p>
-    </div>
-  </div>
-
- 
-
-  
-
-      <hr class="divider" />
-      <div class="w3cite">
-        Powered by
-        <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          title="W3.CSS"
-          target="_blank"
-          class="w3-hover-opacity"
-          >w3.css</a
+      <hr class="divider" id="contact-divider" />
+      <div id="contact">
+        <h2>Contact</h2>
+        <iframe
+          id="contact-form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckXuM3uvPC_U1cPeyvt9AYu7uZ3TRWUyzza9YGJg3NT8hbJA/viewform?embedded=true"
+          width="100%"
+          height="732"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
         >
       </div>
       <!-- End page content -->
     </div>
-
-    <script>
-      // Script to open and close sidebar
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-      }
-    </script>
-    <script src="js/main.js"></script>
   </body>
 </html>
