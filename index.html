@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
-    <style>
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@400&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+  <body>
     <!-- Sidebar/menu -->
     <nav id="sidebar">
       <br />
@@ -27,7 +24,6 @@
         src="/images/GH_cloaked_circleCrop.jpg"
         alt="portrait photograph"
       />
-
       <div id="main-project-holder">
         <img
           id="main-project-icon"
@@ -110,7 +106,7 @@
     </nav>
 
     <!-- !PAGE CONTENT! -->
-    <div class="all-content">
+    <div id="all-content">
       <!-- <div id="top-conditional-images">
         <img
           id="hamburger-icon"
@@ -123,10 +119,15 @@
           alt="portrait photograph"
         />
       </div> -->
-      <div id="heading">
+      <div id="mini-about-holder">
         <h1 id="mini-about">
           I'm Geoffrey - a web developer and mapper with a biology background
         </h1>
+        <img
+          id="butterfly"
+          alt="Butterfly on a Rattlesnake Master flower"
+          src="images/butterfly-cropped-small.jpg"
+        />
       </div>
       <hr class="divider" id="portfolio-divider" />
       <div id="portfolio">
@@ -248,49 +249,50 @@
       <br />
       <!-- About section -->
       <hr class="divider" id="about-divider" />
-      <h2>About</h2>
       <div id="about">
-        <p>
-          Hi, I'm Geoffrey - I'm an early career web developer and web mapper
-          with a background in environmental biology. I enjoy the type of
-          applied problem solving that goes along with putting together jigsaw
-          puzzles, building with Legos, and planting gardens.
-        </p>
-        <p>
-          To me, the process of computer programming feels similar, and I like
-          that challenge. I first dabbled in Java in high school, but only
-          understood the true power of being able to write my own computer
-          programs in graduate school when I needed to analyze large datasets
-          from sensors in a customizable way.
-        </p>
-        <p>
-          During the next several years, I gained a lot of hands-on experience
-          writing reusable scripts for scientific data analysis using MATLAB, R,
-          Python, and bash, to run on local and remote computers (and a lot of
-          associated troubleshooting experience to get those scripts working
-          reliably!)
-        </p>
-        <p>
-          I realized that the programs I enjoyed writing the most were ones with
-          some sort of visual output, and so I started learning GIS and
-          Javascript to translate my skills to web development and web mapping,
-          which has been a good fit.
-        </p>
-        <p>
-          Through internships, self-guided projects, classes, and tutorials,
-          I've built a strong foundation in developing web applications using
-          Javascript, Typescript, and React, and web mapping using Mapbox,
-          Leaflet, and flying a drone to collect images for interactive mapping
-          (I'm a licensed Part 107 pilot).
-        </p>
-        <p>
-          From my Biology research background, I developed skills to
-          successfully manage complex projects as well as a strong work ethic
-          even under challenging field conditions. These provide me with a deep
-          drive to continue learning and expanding my skills in web development
-          and mapping.
-        </p>
-
+        <h2 id="about-title">About</h2>
+        <div id="about-paragraphs">
+          <p>
+            Hi, I'm Geoffrey - I'm an early career web developer and web mapper
+            with a background in environmental biology. I enjoy the type of
+            applied problem solving that goes along with putting together jigsaw
+            puzzles, building with Legos, and planting gardens.
+          </p>
+          <p>
+            To me, the process of computer programming feels similar, and I like
+            that challenge. I first dabbled in Java in high school, but only
+            understood the true power of being able to write my own computer
+            programs in graduate school when I needed to analyze large datasets
+            from sensors in a customizable way.
+          </p>
+          <p>
+            During the next several years, I gained a lot of hands-on experience
+            writing reusable scripts for scientific data analysis using MATLAB,
+            R, Python, and bash, to run on local and remote computers (and a lot
+            of associated troubleshooting experience to get those scripts
+            working reliably!)
+          </p>
+          <p>
+            I realized that the programs I enjoyed writing the most were ones
+            with some sort of visual output, and so I started learning GIS and
+            Javascript to translate my skills to web development and web
+            mapping, which has been a good fit.
+          </p>
+          <p>
+            Through internships, self-guided projects, classes, and tutorials,
+            I've built a strong foundation in developing web applications using
+            Javascript, Typescript, and React, and web mapping using Mapbox,
+            Leaflet, and flying a drone to collect images for interactive
+            mapping (I'm a licensed Part 107 pilot).
+          </p>
+          <p>
+            From my Biology research background, I developed skills to
+            successfully manage complex projects as well as a strong work ethic
+            even under challenging field conditions. These provide me with a
+            deep drive to continue learning and expanding my skills in web
+            development and mapping.
+          </p>
+        </div>
         <br />
       </div>
       <hr class="divider" id="other-divider" />

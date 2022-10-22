@@ -1,31 +1,29 @@
 /* Center website */
+body {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+  max-width: 1600px;
+  font-size: 1.25em;
+}
+
 .main {
   max-width: 1000px;
   margin: auto;
 }
 
-h1 {
-  font-size: 44px;
-  font-family: Arial, Helvetica, sans-serif;
-  word-wrap: break-word;
-  background-color: aquamarine;
-  padding: 0.7em 0 0.7em 0;
-  margin: 0;
-  text-align: center;
-}
-
 h2 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   font-size: 36px;
   margin: 20px 0 20px 20px;
 }
 
-.all-content {
+#all-content {
   position: fixed;
   top: 0px;
   height: 100vh;
   margin: 0 0 0 12%;
   background-color: #f1f1f1;
   overflow: scroll;
+  z-index: 2;
 }
 
 #sidebar {
@@ -39,6 +37,7 @@ h2 {
   margin: 0;
   background-color: white;
   max-width: 10%;
+  z-index: 3;
 }
 
 #topbar {
@@ -75,8 +74,38 @@ h2 {
   margin: 25px 5px 10px 5px;
 }
 
+/* #basketflower {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+} */
+
+#mini-about-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 150, 136, 0.4);
+  max-height: 1;
+}
+
+#mini-about {
+  font-size: 36px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  padding: 0.7em 0 0.7em 0;
+  margin: 0;
+  text-align: center;
+}
+
+#butterfly {
+  width: 15%;
+  height: auto;
+}
+
 .main-project-grid {
-  margin: 40px;
+  padding: 40px;
   /* Needed for more regular wrapping of 'tiles'. 
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
@@ -84,6 +113,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
+  background-color: #f1f1f1;
 }
 
 .other-project-grid {
@@ -154,7 +184,7 @@ h2 {
     padding: 15px 0 5px 0;
     background-color: white;
     max-height: 15%;
-    z-index: 1;
+    z-index: 3;
     font-size: 1em;
   }
 
@@ -213,6 +243,11 @@ h2 {
 
   .all-content {
     margin: 12% 0 0 0;
+  }
+
+  /* Gets the section below the top bar */
+  #mini-about-holder {
+    margin: 15% 0 0 0;
   }
 }
 
@@ -312,10 +347,24 @@ h2 {
 }
 
 #about {
+  background-image: url("../images/basketflower-med.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  width: 90%;
   justify-content: space-between;
-  margin: 0 5% 0 5%;
+  align-items: center;
   min-height: 70vh;
+}
+
+#about-paragraphs {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 70%;
+  padding: 10px 20px;
+}
+
+#about-title {
+  align-self: flex-start;
 }
