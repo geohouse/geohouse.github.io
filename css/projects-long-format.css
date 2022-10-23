@@ -122,3 +122,30 @@ br {
 .monospace {
   font-family: "Courier New", Courier, monospace;
 }
+
+table {
+  table-layout: fixed;
+  width: calc(100% - 20px);
+  border-collapse: collapse;
+  border: 1px solid #888888;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.contrast-text-1 {
+  color: #e08214;
+}
+
+.contrast-text-2 {
+  color: #8073ac;
+}
+
+/* alternate striping of rows in table by changing opacity only*/
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 150, 136, 0.23);
+}

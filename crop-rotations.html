@@ -255,41 +255,65 @@
         previous year and the crop for the next year for each pixel, I used
         string concatenation of the numeric crop code values for both years
         (where the crop code for the second year was padded to three characters
-        with leading zeros as needed), and back-converted to a number. This
-        allowed me to reliably parse the three digit crop code for each year
-        from the combined output, starting from the right-most side of the
-        combined crop code. The table below provides an example of this. During
-        this process, my computer still ran out of memory to complete the
-        computations for the full state, so I split each input file into
-        quarters then ran the computation on each of those before stitching the
-        results back together to get the output for the whole state.
+        with leading zeros as needed), and back-converted to a number.
+        <span class="underline"
+          >This allowed me to reliably parse the three digit crop code for each
+          year from the combined output, starting from the right-most side of
+          the combined crop code.</span
+        >
+        The table below provides an example of this. During this process, my
+        computer still ran out of memory to complete the computations for the
+        full state, so I split each input file into quarters then ran the
+        computation on each of those before stitching the results back together
+        to get the output for the whole state.
       </p>
       <table>
         <thead>
-          <th>Year 1 crop code</th>
-          <th>Year 2 crop code</th>
-          <th>Combined crop code (year 2 is always the rightmost 3 digits)</th>
+          <th>Year 1 code</th>
+          <th>Year 2 code</th>
+          <th>Combined code</th>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1001</td>
+            <td class="contrast-text-1">1</td>
+            <td class="contrast-text-2">1</td>
+            <td>
+              <!-- This is a bit of a hack to render the number as 
+              centered in the cell (not right-justified), but still make it 
+            clear that the 2nd year's digits are always the 3 at the end, by
+          having each combined code centered on the junction between the year 1 and the 
+        year 2 codes. Done by invisibly padding the year1 codes in the combined code to be 
+      3 digits too. -->
+              <span style="visibility: hidden">00</span>
+              <span class="contrast-text-1">1</span
+              ><span class="contrast-text-2">001</span>
+            </td>
           </tr>
           <tr>
-            <td>10</td>
-            <td>10</td>
-            <td>1010</td>
+            <td class="contrast-text-1">10</td>
+            <td class="contrast-text-2">10</td>
+            <td>
+              <span style="visibility: hidden">0</span>
+              <span class="contrast-text-1">10</span
+              ><span class="contrast-text-2">010</span>
+            </td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>100</td>
-            <td>1100</td>
+            <td class="contrast-text-1">1</td>
+            <td class="contrast-text-2">100</td>
+            <td>
+              <span style="visibility: hidden">00</span>
+              <span class="contrast-text-1">1</span
+              ><span class="contrast-text-2">100</span>
+            </td>
           </tr>
           <tr>
-            <td>100</td>
-            <td>1</td>
-            <td>100001</td>
+            <td class="contrast-text-1">100</td>
+            <td class="contrast-text-2">1</td>
+            <td>
+              <span class="contrast-text-1">100</span
+              ><span class="contrast-text-2">001</span>
+            </td>
           </tr>
         </tbody>
       </table>
