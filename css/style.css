@@ -12,8 +12,9 @@ body {
 
 h2 {
   font-family: "Lato", Arial, Helvetica, sans-serif;
-  font-size: 36px;
-  margin: 20px 0 20px 20px;
+  font-size: 1.5em;
+  margin: 30px 0 20px 20px;
+  text-align: center;
 }
 
 #all-content {
@@ -88,20 +89,19 @@ h2 {
   align-items: center;
   justify-content: space-between;
   background-color: rgba(0, 150, 136, 0.4);
-  max-height: 1;
 }
 
 #mini-about {
-  font-size: 36px;
+  font-size: 1.75em;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   word-wrap: break-word;
-  padding: 0.7em 0.3em 0.7em 0.3em;
-  margin: 0;
   text-align: center;
+  padding: 0.7em 0.3em 0.7em 1.5em;
+  margin: 0;
 }
 
 #butterfly {
-  width: 15%;
+  width: 20%;
   height: auto;
 }
 
@@ -118,7 +118,7 @@ h2 {
 }
 
 .other-project-grid {
-  margin: 40px;
+  padding: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
@@ -156,13 +156,6 @@ h2 {
   background-color: white;
 }
 
-/* Only have 2 columns (instead of 3) if the screen width is < 800px*/
-@media screen and (max-width: 800px) {
-  .column {
-    width: 50%;
-  }
-}
-
 #small-photo,
 #hamburger-icon,
 #top-conditional-images {
@@ -173,7 +166,13 @@ h2 {
   #all-content {
     margin: 0;
   }
-
+  .other-project-grid {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 40px;
+  }
   #sidebar {
     display: none;
   }
@@ -208,7 +207,7 @@ h2 {
   #about-icon-top,
   #other-project-icon-top,
   #contact-icon-top {
-    width: 15%;
+    max-width: 25%;
   }
 
   /* #top-conditional-images {
@@ -219,8 +218,8 @@ h2 {
   }
   */
   #photo {
-    width: 10%;
-    padding: 10px 0 20px 20px;
+    max-width: 10%;
+    padding: 5px 0 10px 10px;
     margin: 0;
   }
 
@@ -252,14 +251,33 @@ h2 {
 
   /* Gets the section below the top bar */
   #mini-about-holder {
-    margin: 15% 0 0 0;
+    margin: 18vh 0 0 0;
+  }
+  #mini-about {
+    padding: 0.5em;
   }
 }
 
 /* Only have 1 column (instead of 3) if the screen width is < 600px*/
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
+@media screen and (max-width: 800px) {
+  .main-project-grid {
+    padding: 15px;
+    /* Needed for more regular wrapping of 'tiles'. 
+      This makes them all the same height, so there will still 
+      be vertical gaps, but not horizontal ones */
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 15px;
+    background-color: #f1f1f1;
+  }
+
+  .other-project-grid {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 15px;
   }
 }
 
@@ -281,6 +299,16 @@ h2 {
   display: none;
 }
 
+#myBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  /*Needed to line up the left edge of the button holder with the project cards */
+  /* margin: 20px 0 0 calc(40px - 8px); */
+}
+
 /* Style the buttons */
 .btn {
   border: none;
@@ -288,7 +316,7 @@ h2 {
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
-  margin: 3px 1px;
+  margin: 3px;
   /* Helps keep vertical space between buttons when the screen is narrow */
 }
 
@@ -301,12 +329,6 @@ h2 {
 .btn.active {
   background-color: #666;
   color: white;
-}
-
-#myBtnContainer {
-  padding: 5px 18px;
-  /*Needed to line up the left edge of the button holder with the project cards */
-  margin: 20px 0 0 calc(40px - 8px);
 }
 
 .image.fit {
@@ -346,11 +368,6 @@ h2 {
   color: #4dac71;
 }
 
-.w3cite {
-  text-align: center;
-  font-size: 12pt;
-}
-
 #about {
   background-image: url("../images/basketflower-med.JPG");
   background-attachment: fixed;
@@ -371,5 +388,6 @@ h2 {
 }
 
 #about-title {
-  align-self: flex-start;
+  color: #f1f1f1;
+  text-shadow: 0px 0px 10px black;
 }
