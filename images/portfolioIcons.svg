@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.3416246"
-     inkscape:cx="-64.846755"
-     inkscape:cy="523.61891"
+     inkscape:zoom="0.33540614"
+     inkscape:cx="-226.59096"
+     inkscape:cy="1050.9646"
      inkscape:window-width="1680"
      inkscape:window-height="987"
      inkscape:window-x="-8"
@@ -243,25 +243,31 @@
        inkscape:export-filename="C:\Users\Geoffrey House User\Documents\GitHub\geohouse.github.io\images\xIcon.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100" />
-    <rect
-       style="fill:#177f62;fill-opacity:0.333333;stroke:#177f2f;stroke-width:2.01794;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect8861"
-       width="92.487724"
-       height="61.035587"
-       x="-46.267303"
-       y="103.91221"
-       ry="6.315918" />
     <g
-       id="g13875"
-       transform="translate(0,5.2916663)">
-      <path
-         style="fill:none;stroke:#177f2f;stroke-width:2.00513;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -46.263812,103.91381 c 0,0 2.493251,10.71387 18.754437,16.84891 16.261183,6.13503 27.75615826,9.20256 27.75615826,9.20256"
-         id="path13872" />
-      <path
-         style="fill:none;stroke:#177f2f;stroke-width:2.00513;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 46.263812,103.91382 c 0,0 -2.493251,10.71386 -18.754437,16.8489 -16.261183,6.13503 -27.75615826,9.20256 -27.75615826,9.20256"
-         id="path9584-0" />
+       id="g13912"
+       inkscape:export-filename="C:\Users\Geoffrey House User\Documents\GitHub\geohouse.github.io\images\contact.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <rect
+         style="fill:#177f62;fill-opacity:0.333333;stroke:#177f2f;stroke-width:2.01794;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect8861"
+         width="92.487724"
+         height="61.035587"
+         x="-114.50237"
+         y="106.47595"
+         ry="6.315918" />
+      <g
+         id="g13875"
+         transform="translate(-68.23506,7.8554113)">
+        <path
+           style="fill:none;stroke:#177f2f;stroke-width:2.00513;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -46.263812,103.91381 c 0,0 2.493251,10.71387 18.754437,16.84891 16.261183,6.13503 27.75615826,9.20256 27.75615826,9.20256"
+           id="path13872" />
+        <path
+           style="fill:none;stroke:#177f2f;stroke-width:2.00513;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 46.263812,103.91382 c 0,0 -2.493251,10.71386 -18.754437,16.8489 -16.261183,6.13503 -27.75615826,9.20256 -27.75615826,9.20256"
+           id="path9584-0" />
+      </g>
     </g>
   </g>
 </svg>
