@@ -3,6 +3,7 @@
   --accent-color: #7f1734;
   /*jungle green */
   --accent-green: #177f62;
+  --off-white: #f1f1f1;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   justify-content: space-between; */
   /* border-bottom: 2px solid #aaa; */
   /* height: auto; */
-  margin: 3% 20% 2% 20%;
+  margin: 1% 20% 2% 20%;
 }
 
 .expand-all {
@@ -38,9 +39,9 @@ body {
 
 h1 {
   font-size: 4em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   color: var(--accent-green);
-  margin: 3% 20% 5% 20%;
+  margin: 3% 5% 3% 20%;
 }
 h2 {
   font-size: 2em;
@@ -53,6 +54,15 @@ h2 {
   /* height: auto; */
   /* margin: 3% 20% 2% 20%; */
 }
+
+h4 {
+  font-weight: normal;
+  font-size: 1em;
+  padding: 0.15em;
+  margin: 0.1em 20% 0.5em 0;
+  background-color: var(--off-white);
+}
+
 hr {
   border: none;
   border-top: 4px double var(--accent-color);
@@ -63,6 +73,14 @@ hr {
   width: 80%;
   margin: 5px 20% 2% 20%;
 }
+
+#page-nav-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .overview-holder {
   display: flex;
   flex-direction: row;

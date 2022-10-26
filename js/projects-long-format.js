@@ -9,9 +9,19 @@ const detailsList = document.querySelectorAll(".details");
 
 function updateCollapseState(action) {
   if (action === "expand") {
+    let collapseContent = [];
     collapseList.forEach((collapseItem, collapseItemIndex) => {
       collapseItem.classList.add("active");
-      let collapseContent = detailsList[collapseItemIndex];
+      // If this is the first or second buttons (the ones used as a demo
+      // nav example at the top of the screen), then make their
+      // target the first paragraph (so page visitors can see how
+      // it works)
+      if (collapseItemIndex === 0 || collapseItemIndex === 1) {
+        collapseContent = detailsList[0];
+      } else {
+        // Need to offset by 2 to accommodate for the example buttons at the top of the screen.
+        collapseContent = detailsList[collapseItemIndex - 2];
+      }
       collapseContent.style.maxHeight = `${collapseContent.scrollHeight}px`;
       collapseItem.innerText = "-";
     });
@@ -27,6 +37,7 @@ function updateCollapseState(action) {
 
 collapseList.forEach((collapseItem, collapseItemIndex) => {
   collapseItem.addEventListener("click", (event) => {
+    let collapseContent = [];
     event.currentTarget.classList.toggle("active");
     if (event.currentTarget.classList.contains("active")) {
       event.currentTarget.innerText = "-";
@@ -36,7 +47,16 @@ collapseList.forEach((collapseItem, collapseItemIndex) => {
     // Find the corresponding content for the collapse button through
     // the index value that can be used to link the elements in the
     // 2 NodeLists
-    let collapseContent = detailsList[collapseItemIndex];
+    // If this is the first or second buttons (the ones used as a demo
+    // nav example at the top of the screen), then make their
+    // target the first paragraph (so page visitors can see how
+    // it works)
+    if (collapseItemIndex === 0 || collapseItemIndex === 1) {
+      collapseContent = detailsList[0];
+    } else {
+      // Need to offset by 2 to accomodate for the example buttons at the top of the screen.
+      collapseContent = detailsList[collapseItemIndex - 2];
+    }
     if (collapseContent.style?.maxHeight) {
       collapseContent.style.maxHeight = null;
     } else {
