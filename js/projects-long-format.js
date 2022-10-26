@@ -53,6 +53,12 @@ collapseList.forEach((collapseItem, collapseItemIndex) => {
     // it works)
     if (collapseItemIndex === 0 || collapseItemIndex === 1) {
       collapseContent = detailsList[0];
+      collapseList[2].classList.toggle("active");
+      if (collapseList[2].classList.contains("active")) {
+        collapseList[2].innerText = "-";
+      } else {
+        collapseList[2].innerText = "+";
+      }
     } else {
       // Need to offset by 2 to accomodate for the example buttons at the top of the screen.
       collapseContent = detailsList[collapseItemIndex - 2];
