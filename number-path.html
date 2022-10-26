@@ -22,13 +22,15 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      This is a web version of the logic game Numbrix from Parade magazines. The
-      puzzle is a 9 by 9 cell grid that you need to fill with each number from 1
-      to 81 to form a path through the grid (without using diagonals). Some
-      numbers pre-populated on the edge of the grid of each puzzle to get
-      started.
-    </p>
+    <div class="details">
+      <p>
+        This is a web version of the logic game Numbrix from Parade magazines.
+        The puzzle is a 9 by 9 cell grid that you need to fill with each number
+        from 1 to 81 to form a path through the grid (without using diagonals).
+        Some numbers pre-populated on the edge of the grid of each puzzle to get
+        started.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>How does it work?</h2>
     </div>
@@ -40,13 +42,15 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      This web version first generates several new puzzles at once, gives each
-      of them a rough difficulty rating, then allows the player to scroll
-      through them to see which puzzle they want to try. If you get stuck while
-      trying to solve it, you can toggle the display of the puzzle's solution
-      path on and off.
-    </p>
+    <div class="details">
+      <p>
+        This web version first generates several new puzzles at once, gives each
+        of them a rough difficulty rating, then allows the player to scroll
+        through them to see which puzzle they want to try. If you get stuck
+        while trying to solve it, you can toggle the display of the puzzle's
+        solution path on and off.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>How is it built?</h2>
     </div>
@@ -58,26 +62,37 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      The main components of this app generate the puzzles and then display the
-      currently selected puzzle on the screen. The completed puzzle
-      configurations for each website load (5,000 attempted puzzle generations)
-      are stored in an array, with the rows and columns for each puzzle
-      represented as an array of arrays, enabling easy browsing of the different
-      puzzles found. There is a toggle to switch between showing each puzzle
-      ready for solving or showing the answer as a solved path that connects the
-      numbers. This is fully rendered in HTML through
-      <span class="monospace">&lttd&gt</span> elements for the number cells, and
-      <span class="monospace">&ltdiv&gt</span> elements in different directions
-      to denote the path. To try and give puzzle solvers more detail about each
-      of the puzzles generated, I built a method to assign expected difficulty
-      levels (easy, medium, or hard) to each of the puzzles based on the length
-      of the typical number 'loops' in each puzzle that take place in between
-      the initial numbers given around the outside edge. Longer 'loops' mean
-      there are larger differences in the initially filled in number values -
-      meaning more possible ways to configure the numbers connecting two of them
-      inside the grid, and therefore the puzzle is typically more difficult.
-    </p>
+    <div class="details">
+      <p>
+        The main components of this app generate the puzzles and then display
+        the currently selected puzzle on the screen.
+      </p>
+      <p>
+        The completed puzzle configurations for each website load (5,000
+        attempted puzzle generations) are stored in an array, with the rows and
+        columns for each puzzle represented as an array of arrays, enabling easy
+        browsing of the different puzzles found.
+      </p>
+      <p>
+        There is a toggle to switch between showing each puzzle ready for
+        solving or showing the answer as a solved path that connects the
+        numbers. This is fully rendered in HTML through
+        <span class="monospace">&lttd&gt</span> elements for the number cells,
+        and <span class="monospace">&ltdiv&gt</span> elements in different
+        directions to denote the path.
+      </p>
+      <p>
+        To try and give puzzle solvers more detail about each of the puzzles
+        generated, I built a method to assign expected difficulty levels (easy,
+        medium, or hard) to each of the puzzles based on the length of the
+        typical number 'loops' in each puzzle that take place in between the
+        initial numbers given around the outside edge. Longer 'loops' mean there
+        are larger differences in the initially filled-in number values. This
+        also means there are more possible ways to configure the numbers
+        connecting two of them inside the grid, and therefore the puzzle is
+        typically more difficult.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>Why did I build it?</h2>
     </div>
@@ -88,15 +103,17 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      A family member introduced me to Numbrix puzzles but we only got one new
-      puzzle per week when it was published in Parade magazine and I wanted
-      build more puzzles for them to be able to solve. I knew it could be tricky
-      to build an automated puzzle generator for this because random shuffling
-      would perform extremely poorly in generating these puzzles. Because of
-      that, I also knew I would need some optimizations based on the puzzle
-      rules, and that challenge was appealing to me.
-    </p>
+    <div class="details">
+      <p>
+        A family member introduced me to Numbrix puzzles but we only got one new
+        puzzle per week when it was published in Parade magazine and I wanted
+        build more puzzles for them to be able to solve. I knew it could be
+        tricky to build an automated puzzle generator for this because random
+        shuffling would perform extremely poorly in generating these puzzles.
+        Because of that, I also knew I would need some optimizations based on
+        the puzzle rules, and that challenge was appealing to me.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>Project design</h2>
     </div>
@@ -108,15 +125,17 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      The design started quite basic, with focusing on getting code that could
-      randomly generate these numberPath puzzles reliably. When that was
-      working, I worked to include additional features to make it more fun for
-      the player: including the ability to browse through all puzzles generated
-      to pick one that looks fun to solve, ranking the puzzles so the player can
-      see how easy or difficult a puzzle may be, and being able to display the
-      solution for the chosen puzzle.
-    </p>
+    <div class="details">
+      <p>
+        The design started quite basic, with focusing on getting code that could
+        randomly generate these numberPath puzzles reliably. When that was
+        working, I worked to include additional features to make it more fun for
+        the player: including the ability to browse through all puzzles
+        generated to pick one that looks fun to solve, ranking the puzzles so
+        the player can see how easy or difficult a puzzle may be, and being able
+        to display the solution for the chosen puzzle.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>What I am most proud of</h2>
     </div>
@@ -127,12 +146,14 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      I am most proud of the heuristics that allow the app to identify many more
-      puzzles per run (more detail about this is in the next section) and
-      assigning a general difficulty level for each puzzle based on the size of
-      number 'loops' that are not anchored by the initially given numbers.
-    </p>
+    <div class="details">
+      <p>
+        I am most proud of the heuristics that allow the app to identify many
+        more puzzles per run (more detail about this is in the next section) and
+        assigning a general difficulty level for each puzzle based on the size
+        of number 'loops' that are not anchored by the initially given numbers.
+      </p>
+    </div>
     <div class="heading-holder">
       <h2>Challenges I ran into and how I resolved them</h2>
     </div>
@@ -150,11 +171,13 @@
         Initially I built this to randomly fill the grid with numbers until
         there were no more possible moves, and then to start over and try again.
         This allowed me to get the basic code working to check for open squares
-        the four possible directions, and to fill them. However, not
-        surprisingly, the percentage of full puzzles that included all 81
-        numbers that this produced was exceedingly small. To help fix this, I
-        identified 2 conditions that seemed to prevent many of the puzzles from
-        being able to be completed:
+        the four possible directions, and to fill them.
+      </p>
+      <p>
+        However, not surprisingly, the percentage of full puzzles that included
+        all 81 numbers that this produced was exceedingly small. To help fix
+        this, I identified 2 conditions that seemed to prevent many of the
+        puzzles from being able to be completed:
       </p>
       <ol>
         <li>Packing numbers into single cell gaps, if found</li>
@@ -179,12 +202,15 @@
       </p>
       <button type="button" class="collapse-button">+</button>
     </div>
-    <p class="details">
-      Working with two-dimensional grids of values and pathfinding through those
-      grids while following different rule sets were both helpful when building
-      my wordPath project. I also learned to closely examine app output given a
-      set of input rules, and to determine heuristic changes that could be made
-      to those rules so that the app could run more efficiently.
-    </p>
+    <div class="details">
+      <p>
+        Working with two-dimensional grids of values and pathfinding through
+        those grids while following different rule sets were both helpful when
+        building my wordPath project. I also learned to closely examine app
+        output given a set of input rules, and to determine heuristic changes
+        that could be made to those rules so that the app could run more
+        efficiently.
+      </p>
+    </div>
   </body>
 </html>

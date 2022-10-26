@@ -95,11 +95,24 @@ hr {
   font-size: 1.25em;
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
   margin: 5px 22% 2% 25%;
-  padding: 5px;
+  padding: 0px 20px 0px 20px;
   max-height: 0px;
   transition: max-height 0.2s ease-out;
   overflow: hidden;
   background-color: rgba(0, 150, 136, 0.2);
+  /* border: solid 1px darkgray; */
+  line-height: 1.5;
+}
+
+.highlight-paragraph {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3px;
+}
+
+.more-details {
+  margin: 10px 0px 20px 40px;
+  font-size: 0.8em;
+  line-height: 1.4;
 }
 
 br {
