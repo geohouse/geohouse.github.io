@@ -1,8 +1,19 @@
 /* Center website */
+
+:root {
+  --teal: #177f62;
+  --off-white: #f1f1f1;
+  --clear-teal: rgba(0, 150, 136, 0.4);
+}
 body {
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
   max-width: 1600px;
   font-size: 1.25em;
+}
+
+@font-face {
+  font-family: "CarterOne";
+  src: url("../fonts/CarterOne-Regular.ttf") format("truetype");
 }
 
 .main {
@@ -22,7 +33,7 @@ h2 {
   top: 0px;
   height: 100vh;
   margin: 0 0 0 12%;
-  background-color: #f1f1f1;
+  background-color: var(--off-white);
   overflow: scroll;
   z-index: 2;
 }
@@ -88,15 +99,22 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 150, 136, 0.4);
+  background-color: var(--clear-teal);
 }
 
-#mini-about {
-  font-size: 1.75em;
-  font-family: "Lato", Arial, Helvetica, sans-serif;
-  word-wrap: break-word;
-  text-align: center;
-  padding: 0.7em 0.3em 0.7em 1.5em;
+#mini-about-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.mini-about {
+  color: var(--teal);
+  font-size: 2em;
+  font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
+  /* word-wrap: break-word; */
+  text-align: left;
+  padding: 0em 0.5em 0.3em 1em;
   margin: 0;
 }
 
@@ -114,7 +132,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
-  background-color: #f1f1f1;
+  background-color: var(--off-white);
 }
 
 .other-project-grid {
@@ -269,15 +287,20 @@ h2 {
     grid-template-columns: 1fr;
     column-gap: 0px;
     row-gap: 15px;
-    background-color: #f1f1f1;
+    background-color: var(--off-white);
   }
 
   .other-project-grid {
-    margin: 15px;
+    padding: 20px;
+    margin: 0px;
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 0px;
     row-gap: 15px;
+  }
+
+  .mini-about {
+    font-size: 1.5em;
   }
 }
 
@@ -365,7 +388,7 @@ h2 {
 }
 
 .paperlink {
-  color: #4dac71;
+  color: var(--teal);
 }
 
 #about {
@@ -388,6 +411,6 @@ h2 {
 }
 
 #about-title {
-  color: #f1f1f1;
+  color: var(--off-white);
   text-shadow: 0px 0px 10px black;
 }

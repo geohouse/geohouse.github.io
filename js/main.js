@@ -95,7 +95,7 @@ btns.forEach((button) => {
 const hamburgerIcon = document.querySelector("#hamburger-icon");
 const allContent = document.querySelector(".all-content");
 
-hamburgerIcon.addEventListener("click", () => {
-  allContent.style.backgroundColor = "rgba(0,0,0,0.4)";
-  allContent.style.zIndex = 2;
-});
+// hamburgerIcon.addEventListener("click", () => {
+//   allContent.style.backgroundColor = "rgba(0,0,0,0.4)";
+//   allContent.style.zIndex = 2;
+// });
