@@ -5,7 +5,7 @@ const jsButton = document.querySelector("#javascript");
 const rButton = document.querySelector("#rscript");
 const pyButton = document.querySelector("#python");
 const bashButton = document.querySelector("#bash");
-const leafletButton = document.querySelector("#leaflet");
+//const leafletButton = document.querySelector("#leaflet");
 const mapboxButton = document.querySelector("#mapbox");
 const rshinyButton = document.querySelector("#rshiny");
 
@@ -47,9 +47,9 @@ pyButton.addEventListener("click", () => {
 bashButton.addEventListener("click", () => {
   filterProjects("bash");
 });
-leafletButton.addEventListener("click", () => {
-  filterProjects("leaflet");
-});
+// leafletButton.addEventListener("click", () => {
+//   filterProjects("leaflet");
+// });
 mapboxButton.addEventListener("click", () => {
   filterProjects("mapbox");
 });
