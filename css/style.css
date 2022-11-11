@@ -22,10 +22,13 @@ body {
 }
 
 h2 {
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  /* font-family: "Lato", Arial, Helvetica, sans-serif; */
+  font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
-  margin: 30px 0 20px 20px;
+  margin: 30px 35% 20px 35%;
   text-align: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 #all-content {
@@ -114,7 +117,7 @@ h2 {
   font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   /* word-wrap: break-word; */
   text-align: left;
-  padding: 0em 0.5em 0.3em 1em;
+  padding: 0em 0.5em 0.2em 1em;
   margin: 0;
 }
 
@@ -412,5 +415,6 @@ h2 {
 
 #about-title {
   color: var(--off-white);
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 8px black;
+  padding: 0 4%;
 }
