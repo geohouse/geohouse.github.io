@@ -48,7 +48,7 @@
         they are asked to log the unique float number and the location where it
         was found on a website. This project is an interactive web map of the
         locations where these floats have been found on Block Island over the
-        last 10 years to see whether the locations where floats were found have
+        last 11 years to see whether the locations where floats were found have
         changed between years, and whether the limited number of each years'
         first run of decorated 'fancy' floats are more commonly found in
         specific areas of the island.
@@ -160,7 +160,7 @@
     </div>
     <div class="overview-holder">
       <p class="overview">
-        Parsing the raw location descriptions to get mappable locations for 95%
+        Parsing the raw location descriptions to get mappable locations for 96%
         of the recorded floats (this was also one of the main challenges!)
       </p>
       <button type="button" class="collapse-button">+</button>
@@ -174,7 +174,7 @@
         locations rendered in the map. Although this isn't directly visible in
         the map outcome, it's what allows all the map features to be possible
         (like showing the different special float icons for year 2020) while
-        confidently showing locations for ~95% of the registered floats based on
+        confidently showing locations for ~96% of the registered floats based on
         a description of where they were found.
       </p>
     </div>
@@ -204,8 +204,8 @@
         standardized location name and float type (regular or fancy).
       </p>
       <p>
-        Because the glass floats project has been active for 10 years, there are
-        ~3100 records to parse, which is more than I could efficiently do
+        Because the glass floats project has been active for 11 years, there are
+        ~3350 records to parse, which is more than I could efficiently do
         manually. To automate this process, I used fuzzy matching from Python's
         fuzzywuzzy package to match each location description against a list of
         curated location names that I created. The fuzzy matching returns a
@@ -220,15 +220,15 @@
       </p>
       <p>
         When I had added enough locations to the curated list to account for
-        most of the float record descriptions (130 locations including common
+        most of the float record descriptions (137 locations including common
         spelling variations), I looked at the quality of the fuzzy matches
         produced and their associated scores to set a minimum score threshold
         for largely correct matches.
       </p>
       <p>
         Any float with a description that couldn't be reliably matched with at
-        least that score was discarded, but this only applied to 131 records
-        (~5% of total), with many of them being ambiguous descriptions, like
+        least that score was discarded, but this only applied to 136 records
+        (~4% of total), with many of them being ambiguous descriptions, like
         'beach'.
       </p>
     </div>
