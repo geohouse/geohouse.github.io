@@ -1,9 +1,30 @@
-/* Center website */
+/* More intuitive box size by the border*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* Allows percentage based heights that are as expected*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  background-color: hsl(0, 0%, 95%);
+}
 
 :root {
   --teal: #177f62;
   --off-white: #f1f1f1;
   --clear-teal: rgba(0, 150, 136, 0.4);
+  --lightest-teal: hsl(163, 69%, 95%);
 }
 body {
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
@@ -21,7 +42,7 @@ body {
   margin: auto;
 }
 
-h2 {
+h3 {
   /* font-family: "Lato", Arial, Helvetica, sans-serif; */
   font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
@@ -60,8 +81,8 @@ h2 {
 }
 
 #photo {
-  width: 85%;
-  margin: 0 0 2em 0;
+  width: 75%;
+  margin: 2rem 0 2rem 0;
 }
 
 #main-project-holder,
@@ -102,27 +123,39 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--clear-teal);
+  background-color: var(--lightest-teal);
+  max-width: 100%;
 }
 
 #mini-about-bio {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
 }
-.mini-about {
+h1.mini-about {
   color: var(--teal);
-  font-size: 2em;
+  font-size: 2rem;
   font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   /* word-wrap: break-word; */
   text-align: left;
-  padding: 0em 0.5em 0.2em 1em;
+  padding: 0rem 0.5rem 0.2rem 1rem;
+  margin: 0;
+}
+
+h2.mini-about {
+  color: var(--teal);
+  font-size: 1.5rem;
+  font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
+  /* word-wrap: break-word; */
+  text-align: left;
+  padding: 0.5rem 0.5rem 0.2rem 2rem;
   margin: 0;
 }
 
 #butterfly {
-  width: 20%;
+  max-width: 25%;
   height: auto;
 }
 
@@ -132,7 +165,7 @@ h2 {
     This makes them all the same height, so there will still 
     be vertical gaps, but not horizontal ones */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   column-gap: 40px;
   row-gap: 40px;
   background-color: var(--off-white);
@@ -170,7 +203,7 @@ h2 {
   justify-content: center;
   align-items: center;
 
-  width: calc(100% - 40px);
+  width: 100%;
   /* Hide columns by default */
   padding: 20px;
   /* margin: 20px; */
