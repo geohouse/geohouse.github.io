@@ -56,7 +56,7 @@ h3 {
   position: fixed;
   top: 0px;
   height: 100vh;
-  margin: 0 0 0 12%;
+  margin: 0 0 0 10%;
   background-color: var(--off-white);
   overflow: scroll;
   z-index: 2;
@@ -68,12 +68,13 @@ h3 {
   flex-direction: column;
   align-items: center;
   top: 0px;
-  left: 15px;
+  left: 0px;
   height: 100%;
   margin: 0;
   background-color: white;
   max-width: 10%;
   z-index: 3;
+  padding-left: 15px;
 }
 
 #topbar {
@@ -136,21 +137,21 @@ h3 {
 }
 h1.mini-about {
   color: var(--teal);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   /* word-wrap: break-word; */
   text-align: left;
-  padding: 0rem 0.5rem 0.2rem 1rem;
+  padding: 0rem 0.5rem 0.2rem 2rem;
   margin: 0;
 }
 
 h2.mini-about {
   color: var(--teal);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "CarterOne", "Lato", Arial, Helvetica, sans-serif;
   /* word-wrap: break-word; */
   text-align: left;
-  padding: 0.5rem 0.5rem 0.2rem 2rem;
+  padding: 0.5rem 0.5rem 0.2rem 3rem;
   margin: 0;
 }
 

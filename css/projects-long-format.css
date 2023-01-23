@@ -20,7 +20,7 @@ body {
   margin: 1% 20% 2% 20%;
 }
 
-.expand-all {
+/* .expand-all {
   border: none;
   height: 20px;
 }
@@ -34,15 +34,17 @@ body {
   height: 20px;
 }
 
-.collapse-all:hover {
+.collapse-button:hover {
   background-color: var(--accent-green);
-}
+} */
 
 h1 {
   font-size: 4em;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   color: var(--accent-green);
-  margin: 3% 5% 3% 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 h2 {
   font-size: 2em;
@@ -60,7 +62,7 @@ h4 {
   font-weight: normal;
   font-size: 1em;
   padding: 0.15em;
-  margin: 0.1em 20% 0.5em 0;
+  margin: 2rem 20% 0.5rem 0;
   background-color: var(--off-white);
 }
 
@@ -110,6 +112,10 @@ hr {
   margin: auto 20px auto 20px;
 }
 
+.collapse-button:hover {
+  background-color: var(--accent-green);
+}
+
 .details {
   font-size: 1.25em;
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
@@ -146,7 +152,7 @@ br {
   align-items: center;
   background-color: #f1f1f1;
   height: 40px;
-  margin: 5px 20% 0px 20%;
+  margin: 5px 30% 3rem 30%;
   padding: 15px;
   border: double 4px var(--accent-green);
 }
